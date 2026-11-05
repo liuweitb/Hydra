@@ -74,4 +74,5 @@ def test_inject_command_for_geometry_faults_has_no_label_args():
 @pytest.mark.skipif(sys.platform != "win32", reason="windows drive paths")
 def test_to_wsl_path():
     assert orch.to_wsl("D:/hydra_work/data/x") == "/mnt/d/hydra_work/data/x"
-    assert orch.to_wsl(orch.PROJECT / "scripts" / "run_job.sh") == "/mnt/d/Hydra/layer_attribution/scripts/run_job.sh"
+    script = orch.to_wsl(orch.PROJECT / "scripts" / "run_job.sh")  # location of the checkout is not fixed
+    assert script.startswith("/mnt/") and script.endswith("/scripts/run_job.sh") and "\\" not in script
