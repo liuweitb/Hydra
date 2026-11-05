@@ -1,0 +1,14 @@
+{
+  "scene": "uh2",
+  "source_dataset": "D:/hydra_work/data/uhumans2_office_mp3d",
+  "dataset_root": "D:/hydra_work/data/faults",
+  "label_space": "D:/Hydra/config/label_spaces/uhumans2_office_label_space.yaml",
+  "confusion_map": {"5": 6, "6": 5, "7": 5, "10": 12, "12": 10, "13": 18, "18": 13},
+  "wsl": {"distro": "Ubuntu-24.04", "runs_root": "/home/hydra/runs/uh2"},
+  "faults": ["label_confusion", "label_dropout", "depth_noise", "depth_holes", "pose_drift", "frame_drop"],
+  "groups": [
+    {"role": "benign", "severities": [0.03], "seeds": [0, 1]},
+    {"role": "main", "severities": [0.2, 0.5, 0.8], "seeds": [0]},
+    {"role": "main", "severities": [0.2, 0.5, 0.8], "seeds": [1, 2]}
+  ]
+}

@@ -1,0 +1,353 @@
+Log file created at: 2026/11/01 01:52:53
+Running on machine: DESKTOP-0P1NPT6
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20261101 01:52:53.768748  2516 hydra_pipeline.cpp:57] [Hydra] Initialized pipeline with:
+================================ PipelineConfig ================================
+enable_lcd:                   false (default)
+timing_disabled:              false (default)
+disable_timer_output:         true (default)
+enable_pgmo_logging:          true (default)
+default_verbosity:            1 (default)
+default_num_threads:          -1 (default)
+store_visualization_details:  false (default)
+label_names:                  [{label: 0, name: unknown},
+                               {label: 1, name: air_vent},
+                               {label: 2, name: books},
+                               {label: 3, name: floor},
+                               {label: 4, name: ceiling_light},
+                               {label: 5, name: chair},
+                               {label: 6, name: bench},
+                               {label: 7, name: couch},
+                               {label: 8, name: stairs},
+                               {label: 9, name: cabinet},
+                               {label: 10, name: computer},
+                               {label: 11, name: lamp},
+                               {label: 12, name: painting},
+                               {label: 13, name: plant},
+                               {label: 14, name: sign},
+                               {label: 15, name: stairs},
+                               {label: 16, name: desk},
+                               {label: 17, name: cubicle},
+                               {label: 18, name: trashcan},
+                               {label: 19, name: wall},
+                               {label: 20, name: human}]
+map_window [Virtual Config: SpatialWindowChecker::Config]:
+   max_radius_m:              8 (default)
+frames [FrameConfig] (default):
+   robot_frame:               base_link (default)
+   odom_frame:                odom (default)
+   map_frame:                 map (default)
+graph [SharedDsgInfo::Config] (default):
+   layers:                    {AGENTS: {layer: 2, partition: 0},
+                               BUILDINGS: {layer: 5, partition: 0},
+                               MESH_PLACES: {layer: 3, partition: 1},
+                               OBJECTS: {layer: 2, partition: 0},
+                               PLACES: {layer: 3, partition: 0},
+                               ROOMS: {layer: 4, partition: 0}} (default)
+label_space [LabelSpaceConfig]:
+   total_semantic_labels:     21
+   semantic_colormap_file:    "" (default)
+   semantic_label_remap_filepath: "" (default)
+   dynamic_labels:            [20]
+   invalid_labels:            [] (default)
+   object_labels:             [5, 6, 7, 10, 12, 13, 18]
+   surface_places_labels:     [3, 15]
+   ground_labels:             [] (default)
+   semantic_layers:           [OBJECTS, MESH_PLACES] (default)
+mesh [MeshFieldConfgi] (default):
+   with_colors:               true (default)
+   with_first_seen_stamps:    true (default)
+   with_labels:               true (default)
+================================================================================
+I20261101 01:52:53.777279  2516 python_pipeline.cpp:151] Using sensor 'camera':
+min_range: 0.10000000000000001
+max_range: 5
+extrinsics:
+  type: param
+  body_R_sensor:
+    w: 1
+    x: 0
+    y: 0
+    z: 0
+  body_p_sensor:
+    - 0
+    - 0
+    - 0
+width: 720
+height: 480
+cx: 360
+cy: 240
+fx: 415.6922
+fy: 415.6922
+I20261101 01:52:53.788139  2516 place_2d_segmenter.cpp:121] [2D Places] Using labels: [3, 15]
+I20261101 01:52:53.790752  2516 gvd_place_extractor.cpp:84] Downsampling TSDF when creating places!
+I20261101 01:52:53.790760  2516 gvd_place_extractor.cpp:87] 
+I20261101 01:52:53.791209  2516 mesh_segmenter.cpp:101] [Mesh Segmenter] using labels: [5, 6, 7, 10, 12, 13, 18]
+I20261101 01:52:53.824980  2516 hydra_pipeline.cpp:107] 
+================================================================================
+= Modules                                                                      =
+================================================================================
+
+********************************************************************************
+* backend                                                                      *
+********************************************************************************
+================================ BackendConfig =================================
+enable_node_merging:          true (default)
+enable_exhaustive_merging:    false (default)
+add_places_to_deformation_graph: true (default)
+optimize_on_lc:               true (default)
+update_functors[agents] [Virtual Config: UpdateAgentsFunctor::Config]:
+update_functors[buildings] [Virtual Config: UpdateBuildingsFunctor::Config]:
+   semantic_label:            22 (default)
+update_functors[frontiers] [Virtual Config: FrontierConfig]:
+   frontier_removal_threshold: 1 (default)
+   frontier_removal_check_threshold: 4 (default)
+update_functors[objects] [Virtual Config: UpdateObjectsFunctor::Config]:
+   allow_connection_merging:  true (default)
+   merge_proposer [MergeProposer::Config] (default):
+      strategy [Virtual Config: SemanticNearestNode::Config]:
+         num_merges_to_consider: 1 (default)
+update_functors[places] [Virtual Config: UpdatePlacesFunctor::Config]:
+   pos_threshold_m [m]:       0.4 (default)
+   distance_tolerance_m [m]:  0.4 (default)
+   layer:                     PLACES (default)
+   deformation_interpolator [DeformationInterpolator::Config] (default):
+      num_control_points:     4 (default)
+      control_point_tolerance_s [s]: 10 (default)
+   merge_proposer [MergeProposer::Config] (default):
+      strategy [Virtual Config: NearestNode::Config]:
+         num_merges_to_consider: 1 (default)
+update_functors[rooms] [Virtual Config: UpdateRoomsFunctor::Config]:
+   places_layer:              PLACES (default)
+   room_finder [RoomFinderConfig]:
+      prefix:                 R (default)
+      min_dilation_m [m]:     0.5
+      max_dilation_m [m]:     1.2
+      min_window_size:        0.2 (default)
+      clip_dilation_window_to_max: false (default)
+      min_component_size:     10
+      min_room_size:          10 (default)
+      dilation_threshold_mode: PLATEAU
+      min_lifetime_length_m:  0.1 (default)
+      plateau_ratio:          0.15
+      max_modularity_iters:   5 (default)
+      modularity_gamma:       1 (default)
+      clustering_mode:        NEIGHBORS (default)
+      dilation_diff_threshold_m [m]: -1
+      log_filtrations:        false (default)
+      log_place_graphs:       false (default)
+update_functors[surface_places] [Virtual Config: Update2dPlacesFunctor::Config]:
+   layer:                     MESH_PLACES (default)
+   allow_places_merge:        true (default)
+   merge_max_delta_z:         0.5 (default)
+   min_points:                10 (default)
+   min_size:                  2 (default)
+   connection_overlap_threshold: 0 (default)
+   connection_max_delta_z:    0.5 (default)
+   connection_ellipse_scale_factor: 1 (default)
+   enable_splitting:          false (default)
+   merge_proposer [MergeProposer::Config] (default):
+      strategy [Virtual Config: SemanticNearestNode::Config]:
+         num_merges_to_consider: 1 (default)
+update_functors[zmq_labels] [Virtual Config: ZmqRoomLabelUpdater::Config]:
+   url:                       tcp://127.0.0.1:8002 (default)
+   num_threads:               2 (default)
+   poll_time_ms:              10 (default)
+pgmo [HydraPgmoConfig]:
+   run_mode:                  FULL (default)
+   num_interp_pts:            3 (default)
+   interp_horizon:            10
+   add_initial_prior:         true (default)
+   output_prefix:             "" (default)
+   odom:                      0.01
+   loop_close:                0.05
+   prior:                     0.01
+   mesh_mesh:                 0.01
+   pose_mesh:                 0.01
+   place_mesh:                0.01
+   place_edge:                10
+   place_merge:               10
+   object_merge:              10
+   sg_loop_close:             0.1
+   optimizer [Virtual Config: KimeraRpgoOptimizer]:
+      solver:                 LM (default)
+      verbosity:              0 (default)
+      print_summary:          true (default)
+      print_iterations:       true (default)
+      use_4dof_optim:         false (default)
+      use_gnc:                true (default)
+      barc_sq:                0
+      inlier_probability:     0.9
+      mu_step:                1.6
+      max_iterations:         100
+      fix_odom:               true
+      robust_cost:            TLS
+      use_pcm:                false (default)
+      trans_threshold:        0.1
+      rot_threshold:          0.01
+      mahalanobis_threshold:  1
+      odom_check:             false
+      odom_trans_threshold:   0.5
+      odom_rot_threshold:     0.1
+      odom_mahalanobis_threshold: 5
+      max_clique_mode:        HEURISTIC
+      metric_type:            NODE
+external_loop_closures [ExternalLoopClosureReceiver::Config] (default):
+   layer:                     AGENTS (default)
+   max_time_difference [s]:   1 (default)
+================================================================================
+
+********************************************************************************
+
+********************************************************************************
+* frontend                                                                     *
+********************************************************************************
+============================= GraphBuilder::Config =============================
+lcd_use_bow_vectors:          true (default)
+mesh_resolution:              0.005
+d_graph_resolution:           2.5
+time_horizon:                 15
+enable_mesh_objects:          true (default)
+use_frontiers:                false (default)
+no_packet_collation:          false (default)
+verbosity:                    0 (default)
+graph_connector [GraphConnector::Config] (default):
+   layers[0] [LayerConnector::Config] (default):
+      parent_layer:           PLACES (default)
+      verbosity:              0 (default)
+      child_layers[0] [ChildLayerConfig]:
+         layer:               OBJECTS
+         include_primary:     true (default)
+         include_partitions:  true (default)
+graph_updater [GraphUpdater::Config] (default):
+   layer_updates[OBJECTS] [LayerTracker::Config]:
+      prefix:                 O
+      target_layer:           !<null> "" (default)
+objects [MeshSegmenterConfig] (default):
+   layer_id:                  OBJECTS (default)
+   bounding_box_type:         AABB (default)
+   timer_namespace:           frontend/objects (default)
+   clustering [ClusteringConfig] (default):
+      cluster_tolerance:      0.25 (default)
+      min_cluster_size:       40 (default)
+      max_cluster_size:       100000 (default)
+pose_graph_tracker [Virtual Config: PoseGraphFromOdom::Config]:
+   min_pose_separation:       0.5 (default)
+   rotation_separation_weight: 0.1 (default)
+   min_time_separation_s:     0.2 (default)
+surface_places [Virtual Config: Place2dSegmenterConfig]:
+   layer:                     MESH_PLACES (default)
+   prefix:                    P
+   pure_final_place_size:     1
+   min_final_place_points:    10
+   place_overlap_threshold:   0
+   place_max_neighbor_z_diff: 0.5 (default)
+   connection_ellipse_scale_factor: 1 (default)
+   clustering [ClusteringConfig]:
+      cluster_tolerance:      0.3
+      min_cluster_size:       50
+      max_cluster_size:       100000 (default)
+freespace_places [Virtual Config: GvdPlaceExtractor::Config]:
+   layer:                     PLACES (default)
+   min_component_size:        3 (default)
+   filter_places:             true (default)
+   filter_ground:             false (default)
+   robot_height:              0 (default)
+   edge_tolerance:            1 (default)
+   node_tolerance:            1 (default)
+   add_freespace_edges:       false (default)
+   gvd [GvdIntegratorConfig]:
+      max_distance_m:         4.5
+      min_distance_m:         0.2 (default)
+      min_diff_m:             0.1
+      min_weight:             1e-06 (default)
+      refine_voxel_pos:       false (default)
+      positive_distance_only: true (default)
+      voronoi_config [VoronoiCheckConfig]:
+         mode:                L1_THEN_ANGLE (default)
+         min_distance_m:      0.3
+         parent_l1_separation: 20
+         parent_cos_angle_separation: 0.2
+   graph [GraphExtractor::Config]:
+      compression_distance_m: 1.5
+      validate_graph:         false (default)
+      min_node_distance_m:    0.4
+      min_edge_distance_m:    0.25
+      merge_new_nodes:        true (default)
+      add_heuristic_edges:    false (default)
+      merge_policy:           distance
+      node_merge_distance_m:  0.7
+      add_overlap_edges:      true (default)
+      add_freespace_edges:    true (default)
+      overlap_edges [OverlapEdgeConfig] (default):
+         num_neighbors_to_check: 4 (default)
+         min_clearance_m:     0.4 (default)
+      freespace_edges [FreespaceEdgeConfig] (default):
+         max_length_m:        2 (default)
+         num_nodes_to_check:  5 (default)
+         num_neighbors_to_find: 1 (default)
+         min_clearance_m:     0.5 (default)
+   tsdf_interpolator [Virtual Config: DownsampleTsdfInterpolator::Config]:
+      ratio:                  2 (default)
+      tolerance:              1e-10 (default)
+frontier_places [Virtual Config: FrontierExtractor::Config]:
+   prefix:                    f (default)
+   cluster_tolerance:         0.3 (default)
+   min_cluster_size:          10 (default)
+   max_cluster_size:          100000 (default)
+   max_place_radius:          5 (default)
+   dense_frontiers:           false (default)
+   frontier_splitting_threshold: 0.2 (default)
+   point_threshold:           10 (default)
+   culling_point_threshold:   10 (default)
+   recent_block_distance:     25 (default)
+   minimum_relative_z:        -1
+   maximum_relative_z:        1 (default)
+   compute_frontier_shape:    false (default)
+view_database [ViewDatabase::Config] (default):
+   view_selection_method:     fusion (default)
+   inflation_distance:        0 (default)
+   layers:                    [PLACES, MESH_PLACES] (default)
+   verbosity:                 0 (default)
+================================================================================
+
+********************************************************************************
+
+********************************************************************************
+* reconstruction                                                               *
+********************************************************************************
+========================= ReconstructionModule::Config =========================
+max_input_queue_size:         0 (default)
+validate_mesh_fields:         true (default)
+full_update_separation_s [s]: 0.2
+max_input_queue_size:         0 (default)
+volumetric_map [VolumetricMap]:
+   voxel_size [m]:            0.1 (default)
+   voxels_per_side:           16 (default)
+   truncation_distance [m]:   0.3 (default)
+   with_semantics:            true
+   with_tracking:             false (default)
+map_window [Uninitialized Virtual Config]
+tsdf [ProjectiveIntegrator]:
+   verbosity:                 1 (default)
+   extra_integration_distance [m]: 0 (default)
+   extra_integration_distance_labels: [] (default)
+   skip_extra_colors_and_labels: false (default)
+   use_weight_dropoff:        true (default)
+   weight_dropoff_epsilon [vs]: -1 (default)
+   use_constant_weight:       false (default)
+   min_measurement_weight:    0.0001 (default)
+   max_weight:                100000 (default)
+   num_threads:               12
+   interpolation_method [Virtual Config: InterpolatorAdaptive::Config]:
+      max_depth_difference_m [m]: 0.2 (default)
+   semantic_integrator [Virtual Config: SingleLabelIntegrator::Config]:
+mesh [MeshIntegratorConfig]:
+   min_weight:                0.0001 (default)
+   integrator_threads:        12
+robot_footprint [Uninitialized Virtual Config]
+================================================================================
+
+********************************************************************************
+I20261101 01:52:53.903389  2516 reconstruction_module.cpp:131] [Hydra Reconstruction] Got input @ 0 [ns] with pose: p=[-19.8499; 24.1766; 2.49225], q={w: -0.5, x: 0.51, y: -0.5, z: 0.489}

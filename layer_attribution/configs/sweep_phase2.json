@@ -1,0 +1,19 @@
+{
+  "scene": "uh2",
+  "source_dataset": "D:/hydra_work/data/uhumans2_office_mp3d",
+  "dataset_root": "D:/hydra_work/data/faults",
+  "config_root": "D:/hydra_work/results/config_faults/final_cfg",
+  "label_space": "D:/Hydra/config/label_spaces/uhumans2_office_label_space.yaml",
+  "confusion_map": {"5": 6, "6": 5, "7": 5, "10": 12, "12": 10, "13": 18, "18": 13},
+  "wsl": {"distro": "Ubuntu-24.04", "runs_root": "/home/hydra/runs/uh2"},
+  "faults": ["label_confusion", "label_dropout", "depth_noise", "pose_drift", "frame_drop"],
+  "config_faults": [
+    {"fault": "objects_min_size", "severities": [0.3, 0.6, 1.0]},
+    {"fault": "objects_tol_merge", "severities": [0.7, 0.85, 1.0]},
+    {"fault": "rooms_min_size", "severities": [0.6, 0.8, 1.0]},
+    {"fault": "rooms_max_dilation", "severities": [0.16, 0.3, 1.0]}
+  ],
+  "groups": [
+    {"role": "benign", "severities": [0.03], "seeds": [3, 4, 5]}
+  ]
+}
