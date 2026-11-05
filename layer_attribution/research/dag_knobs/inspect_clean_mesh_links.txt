@@ -1,0 +1,55 @@
+{
+ "backend_mesh": {
+  "label_histogram": {
+   "0": 16149,
+   "1": 15827,
+   "2": 1696,
+   "3": 246419,
+   "4": 7407,
+   "5": 7023,
+   "7": 5586,
+   "9": 11833,
+   "10": 6053,
+   "11": 4982,
+   "12": 2282,
+   "13": 3336,
+   "14": 1079,
+   "15": 320,
+   "16": 7933,
+   "17": 13285,
+   "18": 3818,
+   "19": 93034
+  },
+  "num_faces": 662823,
+  "num_vertices": 448062,
+  "vertices_array_shape": [
+   6,
+   448062
+  ]
+ },
+ "frontend_vs_backend_mesh": {
+  "frontend_num_vertices": 448062,
+  "labels_equal": true,
+  "max_abs_vertex_diff": 0.0,
+  "same_shape": true
+ },
+ "mesh_places_to_mesh": {
+  "label_histogram_of_referenced_vertices": {
+   "3": 237790,
+   "15": 357
+  },
+  "num_connections": 238147
+ },
+ "objects_to_mesh": {
+  "frac_vertex_label_equals_object_label": 0.9912064461532801,
+  "min_per_object_frac": 0.8987854251012146,
+  "num_connections": 27179,
+  "out_of_range_indices": 0
+ },
+ "places_to_mesh": {
+  "num_places": 1068,
+  "total_deformation_connections": 0,
+  "total_pcl_mesh_connections": 0,
+  "total_voxblox_mesh_connections": 2791
+ }
+}

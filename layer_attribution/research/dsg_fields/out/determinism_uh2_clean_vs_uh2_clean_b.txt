@@ -1,0 +1,117 @@
+
+====================================================================================================
+LEVEL 1  artefact hashes
+====================================================================================================
+backend/dsg_with_mesh.json             74876237   74873446 bytes  sha256[:16] ce001a6b3e8831f3 a08af0691b1c8eac  DIFFERENT
+backend/dsg.json                        9338692    9335901 bytes  sha256[:16] 1dad6a547049a300 4fd819d74b5b46ac  DIFFERENT
+backend/mesh.ply                       48168667   48168667 bytes  sha256[:16] 08853fd5bed8b834 08853fd5bed8b834  IDENTICAL
+backend/trajectory.csv                    47258      47258 bytes  sha256[:16] 52d89d402f1a9ef6 52d89d402f1a9ef6  IDENTICAL
+backend/layer_2_statistics.csv            28976      28976 bytes  sha256[:16] 34328f0855a9f05d 34328f0855a9f05d  IDENTICAL
+backend/layer_3_statistics.csv            44316      44316 bytes  sha256[:16] cfacf877e0ae0951 cfacf877e0ae0951  IDENTICAL
+backend/layer_4_statistics.csv            21895      21895 bytes  sha256[:16] bae752f90ba257e4 bae752f90ba257e4  IDENTICAL
+backend/layer_5_statistics.csv            21895      21895 bytes  sha256[:16] 85d7b2b8d0970bdf 85d7b2b8d0970bdf  IDENTICAL
+backend/loop_closures.csv                    53         53 bytes  sha256[:16] 5c646433225d4f33 5c646433225d4f33  IDENTICAL
+backend/deformation_graph.dgrf           771561     771561 bytes  sha256[:16] d7d8fd9c326b1deb d7d8fd9c326b1deb  IDENTICAL
+backend/pgmo/dsg_pgmo_status.csv          71519      71468 bytes  sha256[:16] 066111a7d8e94585 19568ff88e20c91b  DIFFERENT
+hydra_config.yaml                          1881       1881 bytes  sha256[:16] 45e0171218d36f28 45e0171218d36f28  IDENTICAL
+timing_stats.csv                           2594       2606 bytes  sha256[:16] f20e5769801e40d0 821f0822b4c00ca9  DIFFERENT
+frontend/dsg_with_mesh.json            77287876   77284445 bytes  sha256[:16] 7928492687806f2a 683a565c9c73cb0d  DIFFERENT
+frontend/dsg.json                      11750331   11746900 bytes  sha256[:16] 0926371ca0d423f7 347e1b49e269b1f1  DIFFERENT
+frontend/mesh.ply                      48168667   48168667 bytes  sha256[:16] 08853fd5bed8b834 08853fd5bed8b834  IDENTICAL
+frontend/layer_2_statistics.csv           28941      28941 bytes  sha256[:16] 628dbce7236304b8 628dbce7236304b8  IDENTICAL
+frontend/layer_3_statistics.csv           39173      39173 bytes  sha256[:16] d7e649d38c7e4981 d7e649d38c7e4981  IDENTICAL
+frontend/layer_4_statistics.csv           21895      21895 bytes  sha256[:16] fdb846482b3f8bb4 fdb846482b3f8bb4  IDENTICAL
+frontend/layer_5_statistics.csv           21895      21895 bytes  sha256[:16] fdb846482b3f8bb4 fdb846482b3f8bb4  IDENTICAL
+
+====================================================================================================
+LEVEL 2/3  raw bytes: first difference, then equality after masking the 'block' and 'vertex' keys
+====================================================================================================
+backend/dsg_with_mesh.json: sizes 74876237 vs 74873446; first differing byte at offset 67813906
+   A ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-1475826464,32230,-1309738368],"label":null,"vertex":138430403037504,"v'
+   B ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-938978416,31053,-1309738368],"label":null,"vertex":133375469787456,"vo'
+   masked keys found in A: block x2791, vertex x2791; after masking sizes 74761977 vs 74761977; byte-identical: True
+run A: 2791 records | block[1] == vertex>>32 in 100.0% | vertex % 8 == 0 in 100.0% | vertex range 0x7de6c67fb940..0x7de6d7ffe940 | distinct vertex 12 | distinct block[0..1] pairs 1 | block[2] range -2147036640..2132178463 (502 distinct)
+run B: 2791 records | block[1] == vertex>>32 in 100.0% | vertex % 8 == 0 in 100.0% | vertex range 0x794dccff8940..0x794de67fb940 | distinct vertex 15 | distinct block[0..1] pairs 1 | block[2] range -2147036640..2132178463 (502 distinct)
+   block[2] sequence identical between runs: True
+backend/dsg.json: sizes 9338692 vs 9335901; first differing byte at offset 2276361
+   A ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-1475826464,32230,-1309738368],"label":null,"vertex":138430403037504,"v'
+   B ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-938978416,31053,-1309738368],"label":null,"vertex":133375469787456,"vo'
+   masked keys found in A: block x2791, vertex x2791; after masking sizes 9224432 vs 9224432; byte-identical: True
+frontend/dsg_with_mesh.json: sizes 77287876 vs 77284445; first differing byte at offset 68170646
+   A ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-1475826464,32230,-1309738368],"label":null,"vertex":138430403037504,"v'
+   B ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-938978416,31053,-1309738368],"label":null,"vertex":133375469787456,"vo'
+   masked keys found in A: block x3431, vertex x3431; after masking sizes 77147381 vs 77147381; byte-identical: True
+frontend/dsg.json: sizes 11750331 vs 11746900; first differing byte at offset 2633101
+   A ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-1475826464,32230,-1309738368],"label":null,"vertex":138430403037504,"v'
+   B ... b'tic_label":4294967295,"type":"PlaceNodeAttributes","voxblox_mesh_connections":[{"block":[-938978416,31053,-1309738368],"label":null,"vertex":133375469787456,"vo'
+   masked keys found in A: block x3431, vertex x3431; after masking sizes 11609836 vs 11609836; byte-identical: True
+
+source of the two keys (read from the WSL source tree):
+--- spark_dsg/include/spark_dsg/node_attributes.h:77-86
+   77  /**
+   78   * @brief Information related to place to mesh coorespondence
+   79   */
+   80  struct NearestVertexInfo {
+   81    int32_t block[3];
+   82    double voxel_pos[3];
+   83    size_t vertex;
+   84    std::optional<uint32_t> label;
+   85  };
+   86  
+--- hydra/src/places/graph_extractor.cpp:210-216
+  210  NearestVertexInfo convertInfo(const GvdVertexInfo& parent_info) {
+  211    NearestVertexInfo info;
+  212    info.voxel_pos[0] = parent_info.pos[0];
+  213    info.voxel_pos[1] = parent_info.pos[1];
+  214    info.voxel_pos[2] = parent_info.pos[2];
+  215    return info;
+  216  }
+
+====================================================================================================
+LEVEL 4  parsed JSON structural diff, backend/dsg_with_mesh.json
+====================================================================================================
+parsed both json files in 1.9s, peak RSS 858.3 MB
+top-level keys equal: True | per-key equality: {'SPARK_DSG_header': True, 'directed': True, 'edges': True, 'layer_keys': True, 'layer_names': True, 'mesh': True, 'metadata': True, 'multigraph': True, 'nodes': False}
+node id sequence identical (same order): True | same id set: True | n nodes 4588 4588
+edge (source,target) sequence identical (same order): True | same pair set: True | n edges 13578 13578
+
+differing leaves by JSON path pattern (everything not listed is exactly equal, including float text/ordering/timestamps):
+    5582 x value       $.nodes[*].attributes.voxblox_mesh_connections[*].block[*]
+                e.g. ('$.nodes[109].attributes.voxblox_mesh_connections[0].block[0]', -1475826464, -938978416)
+                e.g. ('$.nodes[109].attributes.voxblox_mesh_connections[0].block[1]', 32230, 31053)
+    2791 x value       $.nodes[*].attributes.voxblox_mesh_connections[*].vertex
+                e.g. ('$.nodes[109].attributes.voxblox_mesh_connections[0].vertex', 138430403037504, 133375469787456)
+                e.g. ('$.nodes[109].attributes.voxblox_mesh_connections[1].vertex', 138430403037504, 133375469787456)
+
+====================================================================================================
+LEVEL 5  semantic diff through spark_dsg (voxblox block/vertex excluded from the comparison)
+====================================================================================================
+fingerprinted A, peak RSS 1072.8 MB
+fingerprinted B, peak RSS 1214.4 MB
+layer keys equal: True | graph metadata equal: True
+node id sets equal: True (A 4588, B 4588, only-A 0, only-B 0)
+nodes compared per layer: {'5': 1, '2': 109, '3[1]': 2774, '4': 8, '2[97]': 628, '3': 1068}
+nodes with any differing field (voxblox block/vertex excluded): none
+differing (layer, field) counts: none
+edge sets equal: True (A 13578, B 13578) | edges with differing weight/weighted/metadata: 0
+mesh vertices     shape (6, 448062) equal: True max|diff| 0.0
+mesh faces        shape (3, 662823) equal: True max|diff| 0.0
+mesh labels       shape (448062,) equal: True max|diff| 0.0
+mesh timestamps   shape (448062,) equal: True max|diff| 0.0
+mesh first_seen   shape (448062,) equal: True max|diff| 0.0
+
+PlaceNodeAttributes.voxblox_mesh_connections records: A 2791, B 2791; same (place, voxel_pos) multiset: True
+records whose 'block' triple differs between runs: 2791/2791
+
+====================================================================================================
+LEVEL 6  backend/pgmo/dsg_pgmo_status.csv (one row per backend spin; wall-clock columns excluded)
+====================================================================================================
+columns: ['total_lc', 'new_lc', 'total_factors', 'total_values', 'new_factors', 'new_graph_factors', 'trajectory_len', 'run_time', 'optimize_time', 'mesh_update_time', 'num_merges_undone'] (state = first 7; run_time/optimize_time/mesh_update_time are wall-clock)
+rows (backend spin iterations) A 1818 B 1818
+distinct consecutive states: A 1341, B 1341; sequences identical: True; idle (repeated-state) iterations: A 477, B 477
+final state A: ['0', '0', '6480', '1215', '0', '0', '628'] B: ['0', '0', '6480', '1215', '0', '0', '628']
+
+====================================================================================================
+VERDICT
+====================================================================================================
+peak RSS MB 1214.4

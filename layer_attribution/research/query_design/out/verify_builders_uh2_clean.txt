@@ -1,0 +1,15 @@
+﻿run uh2_clean: dsg view objects=109 places=1068 rooms=8; snapshot view objects=109 places=1068 rooms=8
+  obj_id        equal=True  shape=(109,)
+  obj_pos       equal=True  shape=(109, 3)
+  obj_label     equal=True  shape=(109,)
+  place_id      equal=True  shape=(1068,)
+  place_pos     equal=True  shape=(1068, 3)
+  place_radius  equal=True  shape=(1068,)
+  place_room    equal=True  shape=(1068,)
+  room_id       equal=True  shape=(8,)
+  room_pos      equal=True  shape=(8, 3)
+  first parent place equal: True
+  objects with two parent places in the dsg view: [(5692549928996306956, [8070450532247930874, 8070450532247956943]), (5692549928996307021, [8070450532247930856, 8070450532247956798]), (5692549928996307073, [8070450532247942503, 8070450532247944944]), (5692549928996307105, [8070450532247946157, 8070450532247946584])]
+  snapshot adapter keeps one parent for them: [1, 1, 1, 1]
+  has_parent() true for 105 of 109 objects; parents()-count histogram {np.int64(1): np.int64(105), np.int64(2): np.int64(4)}
+  has_parent() is True exactly when there is one parent: True

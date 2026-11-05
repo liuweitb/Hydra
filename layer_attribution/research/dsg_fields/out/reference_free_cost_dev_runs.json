@@ -1,0 +1,348 @@
+{
+ "n_runs": 28,
+ "skipped": {
+  "not development split (test, or still running without manifest)": 6,
+  "development, json missing": 0,
+  "development, status not ok / still being written": 0
+ },
+ "quantities": {
+  "mesh.label_unknown_frac": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.5,
+   "ms_max": 0.8,
+   "errors": []
+  },
+  "mesh.label_histogram": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 2.45,
+   "ms_max": 4.9,
+   "errors": []
+  },
+  "mesh.edge_label_flip_rate": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 8.05,
+   "ms_max": 14.3,
+   "errors": []
+  },
+  "mesh.label_normal_consistency": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 162.3,
+   "ms_max": 252.4,
+   "errors": []
+  },
+  "mesh.boundary_edge_frac": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 3.75,
+   "ms_max": 7.1,
+   "errors": []
+  },
+  "mesh.connected_components": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 57.95,
+   "ms_max": 109.5,
+   "errors": []
+  },
+  "mesh.edge_length_and_area": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 134.3,
+   "ms_max": 219.5,
+   "errors": []
+  },
+  "mesh.surface_thickness": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 333.35,
+   "ms_max": 530.3,
+   "errors": []
+  },
+  "mesh.floor_label_height_modes": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 7.55,
+   "ms_max": 16.0,
+   "errors": []
+  },
+  "objects.coincident_same_label": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.3,
+   "ms_max": 4.6,
+   "errors": []
+  },
+  "objects.bbox_size_extremes": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.3,
+   "ms_max": 0.7,
+   "errors": []
+  },
+  "objects.mesh_label_purity": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 1.35,
+   "ms_max": 3.5,
+   "errors": []
+  },
+  "objects.bbox_vs_connected_vertices": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 4.05,
+   "ms_max": 6.6,
+   "errors": []
+  },
+  "objects.orphans_and_multi_parent": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.5,
+   "ms_max": 0.8,
+   "errors": []
+  },
+  "objects.height_above_floor": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 6.8,
+   "ms_max": 14.5,
+   "errors": []
+  },
+  "objects.parent_place_distance": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.3,
+   "ms_max": 1.6,
+   "errors": []
+  },
+  "objects.nearest_place_room_agreement": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.6,
+   "ms_max": 2.2,
+   "errors": []
+  },
+  "places.clearance_vs_mesh": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 13.7,
+   "ms_max": 17.7,
+   "errors": []
+  },
+  "places.radius_vs_basis_points": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.3,
+   "ms_max": 0.7,
+   "errors": []
+  },
+  "places.basis_points_on_mesh": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 7.25,
+   "ms_max": 11.9,
+   "errors": []
+  },
+  "places.graph_components_and_degree": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.1,
+   "ms_max": 0.2,
+   "errors": []
+  },
+  "places.edge_weight_vs_endpoint_radius": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.2,
+   "ms_max": 0.2,
+   "errors": []
+  },
+  "places.edges_through_geometry": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 126.15,
+   "ms_max": 167.0,
+   "errors": []
+  },
+  "places.near_duplicates": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.4,
+   "ms_max": 0.6,
+   "errors": []
+  },
+  "places.centers_inside_object_bbox": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 4.2,
+   "ms_max": 7.5,
+   "errors": []
+  },
+  "places.trajectory_coverage": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 1.0,
+   "ms_max": 5.3,
+   "errors": []
+  },
+  "mplaces.mesh_label_purity_and_coverage": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 130.95,
+   "ms_max": 312.0,
+   "errors": []
+  },
+  "mplaces.graph_components_and_height": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.8500000000000001,
+   "ms_max": 2.5,
+   "errors": []
+  },
+  "rooms.contiguity": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.6,
+   "ms_max": 0.8,
+   "errors": []
+  },
+  "rooms.orphan_places_and_objects": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.1,
+   "ms_max": 0.1,
+   "errors": []
+  },
+  "rooms.adjacency_vs_place_edges": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.1,
+   "ms_max": 0.2,
+   "errors": []
+  },
+  "rooms.size_and_overlap": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.6,
+   "ms_max": 0.8,
+   "errors": []
+  },
+  "rooms.pos_vs_children_centroid": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.3,
+   "ms_max": 0.4,
+   "errors": []
+  },
+  "rooms.objectless_rooms": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.0,
+   "ms_max": 0.0,
+   "errors": []
+  },
+  "building.pos_vs_rooms": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.0,
+   "ms_max": 0.1,
+   "errors": []
+  },
+  "traj.timing": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.1,
+   "ms_max": 0.1,
+   "errors": []
+  },
+  "traj.step_and_smoothness": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.5,
+   "ms_max": 0.8,
+   "errors": []
+  },
+  "traj.height_above_floor": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 86.0,
+   "ms_max": 173.1,
+   "errors": []
+  },
+  "traj.clearance_vs_mesh": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 13.600000000000001,
+   "ms_max": 21.5,
+   "errors": []
+  },
+  "files.layer_statistics_final_rows": {
+   "ok": 28,
+   "missing": 0,
+   "error": 0,
+   "ms_median": 0.9,
+   "ms_max": 4.3,
+   "errors": []
+  }
+ },
+ "shared_structures_ms": {
+  "mesh_edges": {
+   "median": 200.64999999999998,
+   "max": 306.5
+  },
+  "floor_kd": {
+   "median": 71.35,
+   "max": 125.9
+  },
+  "mesh_kd": {
+   "median": 128.0,
+   "max": 229.4
+  },
+  "place_cc": {
+   "median": 0.5,
+   "max": 0.7
+  }
+ }
+}

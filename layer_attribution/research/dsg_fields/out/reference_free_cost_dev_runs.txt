@@ -1,0 +1,43 @@
+﻿28 development runs; skipped (counts): {'not development split (test, or still running without manifest)': 6, 'development, json missing': 0, 'development, status not ok / still being written': 0}
+quantity                                              ok  n/a  err  median ms   max ms
+mesh.label_unknown_frac                               28    0    0        0.5      0.8
+mesh.label_histogram                                  28    0    0        2.5      4.9
+mesh.edge_label_flip_rate                             28    0    0        8.1     14.3
+mesh.label_normal_consistency                         28    0    0      162.3    252.4
+mesh.boundary_edge_frac                               28    0    0        3.8      7.1
+mesh.connected_components                             28    0    0       58.0    109.5
+mesh.edge_length_and_area                             28    0    0      134.3    219.5
+mesh.surface_thickness                                28    0    0      333.4    530.3
+mesh.floor_label_height_modes                         28    0    0        7.5     16.0
+objects.coincident_same_label                         28    0    0        0.3      4.6
+objects.bbox_size_extremes                            28    0    0        0.3      0.7
+objects.mesh_label_purity                             28    0    0        1.4      3.5
+objects.bbox_vs_connected_vertices                    28    0    0        4.0      6.6
+objects.orphans_and_multi_parent                      28    0    0        0.5      0.8
+objects.height_above_floor                            28    0    0        6.8     14.5
+objects.parent_place_distance                         28    0    0        0.3      1.6
+objects.nearest_place_room_agreement                  28    0    0        0.6      2.2
+places.clearance_vs_mesh                              28    0    0       13.7     17.7
+places.radius_vs_basis_points                         28    0    0        0.3      0.7
+places.basis_points_on_mesh                           28    0    0        7.2     11.9
+places.graph_components_and_degree                    28    0    0        0.1      0.2
+places.edge_weight_vs_endpoint_radius                 28    0    0        0.2      0.2
+places.edges_through_geometry                         28    0    0      126.2    167.0
+places.near_duplicates                                28    0    0        0.4      0.6
+places.centers_inside_object_bbox                     28    0    0        4.2      7.5
+places.trajectory_coverage                            28    0    0        1.0      5.3
+mplaces.mesh_label_purity_and_coverage                28    0    0      130.9    312.0
+mplaces.graph_components_and_height                   28    0    0        0.9      2.5
+rooms.contiguity                                      28    0    0        0.6      0.8
+rooms.orphan_places_and_objects                       28    0    0        0.1      0.1
+rooms.adjacency_vs_place_edges                        28    0    0        0.1      0.2
+rooms.size_and_overlap                                28    0    0        0.6      0.8
+rooms.pos_vs_children_centroid                        28    0    0        0.3      0.4
+rooms.objectless_rooms                                28    0    0        0.0      0.0
+building.pos_vs_rooms                                 28    0    0        0.0      0.1
+traj.timing                                           28    0    0        0.1      0.1
+traj.step_and_smoothness                              28    0    0        0.5      0.8
+traj.height_above_floor                               28    0    0       86.0    173.1
+traj.clearance_vs_mesh                                28    0    0       13.6     21.5
+files.layer_statistics_final_rows                     28    0    0        0.9      4.3
+shared structures median/max ms: {'mesh_edges': (201, 306), 'floor_kd': (71, 126), 'mesh_kd': (128, 229), 'place_cc': (0, 1)}

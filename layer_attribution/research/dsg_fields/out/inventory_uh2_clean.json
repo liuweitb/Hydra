@@ -1,0 +1,1378 @@
+{
+ "path": "/home/hydra/runs/uh2/uh2_clean/backend/dsg_with_mesh.json",
+ "layers": {
+  "2": {
+   "name": "OBJECTS",
+   "n_nodes": 109,
+   "class": {
+    "ObjectNodeAttributes": 109
+   },
+   "fields": [
+    {
+     "field": "bounding_box",
+     "n": 109,
+     "n_populated": 109,
+     "kind": "BoundingBox",
+     "example": "{pos: [-14.9578, 22.1933, 1.48119], dim: [1.11562, 0.9799, 0.88702]}",
+     "types": {
+      "AABB": 109
+     },
+     "dims_min": [
+      0.0010000000474974513,
+      0.004000000189989805,
+      0.19099999964237213
+     ],
+     "dims_max": [
+      2.450000047683716,
+      3.572000026702881,
+      1.9630000591278076
+     ],
+     "volume_min_max_median": [
+      0.00017642983584664762,
+      4.655255317687988,
+      0.29739582538604736
+     ],
+     "n_rotated": 0
+    },
+    {
+     "field": "color",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([0, 0, 0], dtype=uint8)",
+     "shapes": {
+      "(3,)": 109
+     },
+     "min_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "max_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "field": "is_active",
+     "n": 109,
+     "n_populated": 1,
+     "kind": "bool",
+     "example": "True",
+     "min": 0.0,
+     "max": 1.0,
+     "mean": 0.009174311926605505,
+     "n_distinct": 2
+    },
+    {
+     "field": "is_predicted",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "last_update_time_ns",
+     "n": 109,
+     "n_populated": 109,
+     "kind": "int",
+     "example": "35900000000",
+     "min": 27599999999.0,
+     "max": 505700020000.0,
+     "mean": 216992675779.25687,
+     "n_distinct": 89
+    },
+    {
+     "field": "mesh_connections",
+     "n": 109,
+     "n_populated": 109,
+     "kind": "list",
+     "example": "[1168, 1169, 1170, 1171, 1172, 1173, 1174, 1199, 1211, 1229, 1232, 1245, 1247, 1248, 1255, 1278, 1307, 1310...",
+     "len_min": 46,
+     "len_mean": 249.348623853211,
+     "len_max": 1152,
+     "len_total": 27179,
+     "elem_min": 6,
+     "elem_max": 448053
+    },
+    {
+     "field": "name",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "str",
+     "example": "''",
+     "n_distinct": 1,
+     "top": [
+      [
+       "",
+       109
+      ]
+     ]
+    },
+    {
+     "field": "position",
+     "n": 109,
+     "n_populated": 109,
+     "kind": "ndarray",
+     "example": "array([-15.08696512, 22.30220546, 1.49343569])",
+     "shapes": {
+      "(3,)": 109
+     },
+     "min_per_axis": [
+      -16.9415,
+      4.7721,
+      1.2168
+     ],
+     "max_per_axis": [
+      28.0549,
+      47.146,
+      3.2481
+     ]
+    },
+    {
+     "field": "registered",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "semantic_feature",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], shape=(0, 0), dtype=float32)",
+     "shapes": {
+      "(0, 0)": 109
+     }
+    },
+    {
+     "field": "semantic_label",
+     "n": 109,
+     "n_populated": 109,
+     "kind": "int",
+     "example": "7",
+     "min": 5.0,
+     "max": 18.0,
+     "mean": 10.110091743119266,
+     "n_distinct": 6
+    },
+    {
+     "field": "world_R_object",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "Quaternion",
+     "example": "Quaternion<w=1, x=0, y=0, z=0>",
+     "n_identity": 109
+    },
+    {
+     "field": "metadata",
+     "n": 109,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}"
+    }
+   ],
+   "parents_hist": {
+    "1": 105,
+    "2": 4
+   },
+   "children_minmeanmax": [
+    0,
+    0.0,
+    0
+   ],
+   "siblings_minmeanmax": [
+    0,
+    0.0,
+    0
+   ]
+  },
+  "2[97]": {
+   "name": "AGENTS",
+   "n_nodes": 628,
+   "class": {
+    "AgentNodeAttributes": 628
+   },
+   "fields": [
+    {
+     "field": "dbow_ids",
+     "n": 628,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], dtype=uint32)",
+     "shapes": {
+      "(0,)": 628
+     }
+    },
+    {
+     "field": "dbow_values",
+     "n": 628,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], dtype=float32)",
+     "shapes": {
+      "(0,)": 628
+     }
+    },
+    {
+     "field": "external_key",
+     "n": 628,
+     "n_populated": 628,
+     "kind": "int",
+     "example": "6989586621679009792",
+     "min": 6.98958662167901e+18,
+     "max": 6.989586621679011e+18,
+     "mean": 6.98958662167901e+18,
+     "n_distinct": 2
+    },
+    {
+     "field": "is_active",
+     "n": 628,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "is_predicted",
+     "n": 628,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "last_update_time_ns",
+     "n": 628,
+     "n_populated": 0,
+     "kind": "int",
+     "example": "0",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "position",
+     "n": 628,
+     "n_populated": 628,
+     "kind": "ndarray",
+     "example": "array([-19.84989264, 24.17657912, 2.49224822])",
+     "shapes": {
+      "(3,)": 628
+     },
+     "min_per_axis": [
+      -19.8727,
+      6.1559,
+      2.4896
+     ],
+     "max_per_axis": [
+      26.0396,
+      45.1787,
+      2.5224
+     ]
+    },
+    {
+     "field": "timestamp",
+     "n": 628,
+     "n_populated": 627,
+     "kind": "timedelta",
+     "example": "datetime.timedelta(seconds=2, microseconds=250000)",
+     "min": 0.0,
+     "max": 501.100019,
+     "n_distinct": 628
+    },
+    {
+     "field": "world_R_body",
+     "n": 628,
+     "n_populated": 628,
+     "kind": "Quaternion",
+     "example": "Quaternion<w=-0.499889, x=0.510429, y=-0.500111, z=0.489349>",
+     "n_identity": 0
+    },
+    {
+     "field": "metadata",
+     "n": 628,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}"
+    }
+   ],
+   "parents_hist": {
+    "1": 627,
+    "0": 1
+   },
+   "children_minmeanmax": [
+    0,
+    0.0,
+    0
+   ],
+   "siblings_minmeanmax": [
+    1,
+    1.9968152866242037,
+    2
+   ]
+  },
+  "3": {
+   "name": "PLACES",
+   "n_nodes": 1068,
+   "class": {
+    "PlaceNodeAttributes": 1068
+   },
+   "fields": [
+    {
+     "field": "active_frontier",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "anti_frontier",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "bounding_box",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "BoundingBox",
+     "example": "invalid",
+     "types": {
+      "INVALID": 1068
+     }
+    },
+    {
+     "field": "color",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([0, 0, 0], dtype=uint8)",
+     "shapes": {
+      "(3,)": 1068
+     },
+     "min_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "max_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "field": "deformation_connections",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "list",
+     "example": "[]",
+     "len_min": 0,
+     "len_mean": 0.0,
+     "len_max": 0,
+     "len_total": 0
+    },
+    {
+     "field": "distance",
+     "n": 1068,
+     "n_populated": 1068,
+     "kind": "float",
+     "example": "0.748331606388092",
+     "min": 0.4000000059604645,
+     "max": 3.006659984588623,
+     "mean": 0.8555296258198635,
+     "n_distinct": 443
+    },
+    {
+     "field": "frontier_scale",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([0., 0., 0.])",
+     "shapes": {
+      "(3,)": 1068
+     },
+     "min_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "max_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "field": "is_active",
+     "n": 1068,
+     "n_populated": 16,
+     "kind": "bool",
+     "example": "True",
+     "min": 0.0,
+     "max": 1.0,
+     "mean": 0.0149812734082397,
+     "n_distinct": 2
+    },
+    {
+     "field": "is_predicted",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "last_update_time_ns",
+     "n": 1068,
+     "n_populated": 1068,
+     "kind": "int",
+     "example": "33050000000",
+     "min": 22900000000.0,
+     "max": 505700020000.0,
+     "mean": 253983256815.98972,
+     "n_distinct": 502
+    },
+    {
+     "field": "mesh_vertex_labels",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "list",
+     "example": "[]",
+     "len_min": 0,
+     "len_mean": 0.0,
+     "len_max": 0,
+     "len_total": 0
+    },
+    {
+     "field": "name",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "str",
+     "example": "''",
+     "n_distinct": 1,
+     "top": [
+      [
+       "",
+       1068
+      ]
+     ]
+    },
+    {
+     "field": "need_cleanup",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "num_basis_points",
+     "n": 1068,
+     "n_populated": 1068,
+     "kind": "int",
+     "example": "3",
+     "min": 2.0,
+     "max": 5.0,
+     "mean": 2.613295880149813,
+     "n_distinct": 4
+    },
+    {
+     "field": "num_frontier_voxels",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "int",
+     "example": "0",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "orientation",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "Quaternion",
+     "example": "Quaternion<w=1, x=0, y=0, z=0>",
+     "n_identity": 1068
+    },
+    {
+     "field": "pcl_mesh_connections",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "list",
+     "example": "[]",
+     "len_min": 0,
+     "len_mean": 0.0,
+     "len_max": 0,
+     "len_total": 0
+    },
+    {
+     "field": "position",
+     "n": 1068,
+     "n_populated": 1068,
+     "kind": "ndarray",
+     "example": "array([-14.30000019, 22.30000114, 2.9000001 ])",
+     "shapes": {
+      "(3,)": 1068
+     },
+     "min_per_axis": [
+      -19.3,
+      4.1,
+      1.1
+     ],
+     "max_per_axis": [
+      30.9,
+      47.3,
+      3.9
+     ]
+    },
+    {
+     "field": "real_place",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "True",
+     "min": 1.0,
+     "max": 1.0,
+     "mean": 1.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "semantic_feature",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], shape=(0, 0), dtype=float32)",
+     "shapes": {
+      "(0, 0)": 1068
+     }
+    },
+    {
+     "field": "semantic_label",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "int",
+     "example": "4294967295",
+     "min": 4294967295.0,
+     "max": 4294967295.0,
+     "mean": 4294967295.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "voxblox_mesh_connections",
+     "n": 1068,
+     "n_populated": 1068,
+     "kind": "list",
+     "example": "[VertexInfo<block=[-1475826464, 32230, -1309738368], pos=[-13.9, 22.1, 2.3], label=n/a>, VertexInfo<block=[...",
+     "len_min": 1,
+     "len_mean": 2.613295880149813,
+     "len_max": 5,
+     "len_total": 2791
+    },
+    {
+     "field": "metadata",
+     "n": 1068,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}"
+    }
+   ],
+   "parents_hist": {
+    "1": 1068
+   },
+   "children_minmeanmax": [
+    0,
+    0.6928838951310862,
+    13
+   ],
+   "siblings_minmeanmax": [
+    1,
+    7.730337078651686,
+    42
+   ]
+  },
+  "3[1]": {
+   "name": "MESH_PLACES",
+   "n_nodes": 2774,
+   "class": {
+    "Place2dNodeAttributes": 2774
+   },
+   "fields": [
+    {
+     "field": "boundary",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "list",
+     "example": "[array([-15.64999962, 22.35000038, 1.00272441]), array([-15.84999943, 22.35000038, 1.00284255]), array([-15...",
+     "len_min": 2,
+     "len_mean": 7.126532083633742,
+     "len_max": 15,
+     "len_total": 19769
+    },
+    {
+     "field": "bounding_box",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "BoundingBox",
+     "example": "invalid",
+     "types": {
+      "INVALID": 2774
+     }
+    },
+    {
+     "field": "color",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([0, 0, 0], dtype=uint8)",
+     "shapes": {
+      "(3,)": 2774
+     },
+     "min_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "max_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "field": "deformation_connections",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "list",
+     "example": "[]",
+     "len_min": 0,
+     "len_mean": 0.0,
+     "len_max": 0,
+     "len_total": 0
+    },
+    {
+     "field": "ellipse_centroid",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "ndarray",
+     "example": "array([-15.85000038, 22.04999733, 1.0025785 ])",
+     "shapes": {
+      "(3,)": 2774
+     },
+     "min_per_axis": [
+      -16.9,
+      4.6412,
+      1.002
+     ],
+     "max_per_axis": [
+      30.3212,
+      47.0,
+      4.0074
+     ]
+    },
+    {
+     "field": "ellipse_matrix_compress",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "ndarray",
+     "example": "array([[12.49990463, -0. ], [-0. , 5.55558381]])",
+     "shapes": {
+      "(2, 2)": 2774
+     }
+    },
+    {
+     "field": "ellipse_matrix_expand",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "ndarray",
+     "example": "array([[0.28284379, 0. ], [0. , 0.42426299]])",
+     "shapes": {
+      "(2, 2)": 2774
+     }
+    },
+    {
+     "field": "is_active",
+     "n": 2774,
+     "n_populated": 2,
+     "kind": "bool",
+     "example": "True",
+     "min": 0.0,
+     "max": 1.0,
+     "mean": 0.0007209805335255948,
+     "n_distinct": 2
+    },
+    {
+     "field": "is_predicted",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "last_update_time_ns",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "int",
+     "example": "0",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "mesh_vertex_labels",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "list",
+     "example": "[]",
+     "len_min": 0,
+     "len_mean": 0.0,
+     "len_max": 0,
+     "len_total": 0
+    },
+    {
+     "field": "name",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "str",
+     "example": "''",
+     "n_distinct": 1,
+     "top": [
+      [
+       "",
+       2774
+      ]
+     ]
+    },
+    {
+     "field": "pcl_boundary_connections",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "list",
+     "example": "[439803, 5023, 439294, 193, 1819]",
+     "len_min": 2,
+     "len_mean": 7.126532083633742,
+     "len_max": 15,
+     "len_total": 19769,
+     "elem_min": 8,
+     "elem_max": 448039
+    },
+    {
+     "field": "pcl_mesh_connections",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "list",
+     "example": "[1, 41, 43, 49, 153, 193, 1427, 1434, 1507, 1718, 1751, 1758, 1781, 1796, 1797, 1798, 1817, 1819, 1820, 182...",
+     "len_min": 3,
+     "len_mean": 85.84967555875991,
+     "len_max": 340,
+     "len_total": 238147,
+     "elem_min": 1,
+     "elem_max": 448061
+    },
+    {
+     "field": "position",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "ndarray",
+     "example": "array([-15.82187653, 22.0093708 , 1.0025785 ])",
+     "shapes": {
+      "(3,)": 2774
+     },
+     "min_per_axis": [
+      -16.9399,
+      4.6855,
+      1.002
+     ],
+     "max_per_axis": [
+      30.2958,
+      47.0086,
+      4.0074
+     ]
+    },
+    {
+     "field": "semantic_feature",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], shape=(0, 0), dtype=float32)",
+     "shapes": {
+      "(0, 0)": 2774
+     }
+    },
+    {
+     "field": "semantic_label",
+     "n": 2774,
+     "n_populated": 2774,
+     "kind": "int",
+     "example": "3",
+     "min": 3.0,
+     "max": 15.0,
+     "mean": 3.0086517664023074,
+     "n_distinct": 2
+    },
+    {
+     "field": "voxblox_mesh_connections",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "list",
+     "example": "[]",
+     "len_min": 0,
+     "len_mean": 0.0,
+     "len_max": 0,
+     "len_total": 0
+    },
+    {
+     "field": "metadata",
+     "n": 2774,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}"
+    }
+   ],
+   "parents_hist": {
+    "0": 2774
+   },
+   "children_minmeanmax": [
+    0,
+    0.0,
+    0
+   ],
+   "siblings_minmeanmax": [
+    0,
+    5.051910598413843,
+    18
+   ]
+  },
+  "4": {
+   "name": "ROOMS",
+   "n_nodes": 8,
+   "class": {
+    "RoomNodeAttributes": 8
+   },
+   "fields": [
+    {
+     "field": "bounding_box",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "BoundingBox",
+     "example": "invalid",
+     "types": {
+      "INVALID": 8
+     }
+    },
+    {
+     "field": "color",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([0, 0, 0], dtype=uint8)",
+     "shapes": {
+      "(3,)": 8
+     },
+     "min_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "max_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "field": "is_active",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "is_predicted",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "last_update_time_ns",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "int",
+     "example": "0",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "name",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "str",
+     "example": "''",
+     "n_distinct": 1,
+     "top": [
+      [
+       "",
+       8
+      ]
+     ]
+    },
+    {
+     "field": "position",
+     "n": 8,
+     "n_populated": 8,
+     "kind": "ndarray",
+     "example": "array([-4.31881248, 21.53413407, 1.89859837])",
+     "shapes": {
+      "(3,)": 8
+     },
+     "min_per_axis": [
+      -11.297,
+      14.9486,
+      1.8986
+     ],
+     "max_per_axis": [
+      23.8016,
+      43.9,
+      2.3778
+     ]
+    },
+    {
+     "field": "semantic_class_probabilities",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}",
+     "len_max": 0
+    },
+    {
+     "field": "semantic_feature",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], shape=(0, 0), dtype=float32)",
+     "shapes": {
+      "(0, 0)": 8
+     }
+    },
+    {
+     "field": "semantic_label",
+     "n": 8,
+     "n_populated": 8,
+     "kind": "int",
+     "example": "0",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "metadata",
+     "n": 8,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}"
+    }
+   ],
+   "parents_hist": {
+    "0": 8
+   },
+   "children_minmeanmax": [
+    44,
+    133.5,
+    316
+   ],
+   "siblings_minmeanmax": [
+    1,
+    2.0,
+    4
+   ]
+  },
+  "5": {
+   "name": "BUILDINGS",
+   "n_nodes": 1,
+   "class": {
+    "SemanticNodeAttributes": 1
+   },
+   "fields": [
+    {
+     "field": "bounding_box",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "BoundingBox",
+     "example": "invalid",
+     "types": {
+      "INVALID": 1
+     }
+    },
+    {
+     "field": "color",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([0, 0, 0], dtype=uint8)",
+     "shapes": {
+      "(3,)": 1
+     },
+     "min_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "max_per_axis": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "field": "is_active",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "is_predicted",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "bool",
+     "example": "False",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "last_update_time_ns",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "int",
+     "example": "0",
+     "min": 0.0,
+     "max": 0.0,
+     "mean": 0.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "name",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "str",
+     "example": "''",
+     "n_distinct": 1,
+     "top": [
+      [
+       "",
+       1
+      ]
+     ]
+    },
+    {
+     "field": "position",
+     "n": 1,
+     "n_populated": 1,
+     "kind": "ndarray",
+     "example": "array([ 4.97049634, 27.68908189, 2.27271719])",
+     "shapes": {
+      "(3,)": 1
+     },
+     "min_per_axis": [
+      4.9705,
+      27.6891,
+      2.2727
+     ],
+     "max_per_axis": [
+      4.9705,
+      27.6891,
+      2.2727
+     ]
+    },
+    {
+     "field": "semantic_feature",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "ndarray",
+     "example": "array([], shape=(0, 0), dtype=float32)",
+     "shapes": {
+      "(0, 0)": 1
+     }
+    },
+    {
+     "field": "semantic_label",
+     "n": 1,
+     "n_populated": 1,
+     "kind": "int",
+     "example": "22",
+     "min": 22.0,
+     "max": 22.0,
+     "mean": 22.0,
+     "n_distinct": 1
+    },
+    {
+     "field": "metadata",
+     "n": 1,
+     "n_populated": 0,
+     "kind": "dict",
+     "example": "{}"
+    }
+   ],
+   "parents_hist": {
+    "0": 1
+   },
+   "children_minmeanmax": [
+    0,
+    0.0,
+    0
+   ],
+   "siblings_minmeanmax": [
+    0,
+    0.0,
+    0
+   ]
+  }
+ },
+ "edges": {
+  "2 - 3": {
+   "count": 113,
+   "kind": "interlayer (parent/child)",
+   "stored_orders": {
+    "3->2": 109,
+    "2->3": 4
+   }
+  },
+  "2[97] - 2[97]": {
+   "count": 627,
+   "kind": "intralayer (sibling)",
+   "stored_orders": {
+    "2[97]->2[97]": 627
+   }
+  },
+  "2[97] - 3": {
+   "count": 627,
+   "kind": "interlayer (parent/child)",
+   "stored_orders": {
+    "3->2[97]": 627
+   }
+  },
+  "3 - 3": {
+   "count": 4128,
+   "kind": "intralayer (sibling)",
+   "stored_orders": {
+    "3->3": 4128
+   }
+  },
+  "3 - 4": {
+   "count": 1068,
+   "kind": "interlayer (parent/child)",
+   "stored_orders": {
+    "4->3": 1068
+   }
+  },
+  "3[1] - 3[1]": {
+   "count": 7007,
+   "kind": "intralayer (sibling)",
+   "stored_orders": {
+    "3[1]->3[1]": 7007
+   }
+  },
+  "4 - 4": {
+   "count": 8,
+   "kind": "intralayer (sibling)",
+   "stored_orders": {
+    "4->4": 8
+   }
+  }
+ },
+ "mesh": {
+  "num_vertices": 448062,
+  "num_faces": 662823,
+  "label_hist": {
+   "19": 93034,
+   "3": 246419,
+   "7": 5586,
+   "0": 16149,
+   "14": 1079,
+   "4": 7407,
+   "12": 2282,
+   "13": 3336,
+   "1": 15827,
+   "18": 3818,
+   "15": 320,
+   "9": 11833,
+   "10": 6053,
+   "17": 13285,
+   "16": 7933,
+   "11": 4982,
+   "2": 1696,
+   "5": 7023
+  },
+  "n_first_seen_nonzero": 445469,
+  "ts_min": 8250000000,
+  "ts_max": 505700020000,
+  "n_degenerate_faces": 0
+ },
+ "load_seconds": 5.12,
+ "load_peak_rss_mb": 1060.4,
+ "json_schema": {
+  "ObjectNodeAttributes": [
+   "bounding_box",
+   "color",
+   "is_active",
+   "is_predicted",
+   "last_update_time_ns",
+   "mesh_connections",
+   "metadata",
+   "name",
+   "position",
+   "registered",
+   "semantic_feature",
+   "semantic_label",
+   "type",
+   "world_R_object"
+  ],
+  "PlaceNodeAttributes": [
+   "active_frontier",
+   "anti_frontier",
+   "bounding_box",
+   "color",
+   "deformation_connections",
+   "distance",
+   "frontier_scale",
+   "is_active",
+   "is_predicted",
+   "last_update_time_ns",
+   "mesh_vertex_labels",
+   "metadata",
+   "name",
+   "need_cleanup",
+   "num_basis_points",
+   "num_frontier_voxels",
+   "orientation",
+   "pcl_mesh_connections",
+   "position",
+   "real_place",
+   "semantic_feature",
+   "semantic_label",
+   "type",
+   "voxblox_mesh_connections"
+  ],
+  "RoomNodeAttributes": [
+   "bounding_box",
+   "color",
+   "is_active",
+   "is_predicted",
+   "last_update_time_ns",
+   "metadata",
+   "name",
+   "position",
+   "semantic_class_probabilities",
+   "semantic_feature",
+   "semantic_label",
+   "type"
+  ],
+  "SemanticNodeAttributes": [
+   "bounding_box",
+   "color",
+   "is_active",
+   "is_predicted",
+   "last_update_time_ns",
+   "metadata",
+   "name",
+   "position",
+   "semantic_feature",
+   "semantic_label",
+   "type"
+  ],
+  "AgentNodeAttributes": [
+   "dbow_ids",
+   "dbow_values",
+   "external_key",
+   "is_active",
+   "is_predicted",
+   "last_update_time_ns",
+   "metadata",
+   "position",
+   "timestamp",
+   "type",
+   "world_R_body"
+  ],
+  "Place2dNodeAttributes": [
+   "boundary",
+   "bounding_box",
+   "color",
+   "deformation_connections",
+   "ellipse_centroid",
+   "ellipse_matrix_compress",
+   "ellipse_matrix_expand",
+   "has_active_mesh_indices",
+   "is_active",
+   "is_predicted",
+   "last_update_time_ns",
+   "mesh_vertex_labels",
+   "metadata",
+   "name",
+   "need_cleanup_splitting",
+   "pcl_boundary_connections",
+   "pcl_mesh_connections",
+   "position",
+   "semantic_feature",
+   "semantic_label",
+   "type",
+   "voxblox_mesh_connections"
+  ]
+ }
+}

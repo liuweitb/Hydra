@@ -1,0 +1,3180 @@
+{
+ "protocol": {
+  "dataset": "D:/hydra_work/data/uhumans2_office_mp3d, clean uHumans2 office, 2077 frames",
+  "truncated_runs": "first 800 frames (--max-steps 800), clean data, one config key changed via make_config_dir()",
+  "parallelism": "at most 2 Hydra jobs, pinned to cores 8,9, run_batch.sh",
+  "reference": "tmp_cfg_ref (severity-0 config dir); tmp_cfg_ref_default (no --config-path) is identical in every layer",
+  "layer_identity": "exact equality of sorted node rows (position, label, size/distance) and of parent-edge rows per layer; mesh vertices+labels",
+  "query_test": "analyze_runs.py: object of class c in room R, gates rooms 3 m, query 1 m (58 queries truncated, 105 full length)"
+ },
+ "reference": {
+  "name": "tmp_cfg_ref",
+  "counts": {
+   "objects": 58,
+   "places": 515,
+   "mesh_places": 1423,
+   "rooms": 5,
+   "buildings": 1,
+   "mesh_vertices": 167222
+  },
+  "room_sizes": [
+   168,
+   131,
+   118,
+   72,
+   26
+  ],
+  "log": {
+   "n_error_lines": 0,
+   "errors": [],
+   "n_no_rooms": 0,
+   "last_places_for_rooms": 515,
+   "last_window_idx": [
+    853,
+    1588
+   ],
+   "last_best": {
+    "threshold_m": 0.848528,
+    "components": 5
+   },
+   "steps_logged": 800
+  },
+  "hydra": {
+   "rc": 0,
+   "seconds": 265
+  }
+ },
+ "runs": {
+  "tmp_cfg_ref_default": {
+   "fault": "none",
+   "severity": null,
+   "hydra": {
+    "rc": 0,
+    "seconds": 265
+   },
+   "params": {},
+   "effective_config_echo": null,
+   "layers_changed_exact": [],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": null,
+   "expected_first_layer": null,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_ref": {
+   "fault": "rooms_min_size",
+   "severity": 0.0,
+   "hydra": {
+    "rc": 0,
+    "seconds": 265
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.min_room_size": 10
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.min_room_size": {
+     "expected": 10,
+     "echoed": "10",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": null,
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": false,
+   "first_layer_matches_expected": false,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_objects_min_size_s050": {
+   "fault": "objects_min_size",
+   "severity": 0.5,
+   "hydra": {
+    "rc": 0,
+    "seconds": 272
+   },
+   "params": {
+    "frontend.objects.min_cluster_size": 200
+   },
+   "effective_config_echo": {
+    "frontend.objects.min_cluster_size": {
+     "expected": 200,
+     "echoed": "200",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "objects"
+   ],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": "objects",
+   "expected_first_layer": "objects",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     18
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 18,
+    "objects_found": 0.31,
+    "objects_found_with_label": 0.31,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 0.31,
+    "query_status": {
+     "ok": 18,
+     "wrong_object": 24,
+     "target_missing": 16,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_objects_min_size_s100": {
+   "fault": "objects_min_size",
+   "severity": 1.0,
+   "hydra": {
+    "rc": 0,
+    "seconds": 273
+   },
+   "params": {
+    "frontend.objects.min_cluster_size": 1000
+   },
+   "effective_config_echo": {
+    "frontend.objects.min_cluster_size": {
+     "expected": 1000,
+     "echoed": "1000",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "objects"
+   ],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": "objects",
+   "expected_first_layer": "objects",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     0
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 0,
+    "objects_found": 0.0,
+    "objects_found_with_label": 0.0,
+    "objects_precision": 0.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 0.0,
+    "query_status": {
+     "ok": 0,
+     "wrong_object": 0,
+     "target_missing": 58,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_objects_tol_merge_s050": {
+   "fault": "objects_tol_merge",
+   "severity": 0.5,
+   "hydra": {
+    "rc": null,
+    "note": "no status line; dsg_with_mesh.json written, 800 steps logged"
+   },
+   "params": {
+    "frontend.objects.cluster_tolerance": 0.6124
+   },
+   "effective_config_echo": {
+    "frontend.objects.cluster_tolerance": {
+     "expected": 0.6124,
+     "echoed": "0.6124",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "objects"
+   ],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": "objects",
+   "expected_first_layer": "objects",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     53
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 53,
+    "objects_found": 0.879,
+    "objects_found_with_label": 0.879,
+    "objects_precision": 0.962,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 0.948,
+    "query_status": {
+     "ok": 55,
+     "wrong_object": 3,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_objects_tol_merge_s100": {
+   "fault": "objects_tol_merge",
+   "severity": 1.0,
+   "hydra": {
+    "rc": null,
+    "note": "no status line; dsg_with_mesh.json written, 800 steps logged"
+   },
+   "params": {
+    "frontend.objects.cluster_tolerance": 1.5
+   },
+   "effective_config_echo": {
+    "frontend.objects.cluster_tolerance": {
+     "expected": 1.5,
+     "echoed": "1.5",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "objects"
+   ],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": "objects",
+   "expected_first_layer": "objects",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     47
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 47,
+    "objects_found": 0.759,
+    "objects_found_with_label": 0.759,
+    "objects_precision": 0.936,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 0.845,
+    "query_status": {
+     "ok": 49,
+     "wrong_object": 9,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_rooms_min_size_s050": {
+   "fault": "rooms_min_size",
+   "severity": 0.5,
+   "hydra": {
+    "rc": 0,
+    "seconds": 346
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.min_room_size": 63
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.min_room_size": {
+     "expected": 63,
+     "echoed": "63",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "rooms",
+    "buildings"
+   ],
+   "parent_edges_changed_only": [
+    "places"
+   ],
+   "first_changed_layer": "rooms",
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     4
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 4,
+    "rooms_matched": 0.8,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_rooms_min_size_s100": {
+   "fault": "rooms_min_size",
+   "severity": 1.0,
+   "hydra": {
+    "rc": 0,
+    "seconds": 342
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.min_room_size": 400
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.min_room_size": {
+     "expected": 400,
+     "echoed": "400",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "rooms",
+    "buildings"
+   ],
+   "parent_edges_changed_only": [
+    "places"
+   ],
+   "first_changed_layer": "rooms",
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     0
+    ],
+    "buildings": [
+     1,
+     0
+    ]
+   },
+   "room_sizes_run": [],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 0,
+    "rooms_matched": 0.0,
+    "room_assignment_agreement": null,
+    "buildings_run": 0,
+    "queries": 58,
+    "query_success": 0.0,
+    "query_status": {
+     "ok": 0,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 58
+    }
+   }
+  },
+  "tmp_cfg_rooms_plateau_ratio_s050": {
+   "fault": "rooms_plateau_ratio",
+   "severity": 0.5,
+   "hydra": {
+    "rc": 0,
+    "seconds": 335
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.plateau_ratio": 0.575
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.plateau_ratio": {
+     "expected": 0.575,
+     "echoed": "0.575",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": null,
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": false,
+   "first_layer_matches_expected": false,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_rooms_plateau_ratio_s100": {
+   "fault": "rooms_plateau_ratio",
+   "severity": 1.0,
+   "hydra": {
+    "rc": 0,
+    "seconds": 336
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.plateau_ratio": 1.0
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.plateau_ratio": {
+     "expected": 1.0,
+     "echoed": "1",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "rooms",
+    "buildings"
+   ],
+   "parent_edges_changed_only": [
+    "places"
+   ],
+   "first_changed_layer": "rooms",
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     3
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    299,
+    144,
+    72
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.6,
+     "components": 3
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 3,
+    "rooms_matched": 0.4,
+    "room_assignment_agreement": 0.369,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 0.259,
+    "query_status": {
+     "ok": 15,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 43
+    }
+   }
+  },
+  "tmp_cfg_rooms_max_dilation_s050": {
+   "fault": "rooms_max_dilation",
+   "severity": 0.5,
+   "hydra": {
+    "rc": 0,
+    "seconds": 345
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.max_dilation_m": 0.9
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.max_dilation_m": {
+     "expected": 0.9,
+     "echoed": "0.9",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [],
+   "parent_edges_changed_only": [],
+   "first_changed_layer": null,
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": false,
+   "first_layer_matches_expected": false,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     5
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    168,
+    131,
+    118,
+    72,
+    26
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   }
+  },
+  "tmp_cfg_rooms_max_dilation_s100": {
+   "fault": "rooms_max_dilation",
+   "severity": 1.0,
+   "hydra": {
+    "rc": 0,
+    "seconds": 348
+   },
+   "params": {
+    "backend.update_functors.rooms.room_finder.max_dilation_m": 0.6
+   },
+   "effective_config_echo": {
+    "backend.update_functors.rooms.room_finder.max_dilation_m": {
+     "expected": 0.6,
+     "echoed": "0.6",
+     "ok": true
+    }
+   },
+   "layers_changed_exact": [
+    "rooms",
+    "buildings"
+   ],
+   "parent_edges_changed_only": [
+    "places"
+   ],
+   "first_changed_layer": "rooms",
+   "expected_first_layer": "rooms",
+   "confined_to_expected_and_downstream": true,
+   "first_layer_matches_expected": true,
+   "counts_ref_vs_run": {
+    "mesh_vertices": [
+     167222,
+     167222
+    ],
+    "objects": [
+     58,
+     58
+    ],
+    "places": [
+     515,
+     515
+    ],
+    "mesh_places": [
+     1423,
+     1423
+    ],
+    "rooms": [
+     5,
+     1
+    ],
+    "buildings": [
+     1,
+     1
+    ]
+   },
+   "room_sizes_run": [
+    515
+   ],
+   "room_finder_last_call": {
+    "last_places_for_rooms": 515,
+    "last_best": {
+     "threshold_m": 0.565684,
+     "components": 1
+    },
+    "n_no_rooms": 0
+   },
+   "log_errors": [],
+   "metrics": {
+    "mesh_vertices_ratio": 1.0,
+    "objects_ref": 58,
+    "objects_run": 58,
+    "objects_found": 1.0,
+    "objects_found_with_label": 1.0,
+    "objects_precision": 1.0,
+    "places_ref": 515,
+    "places_run": 515,
+    "places_covered": 1.0,
+    "places_spurious": 0.0,
+    "rooms_ref": 5,
+    "rooms_run": 1,
+    "rooms_matched": 0.0,
+    "room_assignment_agreement": 0.0,
+    "buildings_run": 1,
+    "queries": 58,
+    "query_success": 0.0,
+    "query_status": {
+     "ok": 0,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 58
+    }
+   }
+  }
+ },
+ "room_finder_emulator_vs_hydra_truncated": {
+  "tmp_cfg_ref": {
+   "params": {
+    "min_room_size": 10
+   },
+   "emulated": {
+    "n_rooms": 5,
+    "sizes": [
+     170,
+     128,
+     116,
+     73,
+     28
+    ],
+    "threshold": 0.848528,
+    "components": 5
+   },
+   "real": {
+    "n_rooms": 5,
+    "sizes": [
+     168,
+     131,
+     118,
+     72,
+     26
+    ],
+    "best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    }
+   },
+   "agree_n_rooms": true,
+   "agree_threshold": true,
+   "size_abs_diff_max": 3
+  },
+  "tmp_cfg_rooms_min_size_s050": {
+   "params": {
+    "min_room_size": 63
+   },
+   "emulated": {
+    "n_rooms": 4,
+    "sizes": [
+     170,
+     128,
+     116,
+     73
+    ],
+    "threshold": 0.848528,
+    "components": 5
+   },
+   "real": {
+    "n_rooms": 4,
+    "sizes": [
+     168,
+     131,
+     118,
+     72
+    ],
+    "best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    }
+   },
+   "agree_n_rooms": true,
+   "agree_threshold": true,
+   "size_abs_diff_max": 3
+  },
+  "tmp_cfg_rooms_min_size_s100": {
+   "params": {
+    "min_room_size": 400
+   },
+   "emulated": {
+    "n_rooms": 0,
+    "sizes": [],
+    "threshold": 0.848528,
+    "components": 5
+   },
+   "real": {
+    "n_rooms": 0,
+    "sizes": [],
+    "best": {
+     "threshold_m": 0.848528,
+     "components": 5
+    }
+   },
+   "agree_n_rooms": true,
+   "agree_threshold": true,
+   "size_abs_diff_max": null
+  }
+ },
+ "room_query_emulator_vs_hydra_truncated": {
+  "tmp_cfg_ref": {
+   "params": {
+    "min_room_size": 10
+   },
+   "emulated": {
+    "n_rooms": 5,
+    "sizes": [
+     170,
+     128,
+     116,
+     73,
+     28
+    ],
+    "threshold": 0.848528,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 0.99,
+    "queries": 58,
+    "query_success": 0.966,
+    "query_status": {
+     "ok": 56,
+     "wrong_object": 2,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "real": {
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "abs_err_query_success": 0.034
+  },
+  "tmp_cfg_rooms_min_size_s050": {
+   "params": {
+    "min_room_size": 63
+   },
+   "emulated": {
+    "n_rooms": 4,
+    "sizes": [
+     170,
+     128,
+     116,
+     73
+    ],
+    "threshold": 0.848528,
+    "rooms_matched": 0.8,
+    "room_assignment_agreement": 0.994,
+    "queries": 58,
+    "query_success": 0.966,
+    "query_status": {
+     "ok": 56,
+     "wrong_object": 2,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "real": {
+    "rooms_run": 4,
+    "rooms_matched": 0.8,
+    "room_assignment_agreement": 1.0,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "abs_err_query_success": 0.034
+  },
+  "tmp_cfg_rooms_min_size_s100": {
+   "params": {
+    "min_room_size": 400
+   },
+   "emulated": {
+    "n_rooms": 0,
+    "sizes": [],
+    "threshold": 0.848528,
+    "rooms_matched": 0.0,
+    "room_assignment_agreement": null,
+    "queries": 58,
+    "query_success": 0.0,
+    "query_status": {
+     "ok": 0,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 58
+    }
+   },
+   "real": {
+    "rooms_run": 0,
+    "rooms_matched": 0.0,
+    "room_assignment_agreement": null,
+    "queries": 58,
+    "query_success": 0.0,
+    "query_status": {
+     "ok": 0,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 58
+    }
+   },
+   "abs_err_query_success": 0.0
+  },
+  "tmp_cfg_rooms_plateau_ratio_s050": {
+   "params": {
+    "plateau_ratio": 0.575
+   },
+   "emulated": {
+    "n_rooms": 5,
+    "sizes": [
+     170,
+     128,
+     116,
+     73,
+     28
+    ],
+    "threshold": 0.848528,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 0.99,
+    "queries": 58,
+    "query_success": 0.966,
+    "query_status": {
+     "ok": 56,
+     "wrong_object": 2,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "real": {
+    "rooms_run": 5,
+    "rooms_matched": 1.0,
+    "room_assignment_agreement": 1.0,
+    "queries": 58,
+    "query_success": 1.0,
+    "query_status": {
+     "ok": 58,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "abs_err_query_success": 0.034
+  },
+  "tmp_cfg_rooms_plateau_ratio_s100": {
+   "params": {
+    "plateau_ratio": 1.0
+   },
+   "emulated": {
+    "n_rooms": 3,
+    "sizes": [
+     298,
+     144,
+     73
+    ],
+    "threshold": 0.6,
+    "rooms_matched": 0.4,
+    "room_assignment_agreement": 0.369,
+    "queries": 58,
+    "query_success": 0.259,
+    "query_status": {
+     "ok": 15,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 43
+    }
+   },
+   "real": {
+    "rooms_run": 3,
+    "rooms_matched": 0.4,
+    "room_assignment_agreement": 0.369,
+    "queries": 58,
+    "query_success": 0.259,
+    "query_status": {
+     "ok": 15,
+     "wrong_object": 0,
+     "target_missing": 0,
+     "room_missing": 43
+    }
+   },
+   "abs_err_query_success": 0.0
+  }
+ },
+ "object_emulator_vs_hydra_truncated": {
+  "tmp_cfg_objects_min_size_s050": {
+   "fault": "objects_min_size",
+   "severity": 0.5,
+   "key": "frontend.objects.min_cluster_size",
+   "value": 200,
+   "emulator_case": "tol0.25_min200",
+   "real": {
+    "n_objects": 18,
+    "objects_found_with_label": 0.31,
+    "query_success": 0.31,
+    "query_status": {
+     "ok": 18,
+     "wrong_object": 24,
+     "target_missing": 16,
+     "room_missing": 0
+    }
+   },
+   "emulated": {
+    "n_clusters": 18,
+    "objects_found_with_label": 0.31
+   },
+   "abs_err_found": 0.0,
+   "abs_err_count": 0
+  },
+  "tmp_cfg_objects_min_size_s100": {
+   "fault": "objects_min_size",
+   "severity": 1.0,
+   "key": "frontend.objects.min_cluster_size",
+   "value": 1000,
+   "emulator_case": "tol0.25_min1000",
+   "real": {
+    "n_objects": 0,
+    "objects_found_with_label": 0.0,
+    "query_success": 0.0,
+    "query_status": {
+     "ok": 0,
+     "wrong_object": 0,
+     "target_missing": 58,
+     "room_missing": 0
+    }
+   },
+   "emulated": {
+    "n_clusters": 0,
+    "objects_found_with_label": 0.0
+   },
+   "abs_err_found": 0.0,
+   "abs_err_count": 0
+  },
+  "tmp_cfg_objects_tol_merge_s050": {
+   "fault": "objects_tol_merge",
+   "severity": 0.5,
+   "key": "frontend.objects.cluster_tolerance",
+   "value": 0.6124,
+   "emulator_case": "tol0.6124_min40",
+   "real": {
+    "n_objects": 53,
+    "objects_found_with_label": 0.879,
+    "query_success": 0.948,
+    "query_status": {
+     "ok": 55,
+     "wrong_object": 3,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "emulated": {
+    "n_clusters": 53,
+    "objects_found_with_label": 0.879
+   },
+   "abs_err_found": 0.0,
+   "abs_err_count": 0
+  },
+  "tmp_cfg_objects_tol_merge_s100": {
+   "fault": "objects_tol_merge",
+   "severity": 1.0,
+   "key": "frontend.objects.cluster_tolerance",
+   "value": 1.5,
+   "emulator_case": "tol1.5_min40",
+   "real": {
+    "n_objects": 47,
+    "objects_found_with_label": 0.759,
+    "query_success": 0.845,
+    "query_status": {
+     "ok": 49,
+     "wrong_object": 9,
+     "target_missing": 0,
+     "room_missing": 0
+    }
+   },
+   "emulated": {
+    "n_clusters": 47,
+    "objects_found_with_label": 0.759
+   },
+   "abs_err_found": 0.0,
+   "abs_err_count": 0
+  }
+ },
+ "emulators_default_config_vs_hydra_full_length_dev_runs": {
+  "what": "each dev-data run's own places layer / labeled mesh through the emulator at default config vs that run's real rooms / objects",
+  "rooms": {
+   "n_graphs": 25,
+   "n_rooms_equal": 25,
+   "threshold_equal": 25,
+   "real_n_rooms_range": [
+    5,
+    9
+   ],
+   "place_assignment_agreement": {
+    "min": 0.9797,
+    "mean": 0.9927,
+    "max": 0.9972
+   },
+   "room_size_abs_diff_max_over_graphs": 10,
+   "room_size_abs_diff_max_median": 4
+  },
+  "objects": {
+   "clean_labels_and_geometry_faults": {
+    "n_runs": 17,
+    "count_rel_error_mean": 0.024,
+    "count_rel_error_max": 0.074,
+    "found_min": 0.896,
+    "found_mean": 0.974
+   },
+   "label_fault_runs": {
+    "n_runs": 8,
+    "count_rel_error_mean": 0.127,
+    "count_rel_error_max": 0.424,
+    "found_min": 0.561,
+    "found_mean": 0.848
+   }
+  },
+  "per_run": {
+   "uh2_clean": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 109,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_depth_holes_s03_r0": {
+    "rooms": {
+     "n_places": 1096,
+     "n_edges": 4167,
+     "real": {
+      "n_rooms": 7,
+      "sizes": [
+       396,
+       193,
+       164,
+       150,
+       74,
+       53,
+       52
+      ],
+      "threshold": 1.0198,
+      "components": 5
+     },
+     "emulated": {
+      "n_rooms": 7,
+      "sizes": [
+       391,
+       183,
+       173,
+       150,
+       79,
+       53,
+       53
+      ],
+      "threshold": 1.019803,
+      "components": 5
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 10,
+     "size_abs_diff_sum": 30,
+     "place_assignment_agreement": 0.9797,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 121,
+     "emulated_n": 121,
+     "real_by_label": {
+      "5": 26,
+      "6": 0,
+      "7": 12,
+      "10": 45,
+      "12": 11,
+      "13": 12,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 28,
+      "6": 0,
+      "7": 12,
+      "10": 42,
+      "12": 12,
+      "13": 12,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.967
+    }
+   },
+   "uh2_depth_holes_s03_r1": {
+    "rooms": {
+     "n_places": 1117,
+     "n_edges": 4307,
+     "real": {
+      "n_rooms": 6,
+      "sizes": [
+       523,
+       202,
+       179,
+       95,
+       53,
+       45
+      ],
+      "threshold": 1.0,
+      "components": 6
+     },
+     "emulated": {
+      "n_rooms": 6,
+      "sizes": [
+       520,
+       202,
+       180,
+       97,
+       53,
+       45
+      ],
+      "threshold": 1.0,
+      "components": 6
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 3,
+     "size_abs_diff_sum": 6,
+     "place_assignment_agreement": 0.9964,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 117,
+     "emulated_n": 119,
+     "real_by_label": {
+      "5": 26,
+      "6": 0,
+      "7": 12,
+      "10": 41,
+      "12": 11,
+      "13": 12,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 28,
+      "6": 0,
+      "7": 12,
+      "10": 40,
+      "12": 12,
+      "13": 12,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.974
+    }
+   },
+   "uh2_depth_holes_s20_r0": {
+    "rooms": {
+     "n_places": 1088,
+     "n_edges": 4229,
+     "real": {
+      "n_rooms": 6,
+      "sizes": [
+       474,
+       365,
+       73,
+       69,
+       48,
+       47
+      ],
+      "threshold": 1.0,
+      "components": 6
+     },
+     "emulated": {
+      "n_rooms": 6,
+      "sizes": [
+       474,
+       366,
+       77,
+       65,
+       48,
+       46
+      ],
+      "threshold": 1.0,
+      "components": 6
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9954,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 122,
+     "emulated_n": 124,
+     "real_by_label": {
+      "5": 28,
+      "6": 0,
+      "7": 12,
+      "10": 42,
+      "12": 12,
+      "13": 12,
+      "18": 16
+     },
+     "emulated_by_label": {
+      "5": 30,
+      "6": 0,
+      "7": 12,
+      "10": 42,
+      "12": 13,
+      "13": 11,
+      "18": 16
+     },
+     "real_found_one_to_one_by_emulated": 0.975
+    }
+   },
+   "uh2_depth_holes_s50": {
+    "rooms": {
+     "n_places": 1211,
+     "n_edges": 4769,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       492,
+       165,
+       151,
+       132,
+       123,
+       53,
+       48,
+       41
+      ],
+      "threshold": 1.09545,
+      "components": 7
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       502,
+       164,
+       141,
+       138,
+       121,
+       53,
+       48,
+       38
+      ],
+      "threshold": 1.095445,
+      "components": 7
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 10,
+     "size_abs_diff_sum": 32,
+     "place_assignment_agreement": 0.9834,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 103,
+     "emulated_n": 102,
+     "real_by_label": {
+      "5": 24,
+      "6": 0,
+      "7": 13,
+      "10": 30,
+      "12": 10,
+      "13": 8,
+      "18": 18
+     },
+     "emulated_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 13,
+      "10": 29,
+      "12": 10,
+      "13": 8,
+      "18": 17
+     },
+     "real_found_one_to_one_by_emulated": 0.981
+    }
+   },
+   "uh2_depth_noise_s03_r0": {
+    "rooms": {
+     "n_places": 1061,
+     "n_edges": 4289,
+     "real": {
+      "n_rooms": 7,
+      "sizes": [
+       313,
+       195,
+       162,
+       147,
+       132,
+       65,
+       47
+      ],
+      "threshold": 1.0,
+      "components": 7
+     },
+     "emulated": {
+      "n_rooms": 7,
+      "sizes": [
+       314,
+       195,
+       162,
+       150,
+       131,
+       62,
+       47
+      ],
+      "threshold": 1.0,
+      "components": 7
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 3,
+     "size_abs_diff_sum": 8,
+     "place_assignment_agreement": 0.9962,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 109,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_depth_noise_s03_r1": {
+    "rooms": {
+     "n_places": 1087,
+     "n_edges": 4345,
+     "real": {
+      "n_rooms": 5,
+      "sizes": [
+       735,
+       142,
+       100,
+       51,
+       51
+      ],
+      "threshold": 0.938084,
+      "components": 5
+     },
+     "emulated": {
+      "n_rooms": 5,
+      "sizes": [
+       736,
+       140,
+       100,
+       52,
+       51
+      ],
+      "threshold": 0.938083,
+      "components": 5
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 2,
+     "size_abs_diff_sum": 4,
+     "place_assignment_agreement": 0.9972,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 110,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 37,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.982
+    }
+   },
+   "uh2_depth_noise_s20_r0": {
+    "rooms": {
+     "n_places": 1004,
+     "n_edges": 3938,
+     "real": {
+      "n_rooms": 5,
+      "sizes": [
+       420,
+       332,
+       161,
+       46,
+       45
+      ],
+      "threshold": 1.03923,
+      "components": 5
+     },
+     "emulated": {
+      "n_rooms": 5,
+      "sizes": [
+       422,
+       327,
+       162,
+       48,
+       45
+      ],
+      "threshold": 1.03923,
+      "components": 5
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 5,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.99,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 107,
+     "emulated_n": 108,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 11,
+      "10": 35,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 26,
+      "6": 0,
+      "7": 11,
+      "10": 34,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_depth_noise_s50": {
+    "rooms": {
+     "n_places": 989,
+     "n_edges": 3953,
+     "real": {
+      "n_rooms": 7,
+      "sizes": [
+       201,
+       185,
+       177,
+       154,
+       136,
+       86,
+       47
+      ],
+      "threshold": 1.0198,
+      "components": 7
+     },
+     "emulated": {
+      "n_rooms": 7,
+      "sizes": [
+       201,
+       185,
+       176,
+       154,
+       136,
+       86,
+       48
+      ],
+      "threshold": 1.019804,
+      "components": 7
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 1,
+     "size_abs_diff_sum": 2,
+     "place_assignment_agreement": 0.997,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 110,
+     "emulated_n": 115,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 11,
+      "10": 36,
+      "12": 11,
+      "13": 12,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 26,
+      "6": 0,
+      "7": 11,
+      "10": 38,
+      "12": 13,
+      "13": 12,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.982
+    }
+   },
+   "uh2_frame_drop_s03_r0": {
+    "rooms": {
+     "n_places": 1048,
+     "n_edges": 4087,
+     "real": {
+      "n_rooms": 7,
+      "sizes": [
+       304,
+       194,
+       160,
+       150,
+       135,
+       59,
+       43
+      ],
+      "threshold": 1.0198,
+      "components": 6
+     },
+     "emulated": {
+      "n_rooms": 7,
+      "sizes": [
+       304,
+       194,
+       161,
+       152,
+       133,
+       58,
+       43
+      ],
+      "threshold": 1.019804,
+      "components": 6
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 2,
+     "size_abs_diff_sum": 6,
+     "place_assignment_agreement": 0.9952,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 109,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_frame_drop_s03_r1": {
+    "rooms": {
+     "n_places": 1063,
+     "n_edges": 4116,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       207,
+       199,
+       157,
+       143,
+       134,
+       108,
+       61,
+       48
+      ],
+      "threshold": 1.01981,
+      "components": 6
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       202,
+       200,
+       159,
+       148,
+       134,
+       108,
+       59,
+       47
+      ],
+      "threshold": 1.019804,
+      "components": 6
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 5,
+     "size_abs_diff_sum": 16,
+     "place_assignment_agreement": 0.9905,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 109,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_frame_drop_s20_r0": {
+    "rooms": {
+     "n_places": 1067,
+     "n_edges": 4188,
+     "real": {
+      "n_rooms": 6,
+      "sizes": [
+       366,
+       325,
+       154,
+       126,
+       48,
+       44
+      ],
+      "threshold": 0.938083,
+      "components": 7
+     },
+     "emulated": {
+      "n_rooms": 6,
+      "sizes": [
+       367,
+       324,
+       155,
+       126,
+       47,
+       44
+      ],
+      "threshold": 0.938083,
+      "components": 7
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 1,
+     "size_abs_diff_sum": 4,
+     "place_assignment_agreement": 0.9944,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 108,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 10,
+      "13": 10,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 11,
+      "13": 10,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_frame_drop_s50": {
+    "rooms": {
+     "n_places": 1075,
+     "n_edges": 4002,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       218,
+       179,
+       174,
+       146,
+       133,
+       114,
+       58,
+       47
+      ],
+      "threshold": 1.03923,
+      "components": 7
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       217,
+       183,
+       171,
+       147,
+       133,
+       114,
+       57,
+       47
+      ],
+      "threshold": 1.03923,
+      "components": 7
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9925,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 109,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 10,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_label_confusion_s03_r0": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 126,
+     "emulated_n": 115,
+     "real_by_label": {
+      "5": 30,
+      "6": 1,
+      "7": 12,
+      "10": 38,
+      "12": 11,
+      "13": 17,
+      "18": 17
+     },
+     "emulated_by_label": {
+      "5": 30,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 8,
+      "13": 13,
+      "18": 17
+     },
+     "real_found_one_to_one_by_emulated": 0.897
+    }
+   },
+   "uh2_label_confusion_s03_r1": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 134,
+     "emulated_n": 118,
+     "real_by_label": {
+      "5": 35,
+      "6": 4,
+      "7": 12,
+      "10": 39,
+      "12": 11,
+      "13": 16,
+      "18": 17
+     },
+     "emulated_by_label": {
+      "5": 31,
+      "6": 2,
+      "7": 12,
+      "10": 36,
+      "12": 9,
+      "13": 12,
+      "18": 16
+     },
+     "real_found_one_to_one_by_emulated": 0.858
+    }
+   },
+   "uh2_label_confusion_s20_r0": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 162,
+     "emulated_n": 146,
+     "real_by_label": {
+      "5": 36,
+      "6": 15,
+      "7": 12,
+      "10": 40,
+      "12": 22,
+      "13": 19,
+      "18": 18
+     },
+     "emulated_by_label": {
+      "5": 34,
+      "6": 11,
+      "7": 12,
+      "10": 35,
+      "12": 17,
+      "13": 19,
+      "18": 18
+     },
+     "real_found_one_to_one_by_emulated": 0.84
+    }
+   },
+   "uh2_label_confusion_s50": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 169,
+     "emulated_n": 136,
+     "real_by_label": {
+      "5": 27,
+      "6": 25,
+      "7": 5,
+      "10": 37,
+      "12": 36,
+      "13": 20,
+      "18": 19
+     },
+     "emulated_by_label": {
+      "5": 20,
+      "6": 25,
+      "7": 2,
+      "10": 26,
+      "12": 31,
+      "13": 18,
+      "18": 14
+     },
+     "real_found_one_to_one_by_emulated": 0.775
+    }
+   },
+   "uh2_label_dropout_s03_r0": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 107,
+     "emulated_n": 106,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 8,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 27,
+      "6": 0,
+      "7": 12,
+      "10": 34,
+      "12": 7,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.972
+    }
+   },
+   "uh2_label_dropout_s03_r1": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 108,
+     "emulated_n": 110,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 36,
+      "12": 9,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 28,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 9,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.991
+    }
+   },
+   "uh2_label_dropout_s20_r0": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 101,
+     "emulated_n": 95,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 34,
+      "12": 7,
+      "13": 10,
+      "18": 13
+     },
+     "emulated_by_label": {
+      "5": 24,
+      "6": 0,
+      "7": 12,
+      "10": 31,
+      "12": 5,
+      "13": 10,
+      "18": 13
+     },
+     "real_found_one_to_one_by_emulated": 0.891
+    }
+   },
+   "uh2_label_dropout_s50": {
+    "rooms": {
+     "n_places": 1068,
+     "n_edges": 4128,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       316,
+       198,
+       159,
+       148,
+       74,
+       66,
+       63,
+       44
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       317,
+       195,
+       163,
+       147,
+       74,
+       66,
+       62,
+       44
+      ],
+      "threshold": 1.077034,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9934,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 66,
+     "emulated_n": 38,
+     "real_by_label": {
+      "5": 15,
+      "6": 0,
+      "7": 5,
+      "10": 26,
+      "12": 3,
+      "13": 7,
+      "18": 10
+     },
+     "emulated_by_label": {
+      "5": 9,
+      "6": 0,
+      "7": 2,
+      "10": 16,
+      "12": 1,
+      "13": 6,
+      "18": 4
+     },
+     "real_found_one_to_one_by_emulated": 0.561
+    }
+   },
+   "uh2_pose_drift_s03_r0": {
+    "rooms": {
+     "n_places": 1081,
+     "n_edges": 4303,
+     "real": {
+      "n_rooms": 7,
+      "sizes": [
+       409,
+       189,
+       171,
+       152,
+       64,
+       51,
+       41
+      ],
+      "threshold": 1.0,
+      "components": 6
+     },
+     "emulated": {
+      "n_rooms": 7,
+      "sizes": [
+       407,
+       189,
+       172,
+       152,
+       64,
+       52,
+       41
+      ],
+      "threshold": 1.0,
+      "components": 6
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 2,
+     "size_abs_diff_sum": 4,
+     "place_assignment_agreement": 0.9963,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 110,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 24,
+      "6": 0,
+      "7": 12,
+      "10": 37,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 24,
+      "6": 0,
+      "7": 12,
+      "10": 37,
+      "12": 12,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.973
+    }
+   },
+   "uh2_pose_drift_s03_r1": {
+    "rooms": {
+     "n_places": 1014,
+     "n_edges": 4086,
+     "real": {
+      "n_rooms": 9,
+      "sizes": [
+       349,
+       245,
+       96,
+       69,
+       60,
+       50,
+       50,
+       43,
+       42
+      ],
+      "threshold": 1.0,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 9,
+      "sizes": [
+       350,
+       244,
+       99,
+       69,
+       60,
+       50,
+       48,
+       42,
+       42
+      ],
+      "threshold": 1.0,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 3,
+     "size_abs_diff_sum": 8,
+     "place_assignment_agreement": 0.996,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 109,
+     "emulated_n": 111,
+     "real_by_label": {
+      "5": 25,
+      "6": 0,
+      "7": 12,
+      "10": 35,
+      "12": 11,
+      "13": 11,
+      "18": 15
+     },
+     "emulated_by_label": {
+      "5": 26,
+      "6": 0,
+      "7": 12,
+      "10": 34,
+      "12": 13,
+      "13": 11,
+      "18": 15
+     },
+     "real_found_one_to_one_by_emulated": 0.972
+    }
+   },
+   "uh2_pose_drift_s20_r0": {
+    "rooms": {
+     "n_places": 1098,
+     "n_edges": 4164,
+     "real": {
+      "n_rooms": 7,
+      "sizes": [
+       412,
+       180,
+       179,
+       179,
+       52,
+       45,
+       44
+      ],
+      "threshold": 1.13137,
+      "components": 7
+     },
+     "emulated": {
+      "n_rooms": 7,
+      "sizes": [
+       413,
+       183,
+       178,
+       175,
+       53,
+       45,
+       44
+      ],
+      "threshold": 1.13137,
+      "components": 7
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 4,
+     "size_abs_diff_sum": 10,
+     "place_assignment_agreement": 0.9936,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 123,
+     "emulated_n": 114,
+     "real_by_label": {
+      "5": 28,
+      "6": 0,
+      "7": 14,
+      "10": 41,
+      "12": 10,
+      "13": 13,
+      "18": 17
+     },
+     "emulated_by_label": {
+      "5": 26,
+      "6": 0,
+      "7": 11,
+      "10": 38,
+      "12": 11,
+      "13": 12,
+      "18": 16
+     },
+     "real_found_one_to_one_by_emulated": 0.911
+    }
+   },
+   "uh2_pose_drift_s50": {
+    "rooms": {
+     "n_places": 1137,
+     "n_edges": 4371,
+     "real": {
+      "n_rooms": 8,
+      "sizes": [
+       307,
+       269,
+       175,
+       107,
+       100,
+       69,
+       55,
+       51
+      ],
+      "threshold": 1.07703,
+      "components": 8
+     },
+     "emulated": {
+      "n_rooms": 8,
+      "sizes": [
+       311,
+       263,
+       182,
+       109,
+       98,
+       66,
+       52,
+       52
+      ],
+      "threshold": 1.077033,
+      "components": 8
+     },
+     "n_rooms_equal": true,
+     "threshold_equal": true,
+     "size_abs_diff_max": 7,
+     "size_abs_diff_sum": 28,
+     "place_assignment_agreement": 0.9832,
+     "places_assigned_only_in_real": 0,
+     "places_assigned_only_in_emulation": 0
+    },
+    "objects": {
+     "real_n": 135,
+     "emulated_n": 125,
+     "real_by_label": {
+      "5": 32,
+      "6": 0,
+      "7": 14,
+      "10": 41,
+      "12": 11,
+      "13": 12,
+      "18": 25
+     },
+     "emulated_by_label": {
+      "5": 31,
+      "6": 0,
+      "7": 14,
+      "10": 40,
+      "12": 11,
+      "13": 11,
+      "18": 18
+     },
+     "real_found_one_to_one_by_emulated": 0.896
+    }
+   }
+  }
+ }
+}

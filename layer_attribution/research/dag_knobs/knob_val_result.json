@@ -1,0 +1,108 @@
+{
+ "kv_base": {
+  "layer_counts": {
+   "2": 5,
+   "2[97]": 28,
+   "3": 86,
+   "3[1]": 216,
+   "4": 1,
+   "5": 1
+  },
+  "mesh_faces": 32317,
+  "mesh_vertices": 21174,
+  "parent_child_edges": {
+   "3->2": 5,
+   "3->2[97]": 28,
+   "4->3": 86
+  },
+  "places_edges": 243,
+  "room_sizes": [
+   86
+  ]
+ },
+ "kv_gvdmin": {
+  "layer_counts": {
+   "2": 5,
+   "2[97]": 28,
+   "3[1]": 216
+  },
+  "layers_vs_base": {
+   "2": "same count 5, max |dpos| = 0 m",
+   "2[97]": "same count 28, max |dpos| = 0 m",
+   "3": "layer missing in one run",
+   "3[1]": "same count 216, max |dpos| = 0 m",
+   "4": "layer missing in one run",
+   "5": "layer missing in one run"
+  },
+  "mesh_faces": 32317,
+  "mesh_positions_identical_to_base": true,
+  "mesh_vertices": 21174,
+  "mesh_vertices_ratio_vs_base": 1.0,
+  "parent_child_edges": {},
+  "places_edges": 0,
+  "room_sizes": []
+ },
+ "kv_inval": "missing (run did not produce a saved graph)",
+ "kv_meshres": {
+  "layer_counts": {
+   "2": 5,
+   "2[97]": 28,
+   "3": 86,
+   "3[1]": 216,
+   "4": 1,
+   "5": 1
+  },
+  "layers_vs_base": {
+   "2": "same count 5, max |dpos| = 0.1195 m",
+   "2[97]": "same count 28, max |dpos| = 0 m",
+   "3": "same count 86, max |dpos| = 0 m",
+   "3[1]": "same count 216, max |dpos| = 5.429 m",
+   "4": "same count 1, max |dpos| = 0 m",
+   "5": "same count 1, max |dpos| = 0 m"
+  },
+  "mesh_faces": 29294,
+  "mesh_positions_identical_to_base": false,
+  "mesh_vertices": 15607,
+  "mesh_vertices_ratio_vs_base": 0.737083215264003,
+  "parent_child_edges": {
+   "3->2": 5,
+   "3->2[97]": 28,
+   "4->3": 86
+  },
+  "places_edges": 243,
+  "room_sizes": [
+   86
+  ]
+ },
+ "kv_minedge": {
+  "layer_counts": {
+   "2": 5,
+   "2[97]": 28,
+   "3": 36,
+   "3[1]": 216,
+   "4": 1,
+   "5": 1
+  },
+  "layers_vs_base": {
+   "2": "same count 5, max |dpos| = 0 m",
+   "2[97]": "same count 28, max |dpos| = 0 m",
+   "3": "count 86 -> 36",
+   "3[1]": "same count 216, max |dpos| = 0 m",
+   "4": "same count 1, max |dpos| = 0.3833 m",
+   "5": "same count 1, max |dpos| = 0.3496 m"
+  },
+  "mesh_faces": 32317,
+  "mesh_positions_identical_to_base": true,
+  "mesh_vertices": 21174,
+  "mesh_vertices_ratio_vs_base": 1.0,
+  "parent_child_edges": {
+   "3->2": 5,
+   "3->2[97]": 28,
+   "4->3": 33
+  },
+  "places_edges": 76,
+  "room_sizes": [
+   33
+  ]
+ }
+}

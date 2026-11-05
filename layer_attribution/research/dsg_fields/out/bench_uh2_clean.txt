@@ -1,0 +1,10 @@
+﻿json 74.9 MB, cache 24.6 MB (np.savez), 7.4 MB (np.savez_compressed, write 1.0 s)
+mode             page cache   work s  process wall s  peak RSS MB
+build            cold          4.069           4.450       1064.5
+build            warm          3.494           3.845       1064.4
+load             warm          0.044           0.321         57.3
+load             cold          0.063           0.303         57.3
+load_graph_only  warm          0.010           0.268         35.3
+load_graph_only  cold          0.016           0.243         35.4
+load(zip)        warm          0.105           0.372         69.6
+load(zip)        cold          0.119           0.349         69.6

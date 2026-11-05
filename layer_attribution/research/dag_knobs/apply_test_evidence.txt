@@ -1,0 +1,91 @@
+﻿##### run tmp_dk_base : effective-config lines from <run>/logs/hydra_python.*.INFO.* (glog) #####
+ 227: objects [MeshSegmenterConfig] (default):
+ 232:       cluster_tolerance:      0.25 (default)
+ 248:       cluster_tolerance:      0.3
+ 296:    cluster_tolerance:         0.3 (default)
+ 233:       min_cluster_size:       40 (default)
+ 249:       min_cluster_size:       50
+ 297:    min_cluster_size:          10 (default)
+ 130:       min_room_size:          10 (default)
+ 239: surface_places [Virtual Config: Place2dSegmenterConfig]:
+ 345:    semantic_integrator [Virtual Config: SingleLabelIntegrator::Config]:
+ 121: update_functors[rooms] [Virtual Config: UpdateRoomsFunctor::Config]:
+ 140: update_functors[surface_places] [Virtual Config: Update2dPlacesFunctor::Config]:
+##### stdout  ~/runs/logs/tmp_dk_base.log #####
+##### stderr (non-progress) ~/runs/logs/tmp_dk_base.err #####
+[Hydra Python] Logging to: /home/hydra/runs/uh2/tmp_dk_base/logs
+
+##### run tmp_dk_mis : effective-config lines from <run>/logs/hydra_python.*.INFO.* (glog) #####
+ 227: objects [MeshSegmenterConfig] (default):
+ 232:       cluster_tolerance:      0.25 (default)
+ 248:       cluster_tolerance:      0.3
+ 296:    cluster_tolerance:         0.3 (default)
+ 233:       min_cluster_size:       40 (default)
+ 249:       min_cluster_size:       50
+ 297:    min_cluster_size:          10 (default)
+ 130:       min_room_size:          10 (default)
+ 239: surface_places [Virtual Config: Place2dSegmenterConfig]:
+ 345:    semantic_integrator [Virtual Config: SingleLabelIntegrator::Config]:
+ 121: update_functors[rooms] [Virtual Config: UpdateRoomsFunctor::Config]:
+ 140: update_functors[surface_places] [Virtual Config: Update2dPlacesFunctor::Config]:
+##### stdout  ~/runs/logs/tmp_dk_mis.log #####
+[33m[WARNING] Errors parsing config 'PythonPipeline::Config':
+============================ PythonPipeline::Config ============================
+Warning: Failed to parse param 'frontend.objects.clustering.cluster_tolerance':
+         yaml-cpp: error at line 108, column 24: bad conversion.
+================================================================================[0m
+##### stderr (non-progress) ~/runs/logs/tmp_dk_mis.err #####
+[Hydra Python] Logging to: /home/hydra/runs/uh2/tmp_dk_mis/logs
+
+##### run tmp_dk_set : effective-config lines from <run>/logs/hydra_python.*.INFO.* (glog) #####
+ 227: objects [MeshSegmenterConfig] (default):
+ 232:       cluster_tolerance:      0.25 (default)
+ 248:       cluster_tolerance:      0.3
+ 296:    cluster_tolerance:         0.3 (default)
+ 233:       min_cluster_size:       400
+ 249:       min_cluster_size:       50
+ 297:    min_cluster_size:          10 (default)
+ 130:       min_room_size:          30
+ 239: surface_places [Virtual Config: Place2dSegmenterConfig]:
+ 345:    semantic_integrator [Virtual Config: SingleLabelIntegrator::Config]:
+ 121: update_functors[rooms] [Virtual Config: UpdateRoomsFunctor::Config]:
+ 140: update_functors[surface_places] [Virtual Config: Update2dPlacesFunctor::Config]:
+##### stdout  ~/runs/logs/tmp_dk_set.log #####
+##### stderr (non-progress) ~/runs/logs/tmp_dk_set.err #####
+[Hydra Python] Logging to: /home/hydra/runs/uh2/tmp_dk_set/logs
+
+##### run tmp_dk_typea : effective-config lines from <run>/logs/hydra_python.*.INFO.* (glog) #####
+ 208: objects [MeshSegmenterConfig] (default):
+ 213:       cluster_tolerance:      0.25 (default)
+ 266:    cluster_tolerance:         0.3 (default)
+ 214:       min_cluster_size:       40 (default)
+ 267:    min_cluster_size:          10 (default)
+ 220: surface_places [Uninitialized Virtual Config]
+ 315:    semantic_integrator [Virtual Config: SingleLabelIntegrator::Config]:
+ 120: update_functors[rooms] [Uninitialized Virtual Config]
+ 121: update_functors[surface_places] [Virtual Config: Update2dPlacesFunctor::Config]:
+##### stdout  ~/runs/logs/tmp_dk_typea.log #####
+##### stderr (non-progress) ~/runs/logs/tmp_dk_typea.err #####
+[Hydra Python] Logging to: /home/hydra/runs/uh2/tmp_dk_typea/logs
+[31m[ERROR] No module of type 'place_2dd' registered to the factory for BaseT='config::internal::ConfigWrapper' (underlying: 'hydra::SurfacePlacesInterface') and ConstructorArguments={}. Registered are: 'place_2d'.[0m
+[31m[ERROR] No module of type 'UpdateRoomsFunctorr' registered to the factory for BaseT='config::internal::ConfigWrapper' (underlying: 'hydra::UpdateFunctor') and ConstructorArguments={}. Registered are: 'Update2dPlacesFunctor', 'UpdateAgentsFunctor', 'UpdateBuildingsFunctor', 'UpdateFrontiersFunctor', 'UpdateMeshClustersFunctor', 'UpdateObjectsFunctor', 'UpdatePlacesFunctor', 'UpdateRoomsFunctor
+
+##### run tmp_dk_typeb : effective-config lines from <run>/logs/hydra_python.*.INFO.* (glog) #####
+ 227: objects [MeshSegmenterConfig] (default):
+ 232:       cluster_tolerance:      0.25 (default)
+ 248:       cluster_tolerance:      0.3
+ 296:    cluster_tolerance:         0.3 (default)
+ 233:       min_cluster_size:       40 (default)
+ 249:       min_cluster_size:       50
+ 297:    min_cluster_size:          10 (default)
+ 130:       min_room_size:          10 (default)
+ 239: surface_places [Virtual Config: Place2dSegmenterConfig]:
+ 345:    semantic_integrator [Uninitialized Virtual Config]
+ 121: update_functors[rooms] [Virtual Config: UpdateRoomsFunctor::Config]:
+ 140: update_functors[surface_places] [Virtual Config: Update2dPlacesFunctor::Config]:
+##### stdout  ~/runs/logs/tmp_dk_typeb.log #####
+##### stderr (non-progress) ~/runs/logs/tmp_dk_typeb.err #####
+[Hydra Python] Logging to: /home/hydra/runs/uh2/tmp_dk_typeb/logs
+[31m[ERROR] No module of type 'SingleLabelIntegratorr' registered to the factory for BaseT='config::internal::ConfigWrapper' (underlying: 'hydra::SemanticIntegrator') and ConstructorArguments={}. Registered are: 'BinarySemanticIntegrator', 'FirstKSemanticIntegrator', 'MLESemanticIntegrator', 'SingleLabelIntegrator'.[0m
+
+

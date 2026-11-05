@@ -1,0 +1,298 @@
+{
+ "dag_rb": {
+  "per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 1.0,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "n": {
+   "depth_holes": 2,
+   "depth_noise": 1,
+   "label_confusion": 2,
+   "label_dropout": 2,
+   "objects_min_size": 1,
+   "objects_tol_merge": 1,
+   "pose_drift": 2
+  },
+  "macro": 1.0,
+  "all_runs_per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 0.6667,
+   "frame_drop": 0.6667,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "all_runs_macro": 0.9167,
+  "strict_per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 1.0,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "strict_macro": 1.0,
+  "confusion": {
+   "mesh+places": {
+    "mesh": 5,
+    "objects": 0
+   },
+   "objects": {
+    "mesh": 0,
+    "objects": 6
+   }
+  }
+ },
+ "naive_rb": {
+  "per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 1.0,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "n": {
+   "depth_holes": 2,
+   "depth_noise": 1,
+   "label_confusion": 2,
+   "label_dropout": 2,
+   "objects_min_size": 1,
+   "objects_tol_merge": 1,
+   "pose_drift": 2
+  },
+  "macro": 0.8571,
+  "all_runs_per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 0.3333,
+   "frame_drop": 0.6667,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "all_runs_macro": 0.75,
+  "strict_per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "strict_macro": 0.5714,
+  "confusion": {
+   "mesh+places": {
+    "mesh": 3,
+    "objects": 2
+   },
+   "objects": {
+    "mesh": 0,
+    "objects": 6
+   }
+  }
+ },
+ "dag_rf": {
+  "per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 1.0,
+   "label_confusion": 0.5,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "n": {
+   "depth_holes": 2,
+   "depth_noise": 1,
+   "label_confusion": 2,
+   "label_dropout": 2,
+   "objects_min_size": 1,
+   "objects_tol_merge": 1,
+   "pose_drift": 2
+  },
+  "macro": 0.9286,
+  "all_runs_per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 0.3333,
+   "frame_drop": 0.0,
+   "label_confusion": 0.6667,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "all_runs_macro": 0.75,
+  "strict_per_fault": {
+   "depth_holes": 1.0,
+   "depth_noise": 0.0,
+   "label_confusion": 0.5,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.5
+  },
+  "strict_macro": 0.7143,
+  "confusion": {
+   "mesh+places": {
+    "mesh": 4,
+    "none": 0,
+    "objects": 0,
+    "places": 1
+   },
+   "objects": {
+    "mesh": 0,
+    "none": 1,
+    "objects": 5,
+    "places": 0
+   }
+  }
+ },
+ "naive_rf": {
+  "per_fault": {
+   "depth_holes": 0.5,
+   "depth_noise": 1.0,
+   "label_confusion": 0.5,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "n": {
+   "depth_holes": 2,
+   "depth_noise": 1,
+   "label_confusion": 2,
+   "label_dropout": 2,
+   "objects_min_size": 1,
+   "objects_tol_merge": 1,
+   "pose_drift": 2
+  },
+  "macro": 0.8571,
+  "all_runs_per_fault": {
+   "depth_holes": 0.6667,
+   "depth_noise": 0.3333,
+   "frame_drop": 0.0,
+   "label_confusion": 0.6667,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 1.0
+  },
+  "all_runs_macro": 0.7083,
+  "strict_per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "label_confusion": 0.5,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "strict_macro": 0.5
+ },
+ "downstream_rb": {
+  "per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "n": {
+   "depth_holes": 2,
+   "depth_noise": 1,
+   "label_confusion": 2,
+   "label_dropout": 2,
+   "objects_min_size": 1,
+   "objects_tol_merge": 1,
+   "pose_drift": 2
+  },
+  "macro": 0.5714,
+  "all_runs_per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "frame_drop": 0.3333,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "all_runs_macro": 0.5417,
+  "strict_per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "label_confusion": 1.0,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "strict_macro": 0.5714
+ },
+ "downstream_rf": {
+  "per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "label_confusion": 0.5,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "n": {
+   "depth_holes": 2,
+   "depth_noise": 1,
+   "label_confusion": 2,
+   "label_dropout": 2,
+   "objects_min_size": 1,
+   "objects_tol_merge": 1,
+   "pose_drift": 2
+  },
+  "macro": 0.5,
+  "all_runs_per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "frame_drop": 0.0,
+   "label_confusion": 0.6667,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.3333
+  },
+  "all_runs_macro": 0.5,
+  "strict_per_fault": {
+   "depth_holes": 0.0,
+   "depth_noise": 0.0,
+   "label_confusion": 0.5,
+   "label_dropout": 1.0,
+   "objects_min_size": 1.0,
+   "objects_tol_merge": 1.0,
+   "pose_drift": 0.0
+  },
+  "strict_macro": 0.5
+ },
+ "random_expected_micro_over_runs": 0.36363636363636365,
+ "random_expected_macro_over_faults": 0.35714285714285715,
+ "prior_candidates_macro_lenient": {
+  "mesh": 0.42857142857142855,
+  "objects": 0.5714285714285714,
+  "places": 0.42857142857142855,
+  "rooms": 0.0
+ },
+ "n_scored": 11,
+ "n_masked": 9
+}

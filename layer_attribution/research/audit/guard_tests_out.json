@@ -1,0 +1,38 @@
+{
+ "splits_synthetic": {
+  "uh2_cfg_rooms_min_size_s60": "test",
+  "uh2_clean": "reference",
+  "uh2_label_dropout_s03_r1": "benign",
+  "uh2_label_dropout_s50": "dev",
+  "uh2_label_dropout_s50_r1": "test"
+ },
+ "runs.select('test',)": "refused",
+ "runs.select('dev', 'test')": "refused",
+ "runs.select('reference', 'repeat', 'benign', 'dev', 'test')": "refused",
+ "runs.select default (DEV_SPLITS) names": [
+  "uh2_clean",
+  "uh2_label_dropout_s03_r1",
+  "uh2_label_dropout_s50"
+ ],
+ "features_extract --splits test": "rc=2 refused: 'test' runs are for the final evaluation only (pass final=True)",
+ "features_extract --splits dev,test": "rc=2 refused: 'test' runs are for the final evaluation only (pass final=True)",
+ "features_extract (default)": "rc=0 3 runs (reference, repeat, benign, dev), reference uh2_clean, 99 features, jobs 1 | uh2_clean                            reference -                sev=0.0 seed=None | uh2_label_dropout_s03_r1             benign    label_dropout    sev=0.03 seed=1 | uh2_label_dropout_s50                dev       label_dropout    sev=0.5 seed=0",
+ "features_extract --splits test --final": "rc=0 2 runs (test), reference uh2_clean, 99 features, jobs 1 | uh2_label_dropout_s50_r1             test      label_dropout    sev=0.5 seed=1 | uh2_cfg_rooms_min_size_s60           test      rooms_min_size   sev=0.6 seed=None",
+ "query_table --splits test": "refused (SplitViolation)",
+ "query_table default splits": [
+  "reference",
+  "repeat",
+  "benign",
+  "dev"
+ ],
+ "evaluate report --splits test": "refused",
+ "evaluate report --splits dev,test": "refused",
+ "calibration invariant to non-benign/non-reference rows (garbage in 24 rows)": true,
+ "reference row garbage: thresholds of reference_based unchanged / reference_free changed": [
+  true,
+  true
+ ],
+ "select(): grid + chosen unchanged by a fake test row": true,
+ "report records/summary/band/prior unchanged by a fake test row": true,
+ "build_records(splits=('test',)) library call": "NOT guarded (library level; only the CLI main() checks)"
+}

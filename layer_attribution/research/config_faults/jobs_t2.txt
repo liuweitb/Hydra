@@ -1,0 +1,3 @@
+tmp_cfg_t2_objects_tol_merge_s100 /mnt/d/hydra_work/results/config_faults/cfg/tmp_cfg_t2_objects_tol_merge_s100
+tmp_cfg_t2_rooms_max_dilation_s055 /mnt/d/hydra_work/results/config_faults/cfg/tmp_cfg_t2_rooms_max_dilation_s055
+tmp_cfg_t2_objects_tol_merge_s080 /mnt/d/hydra_work/results/config_faults/cfg/tmp_cfg_t2_objects_tol_merge_s080

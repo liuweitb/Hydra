@@ -1,0 +1,8 @@
+json 74.9 MB, cache 24.2 MB
+mode             page cache   work s  process wall s  peak RSS MB
+build            cold          4.205           4.582       1061.3
+build            warm          4.069           4.429       1061.4
+load             warm          0.044           0.332         54.1
+load             cold          0.057           0.309         54.1
+load_graph_only  warm          0.011           0.245         32.4
+load_graph_only  cold          0.023           0.271         32.3

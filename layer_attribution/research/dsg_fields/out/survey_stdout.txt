@@ -1,0 +1,39 @@
+run                                   split    fault      sev  json_mb  objects   places  mplaces    rooms   agents mesh_vertices  build_s  load_ms orph_obj multi_par  orph_pl rooms_no_obj invariants   rss_mb
+uh2_clean                          reference        -      0.0     74.9      109     1068     2774        8      628   448062     3.72       34        0        4        0        0       OK       82
+uh2_clean_b                          repeat        -      0.0     74.9      109     1068     2774        8      628   448062     3.56       25        0        4        0        0       OK      875
+uh2_depth_holes_s03_r0               benign depth_holes     0.03     93.4      121     1096     2945        7      628   567793      4.0       26        0        6       14        0       OK     1387
+uh2_depth_holes_s03_r1               benign depth_holes     0.03     93.2      117     1117     2950        6      628   566134     3.87       31        0        7       20        0       OK     1535
+uh2_depth_holes_s20_r0                  dev depth_holes      0.2    106.4      122     1088     2958        6      628   649981     4.22       28        0        6       12        0       OK     1605
+uh2_depth_holes_s50                     dev depth_holes      0.5     95.9      103     1211     2890        8      628   577358     3.95       30        0        9        6        0       OK     1612
+uh2_depth_noise_s03_r0               benign depth_noise     0.03     75.0      109     1061     2720        7      628   449228     3.15       15        0        2        0        0       OK     1613
+uh2_depth_noise_s03_r1               benign depth_noise     0.03     75.1      110     1087     2766        5      628   449015     5.01       23        0        6        8        0       OK     1613
+uh2_depth_noise_s20_r0                  dev depth_noise      0.2     76.2      107     1004     2751        5      628   458022     3.38       21        1        4        0        0       OK     1614
+uh2_depth_noise_s50                     dev depth_noise      0.5     83.5      110      989     2907        7      628   506282     3.85       27        0       11        3        0       OK     1614
+uh2_frame_drop_s03_r0                benign frame_drop     0.03     74.7      109     1048     2752        7      620   447827     3.12       28        0        4        3        0       OK     1615
+uh2_frame_drop_s03_r1                benign frame_drop     0.03     74.7      109     1063     2737        8      623   447557     3.09       22        0        2        6        0       OK     1615
+uh2_frame_drop_s20_r0                   dev frame_drop      0.2     73.1      108     1067     2723        6      575   437529     3.35       25        0        3        4        0       OK     1615
+uh2_frame_drop_s50                      dev frame_drop      0.5     71.2      109     1075     2659        8      491   427106     3.34       26        0        3        6        0       OK     1615
+uh2_label_confusion_s03_r0           benign label_confusion     0.03     74.9      126     1068     2762        8      628   448062     3.05       26        0        3        0        0       OK     1615
+uh2_label_confusion_s03_r1           benign label_confusion     0.03     74.9      134     1068     2762        8      628   448062     3.26       24        0        4        0        0       OK     1615
+uh2_label_confusion_s20_r0              dev label_confusion      0.2     74.9      162     1068     2765        8      628   448062      3.0       20        0        6        0        0       OK     1615
+uh2_label_confusion_s50                 dev label_confusion      0.5     74.9      169     1068     2760        8      628   448062     4.88       14        0        6        0        0       OK     1615
+uh2_label_dropout_s03_r0             benign label_dropout     0.03     74.8      107     1068     2762        8      628   448062     3.12       24        0        3        0        0       OK     1615
+uh2_label_dropout_s03_r1             benign label_dropout     0.03     74.8      108     1068     2762        8      628   448062     3.25       24        0        4        0        0       OK     1615
+uh2_label_dropout_s20_r0                dev label_dropout      0.2     74.8      101     1068     2765        8      628   448062     2.93       19        0        4        0        0       OK     1615
+uh2_label_dropout_s50                   dev label_dropout      0.5     74.7       66     1068     2760        8      628   448062     3.27       16        0        1        0        0       OK     1615
+uh2_pose_drift_s03_r0                benign pose_drift     0.03     75.1      110     1081     2771        7      628   449613     3.29       24        0        3        4        0       OK     1615
+uh2_pose_drift_s03_r1                benign pose_drift     0.03     75.1      109     1014     2826        9      628   449684     3.54       30        0        1       10        0       OK     1615
+uh2_pose_drift_s20_r0                   dev pose_drift      0.2     75.5      123     1098     2858        7      631   449973     3.46       26        0        3        7        0       OK     1615
+uh2_pose_drift_s50                      dev pose_drift      0.5     75.6      135     1137     2954        8      629   447461     3.17       19        1        1        4        0       OK     1615
+
+26 development runs loaded, 26 ok, 0 failed; invariant violations in 0 runs; skipped (counts only): {'not development split': 6, 'development, json missing': 0, 'development, status not ok / still being written': 0}
+  objects        min        66 median       109.0 max       169
+  places         min       989 median      1068.0 max      1211
+  mplaces        min      2659 median      2765.0 max      2958
+  rooms          min         5 median         8.0 max         9
+  agents         min       491 median       628.0 max       631
+  mesh_vertices  min    427106 median    448062.0 max    649981
+  build_s        min      2.93 median         3.3 max      5.01
+  load_ms        min        14 median        24.5 max        34
+  warnings emitted: none; runs with unrepresented edges: 0; traj mismatch: 0
+  survey process peak RSS 1682 MB; RSS after last run 1615 MB

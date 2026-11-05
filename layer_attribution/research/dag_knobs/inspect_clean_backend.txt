@@ -1,0 +1,244 @@
+{
+ "attr_stats": {
+  "mesh_places": {
+   "attr_fields": [
+    "NO_SEMANTIC_LABEL",
+    "boundary",
+    "bounding_box",
+    "color",
+    "deformation_connections",
+    "ellipse_centroid",
+    "ellipse_matrix_compress",
+    "ellipse_matrix_expand",
+    "is_active",
+    "is_predicted",
+    "last_update_time_ns",
+    "mesh_vertex_labels",
+    "metadata",
+    "name",
+    "pcl_boundary_connections",
+    "pcl_mesh_connections",
+    "position",
+    "semantic_feature",
+    "semantic_label",
+    "voxblox_mesh_connections"
+   ],
+   "pcl_mesh_connections_min_med_max": [
+    3,
+    78,
+    340
+   ]
+  },
+  "objects": {
+   "attr_fields": [
+    "NO_SEMANTIC_LABEL",
+    "bounding_box",
+    "color",
+    "is_active",
+    "is_predicted",
+    "last_update_time_ns",
+    "mesh_connections",
+    "metadata",
+    "name",
+    "position",
+    "registered",
+    "semantic_feature",
+    "semantic_label",
+    "world_R_object"
+   ],
+   "mesh_connections_min_med_max": [
+    46,
+    168,
+    1152
+   ]
+  },
+  "places": {
+   "attr_fields": [
+    "NO_SEMANTIC_LABEL",
+    "active_frontier",
+    "anti_frontier",
+    "bounding_box",
+    "color",
+    "deformation_connections",
+    "distance",
+    "frontier_scale",
+    "is_active",
+    "is_predicted",
+    "last_update_time_ns",
+    "mesh_vertex_labels",
+    "metadata",
+    "name",
+    "need_cleanup",
+    "num_basis_points",
+    "num_frontier_voxels",
+    "orientation",
+    "pcl_mesh_connections",
+    "position",
+    "real_place",
+    "semantic_feature",
+    "semantic_label",
+    "voxblox_mesh_connections"
+   ],
+   "radius_min_med_max": [
+    0.4000000059604645,
+    0.7211114168167114,
+    3.006659984588623
+   ],
+   "real_place_count": 1068
+  },
+  "rooms": {
+   "children_per_room": [
+    44,
+    63,
+    66,
+    74,
+    148,
+    159,
+    198,
+    316
+   ]
+  }
+ },
+ "cross_partition_sibling_endpoints": {},
+ "layer_keys": [
+  "2",
+  "2[97]",
+  "3",
+  "3[1]",
+  "4",
+  "5"
+ ],
+ "layer_names": [
+  "AGENTS",
+  "BUILDINGS",
+  "MESH_PLACES",
+  "OBJECTS",
+  "PLACES",
+  "ROOMS"
+ ],
+ "layers": {
+  "2": {
+   "attr_types": {
+    "ObjectNodeAttributes": 109
+   },
+   "id_categories": {
+    "O": 109
+   },
+   "intra_layer_edge_endpoints": 0,
+   "num_nodes": 109,
+   "semantic_labels": {
+    "5": 25,
+    "7": 12,
+    "10": 36,
+    "12": 10,
+    "13": 11,
+    "18": 15
+   }
+  },
+  "2[97]": {
+   "attr_types": {
+    "AgentNodeAttributes": 628
+   },
+   "id_categories": {
+    "a": 628
+   },
+   "intra_layer_edge_endpoints": 1254,
+   "num_nodes": 628,
+   "semantic_labels": {}
+  },
+  "3": {
+   "attr_types": {
+    "PlaceNodeAttributes": 1068
+   },
+   "id_categories": {
+    "p": 1068
+   },
+   "intra_layer_edge_endpoints": 8256,
+   "num_nodes": 1068,
+   "semantic_labels": {
+    "4294967295": 1068
+   }
+  },
+  "3[1]": {
+   "attr_types": {
+    "Place2dNodeAttributes": 2774
+   },
+   "id_categories": {
+    "P": 2774
+   },
+   "intra_layer_edge_endpoints": 14014,
+   "num_nodes": 2774,
+   "semantic_labels": {
+    "3": 2772,
+    "15": 2
+   }
+  },
+  "4": {
+   "attr_types": {
+    "RoomNodeAttributes": 8
+   },
+   "id_categories": {
+    "R": 8
+   },
+   "intra_layer_edge_endpoints": 16,
+   "num_nodes": 8,
+   "semantic_labels": {
+    "0": 8
+   }
+  },
+  "5": {
+   "attr_types": {
+    "SemanticNodeAttributes": 1
+   },
+   "id_categories": {
+    "B": 1
+   },
+   "intra_layer_edge_endpoints": 0,
+   "num_nodes": 1,
+   "semantic_labels": {
+    "22": 1
+   }
+  }
+ },
+ "name_to_key": {
+  "AGENTS": "2",
+  "BUILDINGS": "5",
+  "MESH_PLACES": "3[1]",
+  "OBJECTS": "2",
+  "PLACES": "3",
+  "ROOMS": "4"
+ },
+ "num_parents_histogram_per_layer": {
+  "2": {
+   "1": 105,
+   "2": 4
+  },
+  "2[97]": {
+   "0": 1,
+   "1": 627
+  },
+  "3": {
+   "1": 1068
+  },
+  "3[1]": {
+   "0": 2774
+  },
+  "4": {
+   "0": 8
+  },
+  "5": {
+   "0": 1
+  }
+ },
+ "parent_child_edge_counts": {
+  "3 -> 2": 113,
+  "3 -> 2[97]": 627,
+  "4 -> 3": 1068
+ },
+ "places_edge_weight_min_med_max": [
+  0.28283974528312683,
+  0.5656875967979431,
+  2.408318281173706
+ ],
+ "places_num_edges": 4128
+}

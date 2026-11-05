@@ -1,0 +1,950 @@
+{
+ "uh2_clean": {
+  "_open_seconds": 0.002,
+  "mesh.label_unknown_frac": {
+   "ms": 0.4,
+   "value": {
+    "frac": 0.036041887060272906
+   }
+  },
+  "mesh.label_histogram": {
+   "ms": 4.2,
+   "value": {
+    "frac_by_label": {
+     "0": 0.03604,
+     "1": 0.03532,
+     "2": 0.00379,
+     "3": 0.54997,
+     "4": 0.01653,
+     "5": 0.01567,
+     "7": 0.01247,
+     "9": 0.02641,
+     "10": 0.01351,
+     "11": 0.01112,
+     "12": 0.00509,
+     "13": 0.00745,
+     "14": 0.00241,
+     "15": 0.00071,
+     "16": 0.01771,
+     "17": 0.02965,
+     "18": 0.00852,
+     "19": 0.20764
+    }
+   }
+  },
+  "mesh.edge_label_flip_rate": {
+   "ms": 4.4,
+   "value": {
+    "rate": 0.0421231771315004,
+    "n_edges": 1102932
+   }
+  },
+  "mesh.label_normal_consistency": {
+   "ms": 145.6,
+   "value": {
+    "floor_faces": 359816,
+    "floor_vertical_normal_frac": 0.993171509882829,
+    "wall_faces": 125247,
+    "wall_horizontal_normal_frac": 0.8006179788737455
+   }
+  },
+  "mesh.boundary_edge_frac": {
+   "ms": 2.9,
+   "value": {
+    "boundary_frac": 0.19723337431500765,
+    "nonmanifold_frac": 0.0001205876699560807
+   }
+  },
+  "mesh.connected_components": {
+   "ms": 39.1,
+   "value": {
+    "n": 8797,
+    "largest_frac": 0.01626783793314318,
+    "n_ge_100_vertices": 937
+   }
+  },
+  "mesh.edge_length_and_area": {
+   "ms": 120.4,
+   "value": {
+    "edge_p50": 0.10248727351427078,
+    "edge_p99": 0.1467072069644928,
+    "area_p99": 0.0057368529960513115,
+    "sliver_frac(area<1e-4)": 0.0038939505720229986
+   }
+  },
+  "mesh.surface_thickness": {
+   "ms": 294.8,
+   "value": {
+    "floor_thickness": {
+     "p50": 0.0003799365230182805,
+     "p95": 0.006357727229855387,
+     "n_cells": 4121
+    },
+    "wall_thickness": {
+     "p50": 0.01482848825323211,
+     "p95": 0.08144339582443048,
+     "n_cells": 1405
+    }
+   }
+  },
+  "mesh.floor_label_height_modes": {
+   "ms": 7.7,
+   "value": {
+    "peaks_z_share": [
+     [
+      1.022,
+      0.505
+     ],
+     [
+      4.022,
+      0.471
+     ]
+    ]
+   }
+  },
+  "objects.coincident_same_label": {
+   "ms": 0.4,
+   "value": {
+    "pairs_r0.5": 0,
+    "pairs_r1.0": 8,
+    "n_objects": 109
+   }
+  },
+  "objects.bbox_size_extremes": {
+   "ms": 0.4,
+   "value": {
+    "min_dim<0.05": 9,
+    "max_dim>3": 1,
+    "vol_median": 0.29739582538604736,
+    "vol_p95": 1.9832942485809326
+   }
+  },
+  "objects.mesh_label_purity": {
+   "ms": 1.6,
+   "value": {
+    "mean": 0.9933681973191095,
+    "min": 0.8987854251012146,
+    "n_lt_0.8": 0,
+    "n_lt_0.5": 0,
+    "n_without_vertices": 0
+   }
+  },
+  "objects.bbox_vs_connected_vertices": {
+   "ms": 8.7,
+   "value": {
+    "max_edge_err_m": {
+     "p50": 1.9073486328125e-06,
+     "p95": 3.814697265625e-06,
+     "max": 3.814697265625e-06
+    }
+   }
+  },
+  "objects.orphans_and_multi_parent": {
+   "ms": 0.6,
+   "value": {
+    "no_parent": 0,
+    "multi_parent": 4,
+    "parents_in_different_rooms": 0
+   }
+  },
+  "objects.height_above_floor": {
+   "ms": 5.4,
+   "value": {
+    "bottom_minus_floor": {
+     "p5": -0.0790969967842102,
+     "p50": 0.2523344159126282,
+     "p95": 1.5517245054244992
+    },
+    "n_below_-0.2": 0,
+    "n_above_1.5": 7,
+    "n_no_floor": 2
+   }
+  },
+  "objects.parent_place_distance": {
+   "ms": 0.5,
+   "value": {
+    "dist_m": {
+     "p50": 0.7795219592704664,
+     "p95": 1.4508852444204807
+    },
+    "dist_over_radius": {
+     "p50": 1.5375585958489608,
+     "p95": 2.7438503953269144
+    }
+   }
+  },
+  "objects.nearest_place_room_agreement": {
+   "ms": 0.6,
+   "value": {
+    "agree_frac": 0.9541284403669725,
+    "n_disagree": 5,
+    "nearest_place_dist_m": {
+     "p50": 0.7430897951490795,
+     "p95": 1.2704825244999636
+    }
+   }
+  },
+  "places.clearance_vs_mesh": {
+   "ms": 16.1,
+   "value": {
+    "mesh_dist_minus_radius": {
+     "p1": -1.0440823952533682,
+     "p5": -0.6886751372662812,
+     "p50": -0.13491771869699426
+    },
+    "frac_gap<-0.1": 0.6544943820224719,
+    "frac_gap<-0.3": 0.25749063670411987
+   }
+  },
+  "places.radius_vs_basis_points": {
+   "ms": 0.5,
+   "value": {
+    "frac_|radius-min_basis_dist|>1e-3": 0.10112359550561797,
+    "frac_>0.1": 0.08426966292134831,
+    "n_basis_mean": 2.613295880149813
+   }
+  },
+  "places.basis_points_on_mesh": {
+   "ms": 11.7,
+   "value": {
+    "dist_to_mesh": {
+     "p50": 0.10940933067959839,
+     "p95": 0.13604206903386867,
+     "p99": 0.42240020892975183
+    }
+   }
+  },
+  "places.graph_components_and_degree": {
+   "ms": 0.2,
+   "value": {
+    "n_components": 1,
+    "largest_frac": 1.0,
+    "isolated": 0,
+    "deg_min_med_max": [
+     1,
+     6.0,
+     42
+    ]
+   }
+  },
+  "places.edge_weight_vs_endpoint_radius": {
+   "ms": 0.2,
+   "value": {
+    "weight<=min_endpoint_radius_frac": 0.8306686046511628,
+    "weight_p50": 0.5656875967979431
+   }
+  },
+  "places.edges_through_geometry": {
+   "ms": 118.8,
+   "value": {
+    "worst_mesh_dist_over_min_radius": {
+     "p1": 0.0929855816110059,
+     "p5": 0.2251435290481226,
+     "p50": 0.8663560874925997
+    },
+    "frac<0.5": 0.1875,
+    "frac<0.25": 0.058381782945736434
+   }
+  },
+  "places.near_duplicates": {
+   "ms": 0.4,
+   "value": {
+    "pairs_r0.15": 0
+   }
+  },
+  "places.centers_inside_object_bbox": {
+   "ms": 4.1,
+   "value": {
+    "n_inside": 14,
+    "frac": 0.013108614232209739
+   }
+  },
+  "places.trajectory_coverage": {
+   "ms": 1.1,
+   "value": {
+    "pose_to_nearest_place_m": {
+     "p50": 0.6718389996092617,
+     "p95": 1.0788753112523808,
+     "max": 1.5323040057016528
+    },
+    "pose_outside_parent_sphere_frac": 0.19936204146730463,
+    "poses_without_parent": 1
+   }
+  },
+  "mplaces.mesh_label_purity_and_coverage": {
+   "ms": 119.5,
+   "value": {
+    "vertex_label_matches_node_label": 1.0,
+    "floor_vertices_covered": 0.9526659876064751,
+    "vertices_claimed_by_>1_node": 0.012899595627910543
+   }
+  },
+  "mplaces.graph_components_and_height": {
+   "ms": 0.8,
+   "value": {
+    "n_components": 19,
+    "largest_frac": 0.5104542177361211,
+    "isolated": 9,
+    "z_std": 1.4971367553942554
+   }
+  },
+  "rooms.contiguity": {
+   "ms": 0.6,
+   "value": {
+    "components_per_room": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "rooms_with_gt1": 0,
+    "cross_room_place_edges": 288
+   }
+  },
+  "rooms.orphan_places_and_objects": {
+   "ms": 0.1,
+   "value": {
+    "places_without_room": 0,
+    "frac": 0.0,
+    "places_with_several_rooms": 0,
+    "objects_without_room": 0
+   }
+  },
+  "rooms.adjacency_vs_place_edges": {
+   "ms": 0.1,
+   "value": {
+    "room_edges": 8,
+    "room_edges_without_place_edge": 0,
+    "place_edge_room_pairs_without_room_edge": 0
+   }
+  },
+  "rooms.size_and_overlap": {
+   "ms": 1.1,
+   "value": {
+    "n_children_min_med_max": [
+     44,
+     111.0,
+     316
+    ],
+    "tiny_lt10": 0,
+    "extent_area_m2_min_med_max": [
+     47.52000427246094,
+     117.7199935913086,
+     580.800048828125
+    ],
+    "max_pair_overlap_over_smaller_area": 1.0
+   }
+  },
+  "rooms.pos_vs_children_centroid": {
+   "ms": 0.7,
+   "value": {
+    "dist_m": {
+     "p50": 0.0,
+     "p95": 0.7646426424158632,
+     "max": 1.176373296024406
+    }
+   }
+  },
+  "rooms.objectless_rooms": {
+   "ms": 0.1,
+   "value": {
+    "objects_per_room": [
+     18,
+     30,
+     8,
+     3,
+     21,
+     7,
+     18,
+     4
+    ],
+    "rooms_without_objects": 0
+   }
+  },
+  "building.pos_vs_rooms": {
+   "ms": 0.0,
+   "value": {
+    "dist_to_mean_room_pos_m": 8.887541893234703e-06,
+    "n_building_nodes": 1
+   }
+  },
+  "traj.timing": {
+   "ms": 0.3,
+   "value": {
+    "dt_median_s": 0.7,
+    "dt_max_s": 5.7,
+    "n_dt_gt_2x_median": 31,
+    "monotonic": true
+   }
+  },
+  "traj.step_and_smoothness": {
+   "ms": 1.0,
+   "value": {
+    "step_m": {
+     "p50": 0.4031441749548152,
+     "p99": 0.6060276931319928,
+     "max": 0.6953166087474096
+    },
+    "speed_mps_p99": 0.7994257275377824,
+    "second_diff_m": {
+     "p50": 0.08942599785770684,
+     "p99": 0.6578613839614983
+    },
+    "rot_step_deg": {
+     "p50": 3.827066789841423,
+     "p99": 29.048710427338627,
+     "max": 44.72766009382747
+    }
+   }
+  },
+  "traj.height_above_floor": {
+   "ms": 73.9,
+   "value": {
+    "pose_z_minus_floor": {
+     "p5": 1.4350014301414489,
+     "p50": 1.4898155171585081,
+     "p95": 1.502915113693237,
+     "std": 0.026322053412227587
+    },
+    "n_no_floor": 29
+   }
+  },
+  "traj.clearance_vs_mesh": {
+   "ms": 11.3,
+   "value": {
+    "dist_to_mesh_m": {
+     "p1": 0.2851032450512948,
+     "p5": 0.5142466816837551,
+     "p50": 1.2098652240206746
+    },
+    "frac<0.3": 0.011146496815286623
+   }
+  },
+  "files.layer_statistics_final_rows": {
+   "ms": 0.9,
+   "value": {
+    "frontend_objects": {
+     "nodes_active": 145,
+     "nodes_removed": 158,
+     "nodes_merged": 0,
+     "nodes_w_parents": 145,
+     "nodes_w_children": 0,
+     "edges": 0
+    },
+    "frontend_places": {
+     "nodes_active": 1302,
+     "nodes_removed": 8995,
+     "nodes_merged": 0,
+     "nodes_w_parents": 0,
+     "nodes_w_children": 326,
+     "edges": 4504
+    },
+    "backend_objects": {
+     "nodes_active": 109,
+     "nodes_removed": 105,
+     "nodes_merged": 80,
+     "nodes_w_parents": 105,
+     "nodes_w_children": 0,
+     "edges": 0
+    },
+    "backend_places": {
+     "nodes_active": 1068,
+     "nodes_removed": 4656,
+     "nodes_merged": 464,
+     "nodes_w_parents": 1068,
+     "nodes_w_children": 269,
+     "edges": 4128
+    },
+    "backend_over_frontend": {
+     "objects": 0.7517241379310344,
+     "places": 0.8202764976958525
+    }
+   }
+  },
+  "_shared_structures_ms": {
+   "mesh_edges": 231.2,
+   "floor_kd": 58.9,
+   "mesh_kd": 109.1,
+   "place_cc": 0.6
+  },
+  "_total_ms": 1401.0
+ },
+ "uh2_clean_b": {
+  "_open_seconds": 0.001,
+  "mesh.label_unknown_frac": {
+   "ms": 0.4,
+   "value": {
+    "frac": 0.036041887060272906
+   }
+  },
+  "mesh.label_histogram": {
+   "ms": 2.5,
+   "value": {
+    "frac_by_label": {
+     "0": 0.03604,
+     "1": 0.03532,
+     "2": 0.00379,
+     "3": 0.54997,
+     "4": 0.01653,
+     "5": 0.01567,
+     "7": 0.01247,
+     "9": 0.02641,
+     "10": 0.01351,
+     "11": 0.01112,
+     "12": 0.00509,
+     "13": 0.00745,
+     "14": 0.00241,
+     "15": 0.00071,
+     "16": 0.01771,
+     "17": 0.02965,
+     "18": 0.00852,
+     "19": 0.20764
+    }
+   }
+  },
+  "mesh.edge_label_flip_rate": {
+   "ms": 5.3,
+   "value": {
+    "rate": 0.0421231771315004,
+    "n_edges": 1102932
+   }
+  },
+  "mesh.label_normal_consistency": {
+   "ms": 119.3,
+   "value": {
+    "floor_faces": 359816,
+    "floor_vertical_normal_frac": 0.993171509882829,
+    "wall_faces": 125247,
+    "wall_horizontal_normal_frac": 0.8006179788737455
+   }
+  },
+  "mesh.boundary_edge_frac": {
+   "ms": 2.8,
+   "value": {
+    "boundary_frac": 0.19723337431500765,
+    "nonmanifold_frac": 0.0001205876699560807
+   }
+  },
+  "mesh.connected_components": {
+   "ms": 44.3,
+   "value": {
+    "n": 8797,
+    "largest_frac": 0.01626783793314318,
+    "n_ge_100_vertices": 937
+   }
+  },
+  "mesh.edge_length_and_area": {
+   "ms": 126.8,
+   "value": {
+    "edge_p50": 0.10248727351427078,
+    "edge_p99": 0.1467072069644928,
+    "area_p99": 0.0057368529960513115,
+    "sliver_frac(area<1e-4)": 0.0038939505720229986
+   }
+  },
+  "mesh.surface_thickness": {
+   "ms": 269.4,
+   "value": {
+    "floor_thickness": {
+     "p50": 0.0003799365230182805,
+     "p95": 0.006357727229855387,
+     "n_cells": 4121
+    },
+    "wall_thickness": {
+     "p50": 0.01482848825323211,
+     "p95": 0.08144339582443048,
+     "n_cells": 1405
+    }
+   }
+  },
+  "mesh.floor_label_height_modes": {
+   "ms": 5.2,
+   "value": {
+    "peaks_z_share": [
+     [
+      1.022,
+      0.505
+     ],
+     [
+      4.022,
+      0.471
+     ]
+    ]
+   }
+  },
+  "objects.coincident_same_label": {
+   "ms": 0.2,
+   "value": {
+    "pairs_r0.5": 0,
+    "pairs_r1.0": 8,
+    "n_objects": 109
+   }
+  },
+  "objects.bbox_size_extremes": {
+   "ms": 0.2,
+   "value": {
+    "min_dim<0.05": 9,
+    "max_dim>3": 1,
+    "vol_median": 0.29739582538604736,
+    "vol_p95": 1.9832942485809326
+   }
+  },
+  "objects.mesh_label_purity": {
+   "ms": 0.7,
+   "value": {
+    "mean": 0.9933681973191095,
+    "min": 0.8987854251012146,
+    "n_lt_0.8": 0,
+    "n_lt_0.5": 0,
+    "n_without_vertices": 0
+   }
+  },
+  "objects.bbox_vs_connected_vertices": {
+   "ms": 5.9,
+   "value": {
+    "max_edge_err_m": {
+     "p50": 1.9073486328125e-06,
+     "p95": 3.814697265625e-06,
+     "max": 3.814697265625e-06
+    }
+   }
+  },
+  "objects.orphans_and_multi_parent": {
+   "ms": 0.4,
+   "value": {
+    "no_parent": 0,
+    "multi_parent": 4,
+    "parents_in_different_rooms": 0
+   }
+  },
+  "objects.height_above_floor": {
+   "ms": 4.3,
+   "value": {
+    "bottom_minus_floor": {
+     "p5": -0.0790969967842102,
+     "p50": 0.2523344159126282,
+     "p95": 1.5517245054244992
+    },
+    "n_below_-0.2": 0,
+    "n_above_1.5": 7,
+    "n_no_floor": 2
+   }
+  },
+  "objects.parent_place_distance": {
+   "ms": 0.2,
+   "value": {
+    "dist_m": {
+     "p50": 0.7795219592704664,
+     "p95": 1.4508852444204807
+    },
+    "dist_over_radius": {
+     "p50": 1.5375585958489608,
+     "p95": 2.7438503953269144
+    }
+   }
+  },
+  "objects.nearest_place_room_agreement": {
+   "ms": 0.4,
+   "value": {
+    "agree_frac": 0.9541284403669725,
+    "n_disagree": 5,
+    "nearest_place_dist_m": {
+     "p50": 0.7430897951490795,
+     "p95": 1.2704825244999636
+    }
+   }
+  },
+  "places.clearance_vs_mesh": {
+   "ms": 19.0,
+   "value": {
+    "mesh_dist_minus_radius": {
+     "p1": -1.0440823952533682,
+     "p5": -0.6886751372662812,
+     "p50": -0.13491771869699426
+    },
+    "frac_gap<-0.1": 0.6544943820224719,
+    "frac_gap<-0.3": 0.25749063670411987
+   }
+  },
+  "places.radius_vs_basis_points": {
+   "ms": 0.4,
+   "value": {
+    "frac_|radius-min_basis_dist|>1e-3": 0.10112359550561797,
+    "frac_>0.1": 0.08426966292134831,
+    "n_basis_mean": 2.613295880149813
+   }
+  },
+  "places.basis_points_on_mesh": {
+   "ms": 8.6,
+   "value": {
+    "dist_to_mesh": {
+     "p50": 0.10940933067959839,
+     "p95": 0.13604206903386867,
+     "p99": 0.42240020892975183
+    }
+   }
+  },
+  "places.graph_components_and_degree": {
+   "ms": 0.1,
+   "value": {
+    "n_components": 1,
+    "largest_frac": 1.0,
+    "isolated": 0,
+    "deg_min_med_max": [
+     1,
+     6.0,
+     42
+    ]
+   }
+  },
+  "places.edge_weight_vs_endpoint_radius": {
+   "ms": 0.1,
+   "value": {
+    "weight<=min_endpoint_radius_frac": 0.8306686046511628,
+    "weight_p50": 0.5656875967979431
+   }
+  },
+  "places.edges_through_geometry": {
+   "ms": 125.1,
+   "value": {
+    "worst_mesh_dist_over_min_radius": {
+     "p1": 0.0929855816110059,
+     "p5": 0.2251435290481226,
+     "p50": 0.8663560874925997
+    },
+    "frac<0.5": 0.1875,
+    "frac<0.25": 0.058381782945736434
+   }
+  },
+  "places.near_duplicates": {
+   "ms": 0.4,
+   "value": {
+    "pairs_r0.15": 0
+   }
+  },
+  "places.centers_inside_object_bbox": {
+   "ms": 3.4,
+   "value": {
+    "n_inside": 14,
+    "frac": 0.013108614232209739
+   }
+  },
+  "places.trajectory_coverage": {
+   "ms": 0.9,
+   "value": {
+    "pose_to_nearest_place_m": {
+     "p50": 0.6718389996092617,
+     "p95": 1.0788753112523808,
+     "max": 1.5323040057016528
+    },
+    "pose_outside_parent_sphere_frac": 0.19936204146730463,
+    "poses_without_parent": 1
+   }
+  },
+  "mplaces.mesh_label_purity_and_coverage": {
+   "ms": 109.2,
+   "value": {
+    "vertex_label_matches_node_label": 1.0,
+    "floor_vertices_covered": 0.9526659876064751,
+    "vertices_claimed_by_>1_node": 0.012899595627910543
+   }
+  },
+  "mplaces.graph_components_and_height": {
+   "ms": 0.9,
+   "value": {
+    "n_components": 19,
+    "largest_frac": 0.5104542177361211,
+    "isolated": 9,
+    "z_std": 1.4971367553942554
+   }
+  },
+  "rooms.contiguity": {
+   "ms": 0.7,
+   "value": {
+    "components_per_room": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "rooms_with_gt1": 0,
+    "cross_room_place_edges": 288
+   }
+  },
+  "rooms.orphan_places_and_objects": {
+   "ms": 0.1,
+   "value": {
+    "places_without_room": 0,
+    "frac": 0.0,
+    "places_with_several_rooms": 0,
+    "objects_without_room": 0
+   }
+  },
+  "rooms.adjacency_vs_place_edges": {
+   "ms": 0.1,
+   "value": {
+    "room_edges": 8,
+    "room_edges_without_place_edge": 0,
+    "place_edge_room_pairs_without_room_edge": 0
+   }
+  },
+  "rooms.size_and_overlap": {
+   "ms": 0.6,
+   "value": {
+    "n_children_min_med_max": [
+     44,
+     111.0,
+     316
+    ],
+    "tiny_lt10": 0,
+    "extent_area_m2_min_med_max": [
+     47.52000427246094,
+     117.7199935913086,
+     580.800048828125
+    ],
+    "max_pair_overlap_over_smaller_area": 1.0
+   }
+  },
+  "rooms.pos_vs_children_centroid": {
+   "ms": 0.4,
+   "value": {
+    "dist_m": {
+     "p50": 0.0,
+     "p95": 0.7646426424158632,
+     "max": 1.176373296024406
+    }
+   }
+  },
+  "rooms.objectless_rooms": {
+   "ms": 0.0,
+   "value": {
+    "objects_per_room": [
+     18,
+     30,
+     8,
+     3,
+     21,
+     7,
+     18,
+     4
+    ],
+    "rooms_without_objects": 0
+   }
+  },
+  "building.pos_vs_rooms": {
+   "ms": 0.0,
+   "value": {
+    "dist_to_mean_room_pos_m": 8.887541893234703e-06,
+    "n_building_nodes": 1
+   }
+  },
+  "traj.timing": {
+   "ms": 0.1,
+   "value": {
+    "dt_median_s": 0.7,
+    "dt_max_s": 5.7,
+    "n_dt_gt_2x_median": 31,
+    "monotonic": true
+   }
+  },
+  "traj.step_and_smoothness": {
+   "ms": 0.5,
+   "value": {
+    "step_m": {
+     "p50": 0.4031441749548152,
+     "p99": 0.6060276931319928,
+     "max": 0.6953166087474096
+    },
+    "speed_mps_p99": 0.7994257275377824,
+    "second_diff_m": {
+     "p50": 0.08942599785770684,
+     "p99": 0.6578613839614983
+    },
+    "rot_step_deg": {
+     "p50": 3.827066789841423,
+     "p99": 29.048710427338627,
+     "max": 44.72766009382747
+    }
+   }
+  },
+  "traj.height_above_floor": {
+   "ms": 88.2,
+   "value": {
+    "pose_z_minus_floor": {
+     "p5": 1.4350014301414489,
+     "p50": 1.4898155171585081,
+     "p95": 1.502915113693237,
+     "std": 0.026322053412227587
+    },
+    "n_no_floor": 29
+   }
+  },
+  "traj.clearance_vs_mesh": {
+   "ms": 12.6,
+   "value": {
+    "dist_to_mesh_m": {
+     "p1": 0.2851032450512948,
+     "p5": 0.5142466816837551,
+     "p50": 1.2098652240206746
+    },
+    "frac<0.3": 0.011146496815286623
+   }
+  },
+  "files.layer_statistics_final_rows": {
+   "ms": 1.0,
+   "value": {
+    "frontend_objects": {
+     "nodes_active": 145,
+     "nodes_removed": 158,
+     "nodes_merged": 0,
+     "nodes_w_parents": 145,
+     "nodes_w_children": 0,
+     "edges": 0
+    },
+    "frontend_places": {
+     "nodes_active": 1302,
+     "nodes_removed": 8995,
+     "nodes_merged": 0,
+     "nodes_w_parents": 0,
+     "nodes_w_children": 326,
+     "edges": 4504
+    },
+    "backend_objects": {
+     "nodes_active": 109,
+     "nodes_removed": 105,
+     "nodes_merged": 80,
+     "nodes_w_parents": 105,
+     "nodes_w_children": 0,
+     "edges": 0
+    },
+    "backend_places": {
+     "nodes_active": 1068,
+     "nodes_removed": 4656,
+     "nodes_merged": 464,
+     "nodes_w_parents": 1068,
+     "nodes_w_children": 269,
+     "edges": 4128
+    },
+    "backend_over_frontend": {
+     "objects": 0.7517241379310344,
+     "places": 0.8202764976958525
+    }
+   }
+  },
+  "_shared_structures_ms": {
+   "mesh_edges": 180.3,
+   "floor_kd": 60.8,
+   "mesh_kd": 132.7,
+   "place_cc": 0.4
+  },
+  "_total_ms": 1334.9
+ }
+}

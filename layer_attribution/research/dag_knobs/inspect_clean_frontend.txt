@@ -1,0 +1,198 @@
+{
+ "attr_stats": {
+  "mesh_places": {
+   "attr_fields": [
+    "NO_SEMANTIC_LABEL",
+    "boundary",
+    "bounding_box",
+    "color",
+    "deformation_connections",
+    "ellipse_centroid",
+    "ellipse_matrix_compress",
+    "ellipse_matrix_expand",
+    "is_active",
+    "is_predicted",
+    "last_update_time_ns",
+    "mesh_vertex_labels",
+    "metadata",
+    "name",
+    "pcl_boundary_connections",
+    "pcl_mesh_connections",
+    "position",
+    "semantic_feature",
+    "semantic_label",
+    "voxblox_mesh_connections"
+   ],
+   "pcl_mesh_connections_min_med_max": [
+    3,
+    58,
+    240
+   ]
+  },
+  "objects": {
+   "attr_fields": [
+    "NO_SEMANTIC_LABEL",
+    "bounding_box",
+    "color",
+    "is_active",
+    "is_predicted",
+    "last_update_time_ns",
+    "mesh_connections",
+    "metadata",
+    "name",
+    "position",
+    "registered",
+    "semantic_feature",
+    "semantic_label",
+    "world_R_object"
+   ],
+   "mesh_connections_min_med_max": [
+    43,
+    140,
+    1080
+   ]
+  },
+  "places": {
+   "attr_fields": [
+    "NO_SEMANTIC_LABEL",
+    "active_frontier",
+    "anti_frontier",
+    "bounding_box",
+    "color",
+    "deformation_connections",
+    "distance",
+    "frontier_scale",
+    "is_active",
+    "is_predicted",
+    "last_update_time_ns",
+    "mesh_vertex_labels",
+    "metadata",
+    "name",
+    "need_cleanup",
+    "num_basis_points",
+    "num_frontier_voxels",
+    "orientation",
+    "pcl_mesh_connections",
+    "position",
+    "real_place",
+    "semantic_feature",
+    "semantic_label",
+    "voxblox_mesh_connections"
+   ],
+   "radius_min_med_max": [
+    0.4000000059604645,
+    0.7999992370605469,
+    3.006659984588623
+   ],
+   "real_place_count": 1302
+  }
+ },
+ "cross_partition_sibling_endpoints": {},
+ "layer_keys": [
+  "2",
+  "2[97]",
+  "3",
+  "3[1]",
+  "4",
+  "5"
+ ],
+ "layer_names": [
+  "AGENTS",
+  "BUILDINGS",
+  "MESH_PLACES",
+  "OBJECTS",
+  "PLACES",
+  "ROOMS"
+ ],
+ "layers": {
+  "2": {
+   "attr_types": {
+    "ObjectNodeAttributes": 145
+   },
+   "id_categories": {
+    "O": 145
+   },
+   "intra_layer_edge_endpoints": 0,
+   "num_nodes": 145,
+   "semantic_labels": {
+    "5": 32,
+    "7": 19,
+    "10": 44,
+    "12": 10,
+    "13": 15,
+    "18": 25
+   }
+  },
+  "2[97]": {
+   "attr_types": {
+    "AgentNodeAttributes": 628
+   },
+   "id_categories": {
+    "a": 628
+   },
+   "intra_layer_edge_endpoints": 1254,
+   "num_nodes": 628,
+   "semantic_labels": {}
+  },
+  "3": {
+   "attr_types": {
+    "PlaceNodeAttributes": 1302
+   },
+   "id_categories": {
+    "p": 1302
+   },
+   "intra_layer_edge_endpoints": 9008,
+   "num_nodes": 1302,
+   "semantic_labels": {
+    "4294967295": 1302
+   }
+  },
+  "3[1]": {
+   "attr_types": {
+    "Place2dNodeAttributes": 4163
+   },
+   "id_categories": {
+    "P": 4163
+   },
+   "intra_layer_edge_endpoints": 19548,
+   "num_nodes": 4163,
+   "semantic_labels": {
+    "3": 4161,
+    "15": 2
+   }
+  }
+ },
+ "name_to_key": {
+  "AGENTS": "2",
+  "BUILDINGS": "5",
+  "MESH_PLACES": "3[1]",
+  "OBJECTS": "2",
+  "PLACES": "3",
+  "ROOMS": "4"
+ },
+ "num_parents_histogram_per_layer": {
+  "2": {
+   "1": 145
+  },
+  "2[97]": {
+   "0": 1,
+   "1": 627
+  },
+  "3": {
+   "0": 1302
+  },
+  "3[1]": {
+   "0": 4163
+  }
+ },
+ "parent_child_edge_counts": {
+  "3 -> 2": 145,
+  "3 -> 2[97]": 627
+ },
+ "places_edge_weight_min_med_max": [
+  0.28283974528312683,
+  0.5656875967979431,
+  2.408318281173706
+ ],
+ "places_num_edges": 4504
+}

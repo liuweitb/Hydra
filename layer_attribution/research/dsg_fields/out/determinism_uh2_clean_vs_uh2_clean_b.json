@@ -1,0 +1,55 @@
+{
+ "run_a": "/home/hydra/runs/uh2/uh2_clean",
+ "run_b": "/home/hydra/runs/uh2/uh2_clean_b",
+ "identical_files": [
+  "backend/mesh.ply",
+  "backend/trajectory.csv",
+  "backend/layer_2_statistics.csv",
+  "backend/layer_3_statistics.csv",
+  "backend/layer_4_statistics.csv",
+  "backend/layer_5_statistics.csv",
+  "backend/loop_closures.csv",
+  "backend/deformation_graph.dgrf",
+  "hydra_config.yaml",
+  "frontend/mesh.ply",
+  "frontend/layer_2_statistics.csv",
+  "frontend/layer_3_statistics.csv",
+  "frontend/layer_4_statistics.csv",
+  "frontend/layer_5_statistics.csv"
+ ],
+ "different_files": [
+  "backend/dsg_with_mesh.json",
+  "backend/dsg.json",
+  "backend/pgmo/dsg_pgmo_status.csv",
+  "timing_stats.csv",
+  "frontend/dsg_with_mesh.json",
+  "frontend/dsg.json"
+ ],
+ "backend/dsg_with_mesh.json_identical_after_masking": true,
+ "backend/dsg.json_identical_after_masking": true,
+ "frontend/dsg_with_mesh.json_identical_after_masking": true,
+ "frontend/dsg.json_identical_after_masking": true,
+ "json_diff_paths": {
+  "$.nodes[*].attributes.voxblox_mesh_connections[*].block[*] [value]": 5582,
+  "$.nodes[*].attributes.voxblox_mesh_connections[*].vertex [value]": 2791
+ },
+ "semantic": {
+  "node_field_diffs": {},
+  "edges_equal": true,
+  "mesh_vertices_equal": true,
+  "mesh_faces_equal": true,
+  "mesh_labels_equal": true,
+  "mesh_timestamps_equal": true,
+  "mesh_first_seen_equal": true,
+  "nvi_records": 2791,
+  "nvi_block_differs": 2791,
+  "fingerprint_peak_rss_mb": 1214.4
+ },
+ "pgmo": {
+  "rows_a": 1818,
+  "rows_b": 1818,
+  "state_sequence_equal": true,
+  "states_a": 1341,
+  "states_b": 1341
+ }
+}

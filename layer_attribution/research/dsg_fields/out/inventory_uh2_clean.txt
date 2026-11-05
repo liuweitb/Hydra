@@ -1,0 +1,299 @@
+
+====================================================================================================
+FILE /home/hydra/runs/uh2/uh2_clean/backend/dsg_with_mesh.json
+====================================================================================================
+size bytes 74876237 | spark_dsg.DynamicSceneGraph.load seconds 5.12 | peak RSS MB 1060.4
+num_nodes 4588 (unpartitioned only: 1186 ) num_edges 13578 (unpartitioned only: 5317 )  has_mesh True
+layer_keys ['2', '2[97]', '3', '3[1]', '4', '5']  layer_ids [2, 3, 4, 5]
+layer_names {'AGENTS': '2', 'BUILDINGS': '5', 'MESH_PLACES': '3[1]', 'OBJECTS': '2', 'PLACES': '3', 'ROOMS': '4'}
+graph metadata keys ['labelspaces']
+
+====================================================================================================
+LAYERS AND NODE ATTRIBUTES
+====================================================================================================
+
+--- layer 2 (OBJECTS): 109 nodes
+attribute class(es): {'ObjectNodeAttributes': 109} | id categories: {'O': 109} | first ids: ['O0', 'O1', 'O2', 'O3']
+field                          populated  details
+bounding_box                     109/109  types={'AABB': 109} dims_min=[0.0010000000474974513, 0.004000000189989805, 0.19099999964237213] dims_max=[2.450000047683716, 3.572000026702881, 1.9630000591278076] volume_min_max_median=[0.00017642983584664762, 4.655255317687988, 0.29739582538604736] n_rotated=0
+                                          e.g. {pos: [-14.9578, 22.1933, 1.48119], dim: [1.11562, 0.9799, 0.88702]}
+color                              0/109  shapes={(3,): 109} min_per_axis=[0.0, 0.0, 0.0] max_per_axis=[0.0, 0.0, 0.0]
+                                          e.g. array([0, 0, 0], dtype=uint8)
+is_active                          1/109  min=0.0 max=1.0 mean=0.0092 n_distinct=2
+                                          e.g. True
+is_predicted                       0/109  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+last_update_time_ns              109/109  min=27599999999.0 max=505700020000.0 mean=216992675779.2569 n_distinct=89
+                                          e.g. 35900000000
+mesh_connections                 109/109  len_min=46 len_mean=249.3486 len_max=1152 len_total=27179 elem_min=6 elem_max=448053
+                                          e.g. [1168, 1169, 1170, 1171, 1172, 1173, 1174, 1199, 1211, 1229, 1232, 1245, 1247, 1248, 1255, 1278, 1307, 1310...
+name                               0/109  n_distinct=1 top=[('', 109)]
+                                          e.g. ''
+position                         109/109  shapes={(3,): 109} min_per_axis=[-16.9415, 4.7721, 1.2168] max_per_axis=[28.0549, 47.146, 3.2481]
+                                          e.g. array([-15.08696512, 22.30220546, 1.49343569])
+registered                         0/109  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+semantic_feature                   0/109  shapes={(0, 0): 109}
+                                          e.g. array([], shape=(0, 0), dtype=float32)
+semantic_label                   109/109  min=5.0 max=18.0 mean=10.1101 n_distinct=6
+                                          e.g. 7
+world_R_object                     0/109  n_identity=109
+                                          e.g. Quaternion<w=1, x=0, y=0, z=0>
+metadata                           0/109  
+                                          e.g. {}
+
+--- layer 2[97] (AGENTS): 628 nodes
+attribute class(es): {'AgentNodeAttributes': 628} | id categories: {'a': 628} | first ids: ['a0', 'a1', 'a2', 'a3']
+field                          populated  details
+dbow_ids                           0/628  shapes={(0,): 628}
+                                          e.g. array([], dtype=uint32)
+dbow_values                        0/628  shapes={(0,): 628}
+                                          e.g. array([], dtype=float32)
+external_key                     628/628  min=6.98958662167901e+18 max=6.989586621679011e+18 mean=6.98958662167901e+18 n_distinct=2
+                                          e.g. 6989586621679009792
+is_active                          0/628  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+is_predicted                       0/628  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+last_update_time_ns                0/628  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. 0
+position                         628/628  shapes={(3,): 628} min_per_axis=[-19.8727, 6.1559, 2.4896] max_per_axis=[26.0396, 45.1787, 2.5224]
+                                          e.g. array([-19.84989264, 24.17657912, 2.49224822])
+timestamp                        627/628  min=0.0 max=501.1 n_distinct=628
+                                          e.g. datetime.timedelta(seconds=2, microseconds=250000)
+world_R_body                     628/628  n_identity=0
+                                          e.g. Quaternion<w=-0.499889, x=0.510429, y=-0.500111, z=0.489349>
+metadata                           0/628  
+                                          e.g. {}
+
+--- layer 3 (PLACES): 1068 nodes
+attribute class(es): {'PlaceNodeAttributes': 1068} | id categories: {'p': 1068} | first ids: ['p0', 'p1', 'p3', 'p9']
+field                          populated  details
+active_frontier                   0/1068  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+anti_frontier                     0/1068  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+bounding_box                      0/1068  types={'INVALID': 1068}
+                                          e.g. invalid
+color                             0/1068  shapes={(3,): 1068} min_per_axis=[0.0, 0.0, 0.0] max_per_axis=[0.0, 0.0, 0.0]
+                                          e.g. array([0, 0, 0], dtype=uint8)
+deformation_connections           0/1068  len_min=0 len_mean=0.0 len_max=0 len_total=0
+                                          e.g. []
+distance                       1068/1068  min=0.4 max=3.0067 mean=0.8555 n_distinct=443
+                                          e.g. 0.748331606388092
+frontier_scale                    0/1068  shapes={(3,): 1068} min_per_axis=[0.0, 0.0, 0.0] max_per_axis=[0.0, 0.0, 0.0]
+                                          e.g. array([0., 0., 0.])
+is_active                        16/1068  min=0.0 max=1.0 mean=0.015 n_distinct=2
+                                          e.g. True
+is_predicted                      0/1068  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+last_update_time_ns            1068/1068  min=22900000000.0 max=505700020000.0 mean=253983256815.9897 n_distinct=502
+                                          e.g. 33050000000
+mesh_vertex_labels                0/1068  len_min=0 len_mean=0.0 len_max=0 len_total=0
+                                          e.g. []
+name                              0/1068  n_distinct=1 top=[('', 1068)]
+                                          e.g. ''
+need_cleanup                      0/1068  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+num_basis_points               1068/1068  min=2.0 max=5.0 mean=2.6133 n_distinct=4
+                                          e.g. 3
+num_frontier_voxels               0/1068  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. 0
+orientation                       0/1068  n_identity=1068
+                                          e.g. Quaternion<w=1, x=0, y=0, z=0>
+pcl_mesh_connections              0/1068  len_min=0 len_mean=0.0 len_max=0 len_total=0
+                                          e.g. []
+position                       1068/1068  shapes={(3,): 1068} min_per_axis=[-19.3, 4.1, 1.1] max_per_axis=[30.9, 47.3, 3.9]
+                                          e.g. array([-14.30000019, 22.30000114, 2.9000001 ])
+real_place                        0/1068  min=1.0 max=1.0 mean=1.0 n_distinct=1
+                                          e.g. True
+semantic_feature                  0/1068  shapes={(0, 0): 1068}
+                                          e.g. array([], shape=(0, 0), dtype=float32)
+semantic_label                    0/1068  min=4294967295.0 max=4294967295.0 mean=4294967295.0 n_distinct=1
+                                          e.g. 4294967295
+voxblox_mesh_connections       1068/1068  len_min=1 len_mean=2.6133 len_max=5 len_total=2791
+                                          e.g. [VertexInfo<block=[-1475826464, 32230, -1309738368], pos=[-13.9, 22.1, 2.3], label=n/a>, VertexInfo<block=[...
+metadata                          0/1068  
+                                          e.g. {}
+
+--- layer 3[1] (MESH_PLACES): 2774 nodes
+attribute class(es): {'Place2dNodeAttributes': 2774} | id categories: {'P': 2774} | first ids: ['P9261', 'P9266', 'P9267', 'P9606']
+field                          populated  details
+boundary                       2774/2774  len_min=2 len_mean=7.1265 len_max=15 len_total=19769
+                                          e.g. [array([-15.64999962, 22.35000038, 1.00272441]), array([-15.84999943, 22.35000038, 1.00284255]), array([-15...
+bounding_box                      0/2774  types={'INVALID': 2774}
+                                          e.g. invalid
+color                             0/2774  shapes={(3,): 2774} min_per_axis=[0.0, 0.0, 0.0] max_per_axis=[0.0, 0.0, 0.0]
+                                          e.g. array([0, 0, 0], dtype=uint8)
+deformation_connections           0/2774  len_min=0 len_mean=0.0 len_max=0 len_total=0
+                                          e.g. []
+ellipse_centroid               2774/2774  shapes={(3,): 2774} min_per_axis=[-16.9, 4.6412, 1.002] max_per_axis=[30.3212, 47.0, 4.0074]
+                                          e.g. array([-15.85000038, 22.04999733, 1.0025785 ])
+ellipse_matrix_compress        2774/2774  shapes={(2, 2): 2774}
+                                          e.g. array([[12.49990463, -0. ], [-0. , 5.55558381]])
+ellipse_matrix_expand          2774/2774  shapes={(2, 2): 2774}
+                                          e.g. array([[0.28284379, 0. ], [0. , 0.42426299]])
+is_active                         2/2774  min=0.0 max=1.0 mean=0.0007 n_distinct=2
+                                          e.g. True
+is_predicted                      0/2774  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+last_update_time_ns               0/2774  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. 0
+mesh_vertex_labels                0/2774  len_min=0 len_mean=0.0 len_max=0 len_total=0
+                                          e.g. []
+name                              0/2774  n_distinct=1 top=[('', 2774)]
+                                          e.g. ''
+pcl_boundary_connections       2774/2774  len_min=2 len_mean=7.1265 len_max=15 len_total=19769 elem_min=8 elem_max=448039
+                                          e.g. [439803, 5023, 439294, 193, 1819]
+pcl_mesh_connections           2774/2774  len_min=3 len_mean=85.8497 len_max=340 len_total=238147 elem_min=1 elem_max=448061
+                                          e.g. [1, 41, 43, 49, 153, 193, 1427, 1434, 1507, 1718, 1751, 1758, 1781, 1796, 1797, 1798, 1817, 1819, 1820, 182...
+position                       2774/2774  shapes={(3,): 2774} min_per_axis=[-16.9399, 4.6855, 1.002] max_per_axis=[30.2958, 47.0086, 4.0074]
+                                          e.g. array([-15.82187653, 22.0093708 , 1.0025785 ])
+semantic_feature                  0/2774  shapes={(0, 0): 2774}
+                                          e.g. array([], shape=(0, 0), dtype=float32)
+semantic_label                 2774/2774  min=3.0 max=15.0 mean=3.0087 n_distinct=2
+                                          e.g. 3
+voxblox_mesh_connections          0/2774  len_min=0 len_mean=0.0 len_max=0 len_total=0
+                                          e.g. []
+metadata                          0/2774  
+                                          e.g. {}
+
+--- layer 4 (ROOMS): 8 nodes
+attribute class(es): {'RoomNodeAttributes': 8} | id categories: {'R': 8} | first ids: ['R0', 'R1', 'R2', 'R3']
+field                          populated  details
+bounding_box                         0/8  types={'INVALID': 8}
+                                          e.g. invalid
+color                                0/8  shapes={(3,): 8} min_per_axis=[0.0, 0.0, 0.0] max_per_axis=[0.0, 0.0, 0.0]
+                                          e.g. array([0, 0, 0], dtype=uint8)
+is_active                            0/8  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+is_predicted                         0/8  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+last_update_time_ns                  0/8  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. 0
+name                                 0/8  n_distinct=1 top=[('', 8)]
+                                          e.g. ''
+position                             8/8  shapes={(3,): 8} min_per_axis=[-11.297, 14.9486, 1.8986] max_per_axis=[23.8016, 43.9, 2.3778]
+                                          e.g. array([-4.31881248, 21.53413407, 1.89859837])
+semantic_class_probabilities           0/8  len_max=0
+                                          e.g. {}
+semantic_feature                     0/8  shapes={(0, 0): 8}
+                                          e.g. array([], shape=(0, 0), dtype=float32)
+semantic_label                       8/8  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. 0
+metadata                             0/8  
+                                          e.g. {}
+
+--- layer 5 (BUILDINGS): 1 nodes
+attribute class(es): {'SemanticNodeAttributes': 1} | id categories: {'B': 1} | first ids: ['B0']
+field                          populated  details
+bounding_box                         0/1  types={'INVALID': 1}
+                                          e.g. invalid
+color                                0/1  shapes={(3,): 1} min_per_axis=[0.0, 0.0, 0.0] max_per_axis=[0.0, 0.0, 0.0]
+                                          e.g. array([0, 0, 0], dtype=uint8)
+is_active                            0/1  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+is_predicted                         0/1  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. False
+last_update_time_ns                  0/1  min=0.0 max=0.0 mean=0.0 n_distinct=1
+                                          e.g. 0
+name                                 0/1  n_distinct=1 top=[('', 1)]
+                                          e.g. ''
+position                             1/1  shapes={(3,): 1} min_per_axis=[4.9705, 27.6891, 2.2727] max_per_axis=[4.9705, 27.6891, 2.2727]
+                                          e.g. array([ 4.97049634, 27.68908189, 2.27271719])
+semantic_feature                     0/1  shapes={(0, 0): 1}
+                                          e.g. array([], shape=(0, 0), dtype=float32)
+semantic_label                       1/1  min=22.0 max=22.0 mean=22.0 n_distinct=1
+                                          e.g. 22
+metadata                             0/1  
+                                          e.g. {}
+
+====================================================================================================
+EDGES
+====================================================================================================
+g.edges 13578 | g.interlayer_edges 1808 | g.unpartitioned_edges 5317 | directed flag in file: false (each edge stored once, source/target order is arbitrary)
+layer pair (unordered)        count  kind               stored source->target orders
+2 - 3                           113  interlayer (parent/child)  {'3->2': 109, '2->3': 4}
+2[97] - 2[97]                   627  intralayer (sibling)       {'2[97]->2[97]': 627}
+2[97] - 3                       627  interlayer (parent/child)  {'3->2[97]': 627}
+3 - 3                          4128  intralayer (sibling)       {'3->3': 4128}
+3 - 4                          1068  interlayer (parent/child)  {'4->3': 1068}
+3[1] - 3[1]                    7007  intralayer (sibling)       {'3[1]->3[1]': 7007}
+4 - 4                             8  intralayer (sibling)       {'4->4': 8}
+
+edge attributes (EdgeAttributes: weight, weighted, metadata):
+  2->3: n=4 weighted={False: 4} weight min/mean/max = 1/1/1
+  2[97]->2[97]: n=627 weighted={False: 627} weight min/mean/max = 1/1/1
+  3->2: n=109 weighted={False: 109} weight min/mean/max = 1/1/1
+  3->2[97]: n=627 weighted={False: 627} weight min/mean/max = 1/1/1
+  3->3: n=4128 weighted={True: 4128} weight min/mean/max = 0.2828/0.697/2.408
+  3[1]->3[1]: n=7007 weighted={True: 7007} weight min/mean/max = 8.689e-08/0.4488/1.209
+  4->3: n=1068 weighted={False: 1068} weight min/mean/max = 1/1/1
+  4->4: n=8 weighted={False: 8} weight min/mean/max = 1/1/1
+
+edge weight semantics (weighted edge classes only; GVD voxel size 0.2 m assumed for the lattice test):
+  ('3', '3'): corr(weight, node-to-node length) = 0.044; weight on 0.2*sqrt(int) lattice: 100.0%; corr(weight, min endpoint distance attr) = 0.751; weight <= min endpoint distance: 83.0%
+  ('3[1]', '3[1]'): corr(weight, node-to-node length) = -0.195; weight on 0.2*sqrt(int) lattice: 1.9%
+
+per-layer node relations from SceneGraphNode.parents()/children()/siblings():
+  2 (OBJECTS): parents/node hist {1: 105, 2: 4} -> {'3': 113}; children/node min/mean/max 0/0.00/0 -> {}; siblings/node min/mean/max 0/0.00/0
+  2[97] (AGENTS): parents/node hist {1: 627, 0: 1} -> {'3': 627}; children/node min/mean/max 0/0.00/0 -> {}; siblings/node min/mean/max 1/2.00/2
+  3 (PLACES): parents/node hist {1: 1068} -> {'4': 1068}; children/node min/mean/max 0/0.69/13 -> {'2[97]': 627, '2': 113}; siblings/node min/mean/max 1/7.73/42
+  3[1] (MESH_PLACES): parents/node hist {0: 2774} -> {}; children/node min/mean/max 0/0.00/0 -> {}; siblings/node min/mean/max 0/5.05/18
+  4 (ROOMS): parents/node hist {0: 8} -> {}; children/node min/mean/max 44/133.50/316 -> {'3': 1068}; siblings/node min/mean/max 1/2.00/4
+  5 (BUILDINGS): parents/node hist {0: 1} -> {}; children/node min/mean/max 0/0.00/0 -> {}; siblings/node min/mean/max 0/0.00/0
+
+4 OBJECTS->PLACES stored-order edges (the other 109 are PLACES->OBJECTS); same parent/child relation, only storage order differs:
+   O12 label 13 -> p28111 parents of object: ['p2042', 'p28111']
+   O77 label 10 -> p27966 parents of object: ['p2024', 'p27966']
+   O129 label 18 -> p16112 parents of object: ['p13671', 'p16112']
+   O161 label 13 -> p17325 parents of object: ['p17325', 'p17752']
+
+====================================================================================================
+MESH (g.mesh)
+====================================================================================================
+num_vertices 448062 num_faces 662823 total_bytes 37414728
+get_vertices() shape/dtype: (6, 448062) float64 -> rows 0..2 = x,y,z (m); rows 3..5 = r,g,b scaled to 0..1
+  xyz min [-17.35, 4.201, 0.997] max [30.75, 47.405, 4.15]
+  rgb row0..2 min [0.0, 0.0, 0.0] max [0.9686, 0.9686, 0.9686] | vertex 0 rgb*255 = [169.0, 163.0, 145.0] vs m.color(0) = (169, 163, 145)
+  alpha (every 97th vertex) distinct: [254, 255]
+get_faces() shape/dtype: (3, 662823) int32 -> 3 x n_faces vertex indices; index range 0 448061
+  degenerate faces (repeated index): 0
+per-vertex labels (m.get_labels()): list[int] of length 448062 range 0 19
+  label histogram: {'3:floor': 246419, '19:wall': 93034, '0:unknown': 16149, '1:air_vent': 15827, '17:cubicle': 13285, '9:cabinet': 11833, '16:desk': 7933, '4:ceiling_light': 7407, '5:chair': 7023, '10:computer': 6053, '7:couch': 5586, '11:lamp': 4982, '18:trashcan': 3818, '13:plant': 3336, '12:painting': 2282, '2:books': 1696, '14:sign': 1079, '15:stairs': 320}
+timestamp(i) ns (last update of the vertex block): min 8250000000 max 505700020000 distinct 731 -> seconds 8.25 .. 505.7
+first_seen_timestamp(i) ns: nonzero 445469 of 448062 (99.4%); min>0 250000000 max 505700020000
+example vertex 0: pos [-15.950001   21.603804    1.4499999] color (169, 163, 145, 254) label 19 timestamp 15099999999 first_seen 0 face0 [200, 188, 212]
+
+object mesh_connections index into the mesh (vertex ids); label of the connected vertices vs object semantic_label:
+  O0: n_conn=635 idx range 1168..447939 (<448062: True) object label 7 -> fraction of connected vertices with that label 1.000
+  O1: n_conn=92 idx range 6..829 (<448062: True) object label 7 -> fraction of connected vertices with that label 1.000
+  O2: n_conn=741 idx range 2279..447901 (<448062: True) object label 13 -> fraction of connected vertices with that label 0.899
+  O3: n_conn=1152 idx range 2287..447976 (<448062: True) object label 7 -> fraction of connected vertices with that label 0.991
+  O5: n_conn=421 idx range 13539..429512 (<448062: True) object label 18 -> fraction of connected vertices with that label 0.993
+  first 50 MESH_PLACES nodes: pcl_mesh_connections total 5952 idx range 1..448046; labels of those vertices: {3: 5952} (node semantic_label Counter({3: 50}))
+  PLACES voxblox_mesh_connections of p0 : ['VertexInfo<block=[-1475826464, 32230, -1309738368], pos=[-13.9, 22.1, 2.3], label=n/a>', 'VertexInfo<block=[-1475826464, 32230, -1309738368], pos=[-14.5, 22.3, 3.9], label=n/a>']
+   place distance attr 0.7483 | |place pos - basis voxel_pos| [0.7483, 1.0198, 0.8246]
+   all 1068 places: distance - min_k |pos - basis_k| : |max| 1.221, within 1e-4 for 89.9% (basis voxel_pos = nearest-obstacle voxels; 'block' and 'vertex' of these records are uninitialized memory, see determinism_diff.py)
+
+====================================================================================================
+LABEL SPACES
+====================================================================================================
+labelspace layer 2: 21 labels {0: 'unknown', 1: 'air_vent', 2: 'books', 3: 'floor', 4: 'ceiling_light', 5: 'chair', 6: 'bench', 7: 'couch', 8: 'stairs', 9: 'cabinet', 10: 'computer', 11: 'lamp', 12: 'painting', 13: 'plant', 14: 'sign', 15: 'stairs', 16: 'desk', 17: 'cubicle', 18: 'trashcan', 19: 'wall', 20: 'human'}
+labelspace layer 3[1]: 21 labels {0: 'unknown', 1: 'air_vent', 2: 'books', 3: 'floor', 4: 'ceiling_light', 5: 'chair', 6: 'bench', 7: 'couch', 8: 'stairs', 9: 'cabinet', 10: 'computer', 11: 'lamp', 12: 'painting', 13: 'plant', 14: 'sign', 15: 'stairs', 16: 'desk', 17: 'cubicle', 18: 'trashcan', 19: 'wall', 20: 'human'}
+graph.metadata: {'labelspaces': ['_l2p0', '_l3p1', 'mesh']}
+
+====================================================================================================
+RAW JSON SCHEMA (what is serialized, node attribute keys per class)
+====================================================================================================
+top-level keys: ['SPARK_DSG_header', 'directed', 'edges', 'layer_keys', 'layer_names', 'mesh', 'metadata', 'multigraph', 'nodes'] | parse seconds 0.9
+header: {'project_name': 'main', 'version': {'major': 1, 'minor': 1, 'patch': 3}} | directed False | multigraph False
+  ObjectNodeAttributes: ['bounding_box', 'color', 'is_active', 'is_predicted', 'last_update_time_ns', 'mesh_connections', 'metadata', 'name', 'position', 'registered', 'semantic_feature', 'semantic_label', 'type', 'world_R_object']
+  PlaceNodeAttributes: ['active_frontier', 'anti_frontier', 'bounding_box', 'color', 'deformation_connections', 'distance', 'frontier_scale', 'is_active', 'is_predicted', 'last_update_time_ns', 'mesh_vertex_labels', 'metadata', 'name', 'need_cleanup', 'num_basis_points', 'num_frontier_voxels', 'orientation', 'pcl_mesh_connections', 'position', 'real_place', 'semantic_feature', 'semantic_label', 'type', 'voxblox_mesh_connections']
+  RoomNodeAttributes: ['bounding_box', 'color', 'is_active', 'is_predicted', 'last_update_time_ns', 'metadata', 'name', 'position', 'semantic_class_probabilities', 'semantic_feature', 'semantic_label', 'type']
+  SemanticNodeAttributes: ['bounding_box', 'color', 'is_active', 'is_predicted', 'last_update_time_ns', 'metadata', 'name', 'position', 'semantic_feature', 'semantic_label', 'type']
+  AgentNodeAttributes: ['dbow_ids', 'dbow_values', 'external_key', 'is_active', 'is_predicted', 'last_update_time_ns', 'metadata', 'position', 'timestamp', 'type', 'world_R_body']
+  Place2dNodeAttributes: ['boundary', 'bounding_box', 'color', 'deformation_connections', 'ellipse_centroid', 'ellipse_matrix_compress', 'ellipse_matrix_expand', 'has_active_mesh_indices', 'is_active', 'is_predicted', 'last_update_time_ns', 'mesh_vertex_labels', 'metadata', 'name', 'need_cleanup_splitting', 'pcl_boundary_connections', 'pcl_mesh_connections', 'position', 'semantic_feature', 'semantic_label', 'type', 'voxblox_mesh_connections']
+  node counts by (type, layer, partition): {'ObjectNodeAttributes/2/0': 109, 'PlaceNodeAttributes/3/0': 1068, 'RoomNodeAttributes/4/0': 8, 'SemanticNodeAttributes/5/0': 1, 'AgentNodeAttributes/2/97': 628, 'Place2dNodeAttributes/3/1': 2774}
+  mesh keys: ['colors', 'faces', 'first_seen_stamps', 'has_colors', 'has_first_seen_stamps', 'has_labels', 'has_timestamps', 'header', 'labels', 'points', 'stamps']
+  node dict keys: ['attributes', 'id', 'layer', 'partition'] | edge dict keys: ['info', 'source', 'target'] | edge info keys: ['metadata', 'type', 'weight', 'weighted']

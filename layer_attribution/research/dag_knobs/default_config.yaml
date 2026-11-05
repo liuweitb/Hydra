@@ -1,0 +1,200 @@
+enable_lcd: false
+timing_disabled: false
+disable_timer_output: true
+enable_pgmo_logging: true
+default_verbosity: 1
+default_num_threads: -1
+store_visualization_details: false
+map_window:
+  type: spatial
+  max_radius_m: 8
+label_names:
+  []
+robot_frame: base_link
+odom_frame: odom
+map_frame: map
+layers:
+  AGENTS:
+    layer: 2
+    partition: 0
+  BUILDINGS:
+    layer: 5
+    partition: 0
+  MESH_PLACES:
+    layer: 3
+    partition: 1
+  OBJECTS:
+    layer: 2
+    partition: 0
+  PLACES:
+    layer: 3
+    partition: 0
+  ROOMS:
+    layer: 4
+    partition: 0
+total_semantic_labels: 0
+semantic_colormap_file: ""
+semantic_label_remap_filepath: ""
+dynamic_labels:
+  []
+invalid_labels:
+  []
+object_labels:
+  []
+surface_places_labels:
+  []
+ground_labels:
+  []
+semantic_layers:
+  - OBJECTS
+  - MESH_PLACES
+mesh:
+  with_colors: true
+  with_first_seen_stamps: true
+  with_labels: true
+active_window:
+  type: ReconstructionModule
+  max_input_queue_size: 0
+  volumetric_map:
+    voxel_size: 0.100000001
+    voxels_per_side: 16
+    truncation_distance: 0.300000012
+    with_semantics: true
+    with_tracking: false
+  map_window:
+    type: Uninitialized Virtual Config
+  sinks:
+    []
+  validate_mesh_fields: true
+  full_update_separation_s: 0
+  tsdf:
+    verbosity: 1
+    extra_integration_distance: 0
+    extra_integration_distance_labels:
+      []
+    skip_extra_colors_and_labels: false
+    use_weight_dropoff: true
+    weight_dropoff_epsilon: -1
+    use_constant_weight: false
+    min_measurement_weight: 9.99999975e-05
+    max_weight: 100000
+    num_threads: -1
+    interpolation_method:
+      type: adaptive
+      max_depth_difference_m: 0.200000003
+    semantic_integrator:
+      type: Uninitialized Virtual Config
+  mesh:
+    min_weight: 9.99999975e-05
+    integrator_threads: -1
+  robot_footprint:
+    type: Uninitialized Virtual Config
+frontend:
+  type: GraphBuilder
+  lcd_use_bow_vectors: true
+  pgmo:
+    mesh_resolution: 0.10000000000000001
+    d_graph_resolution: 1.5
+    time_horizon: 10
+  graph_connector:
+    layers:
+      - parent_layer: PLACES
+        child_layers:
+          - layer: OBJECTS
+            include_primary: true
+            include_partitions: true
+        verbosity: 0
+  graph_updater:
+    layer_updates:
+      OBJECTS:
+        prefix: O
+        target_layer: !<null> ""
+  enable_mesh_objects: true
+  objects:
+    layer_id: OBJECTS
+    cluster_tolerance: 0.25
+    min_cluster_size: 40
+    max_cluster_size: 100000
+    bounding_box_type: AABB
+    timer_namespace: frontend/objects
+    sinks:
+      []
+  pose_graph_tracker:
+    type: PoseGraphFromOdom
+    min_pose_separation: 0.5
+    rotation_separation_weight: 0.10000000000000001
+    min_time_separation_s: 0.20000000000000001
+  surface_places:
+    type: Uninitialized Virtual Config
+  freespace_places:
+    type: Uninitialized Virtual Config
+  use_frontiers: false
+  frontier_places:
+    type: Uninitialized Virtual Config
+  view_database:
+    view_selection_method: fusion
+    inflation_distance: 0
+    layers:
+      - PLACES
+      - MESH_PLACES
+    verbosity: 0
+  sinks:
+    []
+  no_packet_collation: false
+  verbosity: 0
+backend:
+  type: BackendModule
+  enable_node_merging: true
+  enable_exhaustive_merging: false
+  update_functors:
+    {}
+  pgmo:
+    run_mode: FULL
+    num_interp_pts: 3
+    interp_horizon: 5
+    add_initial_prior: true
+    output_prefix: ""
+    covariance:
+      odom: -1
+      loop_close: -1
+      prior: -1
+      mesh_mesh: -1
+      pose_mesh: -1
+      place_mesh: 0
+      place_edge: 0
+      place_merge: 0
+      object_merge: 0
+      sg_loop_close: 0
+    optimizer:
+      type: KimeraRpgoOptimizer
+      solver: LM
+      verbosity: 0
+      print_summary: true
+      print_iterations: true
+      use_4dof_optim: false
+      use_gnc: true
+      gnc:
+        barc_sq: 0
+        inlier_probability: 0.69999999999999996
+        mu_step: 1.3999999999999999
+        max_iterations: 100
+        fix_odom: true
+        robust_cost: TLS
+      use_pcm: false
+      pcm:
+        trans_threshold: 0.10000000000000001
+        rot_threshold: 0.01
+        mahalanobis_threshold: 1
+        odom_check: false
+        odom_trans_threshold: 0.5
+        odom_rot_threshold: 0.10000000000000001
+        odom_mahalanobis_threshold: 5
+        max_clique_mode: HEURISTIC
+        metric_type: NODE
+  add_places_to_deformation_graph: true
+  optimize_on_lc: true
+  external_loop_closures:
+    layer: AGENTS
+    max_time_difference: 1
+  sinks:
+    []

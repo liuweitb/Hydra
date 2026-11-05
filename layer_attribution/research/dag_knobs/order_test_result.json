@@ -1,0 +1,20 @@
+{
+ "tmp_dk_ordbase": {
+  "n_rooms": 1,
+  "n_buildings": 1,
+  "room_num_parents": [
+   0
+  ],
+  "building_num_children": 0,
+  "abs_diff_building_vs_room_centroid_m": 0.19696968252008773
+ },
+ "tmp_dk_ordtest": {
+  "n_rooms": 1,
+  "n_buildings": 1,
+  "room_num_parents": [
+   1
+  ],
+  "building_num_children": 1,
+  "abs_diff_building_vs_room_centroid_m": 0.0
+ }
+}

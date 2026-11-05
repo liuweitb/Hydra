@@ -1,0 +1,4 @@
+# regenerable temporary configs of the dag_knobs study (make_tmp_configs.py, make_knob_val*_configs.py)
+tmp_cfg/
+# empty stderr captures
+*.err

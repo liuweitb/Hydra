@@ -1,0 +1,673 @@
+{
+ "rooms_min_size": {
+  "0.0": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.1": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.2": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.3": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.4": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.5": {
+   "n_rooms": 6,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.6": {
+   "n_rooms": 4,
+   "sizes": [
+    317,
+    195,
+    163,
+    147
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.7": {
+   "n_rooms": 4,
+   "sizes": [
+    317,
+    195,
+    163,
+    147
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.8": {
+   "n_rooms": 2,
+   "sizes": [
+    317,
+    195
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.9": {
+   "n_rooms": 1,
+   "sizes": [
+    317
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "1.0": {
+   "n_rooms": 0,
+   "sizes": [],
+   "threshold": 1.077034,
+   "components": 8
+  }
+ },
+ "rooms_min_component": {
+  "0.0": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.1": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 7
+  },
+  "0.2": {
+   "n_rooms": 6,
+   "sizes": [
+    317,
+    243,
+    159,
+    147,
+    140,
+    62
+   ],
+   "threshold": 1.0,
+   "components": 6
+  },
+  "0.3": {
+   "n_rooms": 4,
+   "sizes": [
+    464,
+    402,
+    140,
+    62
+   ],
+   "threshold": 0.916515,
+   "components": 4
+  },
+  "0.4": {
+   "n_rooms": 3,
+   "sizes": [
+    464,
+    464,
+    140
+   ],
+   "threshold": 0.894428,
+   "components": 3
+  },
+  "0.5": {
+   "n_rooms": 3,
+   "sizes": [
+    604,
+    243,
+    221
+   ],
+   "threshold": 0.979796,
+   "components": 3
+  },
+  "0.6": {
+   "n_rooms": 2,
+   "sizes": [
+    928,
+    140
+   ],
+   "threshold": 0.6,
+   "components": 2
+  },
+  "0.7": {
+   "n_rooms": 2,
+   "sizes": [
+    928,
+    140
+   ],
+   "threshold": 0.6,
+   "components": 2
+  },
+  "0.8": {
+   "n_rooms": 2,
+   "sizes": [
+    604,
+    464
+   ],
+   "threshold": 0.894428,
+   "components": 2
+  },
+  "0.9": {
+   "n_rooms": 1,
+   "sizes": [
+    1068
+   ],
+   "threshold": 0.565684,
+   "components": 1
+  },
+  "1.0": {
+   "n_rooms": 1,
+   "sizes": [
+    1068
+   ],
+   "threshold": 0.565684,
+   "components": 1
+  }
+ },
+ "rooms_plateau_ratio": {
+  "0.0": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.1": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.2": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.3": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.4": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.5": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.6": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.7": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.8": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.9": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "1.0": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  }
+ },
+ "rooms_max_dilation": {
+  "0.0": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.1": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.2": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.019804,
+   "components": 7
+  },
+  "0.3": {
+   "n_rooms": 6,
+   "sizes": [
+    464,
+    358,
+    113,
+    62,
+    44,
+    27
+   ],
+   "threshold": 0.916515,
+   "components": 6
+  },
+  "0.4": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.5": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.6": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.7": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.8": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "0.9": {
+   "n_rooms": 3,
+   "sizes": [
+    884,
+    140,
+    44
+   ],
+   "threshold": 0.6,
+   "components": 4
+  },
+  "1.0": {
+   "n_rooms": 1,
+   "sizes": [
+    1068
+   ],
+   "threshold": 0.565684,
+   "components": 2
+  }
+ },
+ "rooms_min_dilation": {
+  "0.0": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.1": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.2": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 8
+  },
+  "0.3": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 8
+  },
+  "0.4": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 8
+  },
+  "0.5": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 8
+  },
+  "0.6": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 8
+  },
+  "0.7": {
+   "n_rooms": 7,
+   "sizes": [
+    317,
+    199,
+    159,
+    147,
+    140,
+    62,
+    44
+   ],
+   "threshold": 1.0,
+   "components": 8
+  },
+  "0.8": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.077034,
+   "components": 8
+  },
+  "0.9": {
+   "n_rooms": 8,
+   "sizes": [
+    317,
+    195,
+    163,
+    147,
+    74,
+    66,
+    62,
+    44
+   ],
+   "threshold": 1.095445,
+   "components": 8
+  },
+  "1.0": {
+   "n_rooms": 6,
+   "sizes": [
+    457,
+    195,
+    163,
+    147,
+    62,
+    44
+   ],
+   "threshold": 1.16619,
+   "components": 6
+  }
+ }
+}

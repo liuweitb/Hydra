@@ -1,0 +1,7 @@
+fault,n_room_missing,n_wrong_room,n_wrong_label,n_wrong_position,n_target_missing,n_fail
+label_confusion,0,2,56,2,0,60
+label_dropout,0,2,0,37,21,60
+depth_noise,0,15,1,7,0,23
+depth_holes,0,20,2,66,9,97
+pose_drift,0,14,5,68,0,87
+frame_drop,0,10,0,8,1,19

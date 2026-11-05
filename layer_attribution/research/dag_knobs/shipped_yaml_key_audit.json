@@ -1,0 +1,554 @@
+[
+ {
+  "key": "map_window.type",
+  "yaml_value": "spatial",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "map_window.max_radius_m",
+  "yaml_value": 8.0,
+  "effective": "8 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "active_window.full_update_separation_s",
+  "yaml_value": 0.2,
+  "effective": "0.2",
+  "status": "applied"
+ },
+ {
+  "key": "active_window.volumetric_map.voxels_per_side",
+  "yaml_value": 16,
+  "effective": "16 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "active_window.volumetric_map.voxel_size",
+  "yaml_value": 0.1,
+  "effective": "0.1 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "active_window.volumetric_map.truncation_distance",
+  "yaml_value": 0.3,
+  "effective": "0.3 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "active_window.tsdf.semantic_integrator.type",
+  "yaml_value": "SingleLabelIntegrator",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.pgmo.time_horizon",
+  "yaml_value": 15.0,
+  "effective": "15",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.pgmo.d_graph_resolution",
+  "yaml_value": 2.5,
+  "effective": "2.5",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.pgmo.mesh_resolution",
+  "yaml_value": 0.005,
+  "effective": "0.005",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.objects.min_cluster_size",
+  "yaml_value": 40,
+  "effective": "40 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.objects.cluster_tolerance",
+  "yaml_value": 0.25,
+  "effective": "0.25 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.type",
+  "yaml_value": "place_2d",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.prefix",
+  "yaml_value": "P",
+  "effective": "P",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.pure_final_place_size",
+  "yaml_value": 1,
+  "effective": "1",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.cluster_tolerance",
+  "yaml_value": 0.3,
+  "effective": "0.3",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.min_cluster_size",
+  "yaml_value": 50,
+  "effective": "50",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.max_cluster_size",
+  "yaml_value": 100000,
+  "effective": "100000 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.min_final_place_points",
+  "yaml_value": 10,
+  "effective": "10",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.place_max_neighbor_z_diff",
+  "yaml_value": 0.5,
+  "effective": "0.5 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.surface_places.place_overlap_threshold",
+  "yaml_value": 0.0,
+  "effective": "0",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.type",
+  "yaml_value": "gvd",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.filter_places",
+  "yaml_value": true,
+  "effective": "true (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.min_places_component_size",
+  "yaml_value": 3,
+  "effective": null,
+  "status": "ignored_no_such_field"
+ },
+ {
+  "key": "frontend.freespace_places.filter_ground",
+  "yaml_value": false,
+  "effective": "false (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.max_distance_m",
+  "yaml_value": 4.5,
+  "effective": "4.5",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.min_distance_m",
+  "yaml_value": 0.2,
+  "effective": "0.2 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.min_diff_m",
+  "yaml_value": 0.1,
+  "effective": "0.1",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.voronoi_config.mode",
+  "yaml_value": "L1_THEN_ANGLE",
+  "effective": "L1_THEN_ANGLE (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.voronoi_config.min_distance_m",
+  "yaml_value": 0.3,
+  "effective": "0.3",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.voronoi_config.parent_l1_separation",
+  "yaml_value": 20,
+  "effective": "20",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.gvd.voronoi_config.parent_cos_angle_separation",
+  "yaml_value": 0.2,
+  "effective": "0.2",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.graph.type",
+  "yaml_value": "CompressionGraphExtractor",
+  "effective": "plain",
+  "status": "ignored_no_such_field"
+ },
+ {
+  "key": "frontend.freespace_places.graph.compression_distance_m",
+  "yaml_value": 1.5,
+  "effective": "1.5",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.graph.min_node_distance_m",
+  "yaml_value": 0.4,
+  "effective": "0.4",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.graph.min_edge_distance_m",
+  "yaml_value": 0.25,
+  "effective": "0.25",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.graph.node_merge_distance_m",
+  "yaml_value": 0.7,
+  "effective": "0.7",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.graph.merge_policy",
+  "yaml_value": "distance",
+  "effective": "distance",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.tsdf_interpolator.type",
+  "yaml_value": "downsample",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.freespace_places.tsdf_interpolator.ratio",
+  "yaml_value": 2,
+  "effective": "2 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.use_frontiers",
+  "yaml_value": false,
+  "effective": "false (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.type",
+  "yaml_value": "voxel_clustering",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.cluster_tolerance",
+  "yaml_value": 0.3,
+  "effective": "0.3 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.min_cluster_size",
+  "yaml_value": 10,
+  "effective": "10 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.max_cluster_size",
+  "yaml_value": 100000,
+  "effective": "100000 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.max_place_radius",
+  "yaml_value": 5,
+  "effective": "5 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.dense_frontiers",
+  "yaml_value": false,
+  "effective": "false (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.frontier_splitting_threshold",
+  "yaml_value": 0.2,
+  "effective": "0.2 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.point_threshold",
+  "yaml_value": 10,
+  "effective": "10 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.recent_block_distance",
+  "yaml_value": 25,
+  "effective": "25 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.minimum_relative_z",
+  "yaml_value": -1.0,
+  "effective": "-1",
+  "status": "applied"
+ },
+ {
+  "key": "frontend.frontier_places.maximum_relative_z",
+  "yaml_value": 1,
+  "effective": "1 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.add_places_to_deformation_graph",
+  "yaml_value": true,
+  "effective": "true (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.optimize_on_lc",
+  "yaml_value": true,
+  "effective": "true (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.enable_node_merging",
+  "yaml_value": true,
+  "effective": "true (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.agents.type",
+  "yaml_value": "UpdateAgentsFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.objects.type",
+  "yaml_value": "UpdateObjectsFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.surface_places.type",
+  "yaml_value": "Update2dPlacesFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.places.type",
+  "yaml_value": "UpdatePlacesFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.frontiers.type",
+  "yaml_value": "UpdateFrontiersFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.type",
+  "yaml_value": "UpdateRoomsFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.min_dilation_m",
+  "yaml_value": 0.5,
+  "effective": "0.5",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.max_dilation_m",
+  "yaml_value": 1.2,
+  "effective": "1.2",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.min_component_size",
+  "yaml_value": 10,
+  "effective": "10",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.min_room_size",
+  "yaml_value": 10,
+  "effective": "10 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.dilation_threshold_mode",
+  "yaml_value": "PLATEAU",
+  "effective": "PLATEAU",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.min_lifetime_length_m",
+  "yaml_value": 0.1,
+  "effective": "0.1 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.plateau_ratio",
+  "yaml_value": 0.15,
+  "effective": "0.15",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.clustering_mode",
+  "yaml_value": "NEIGHBORS",
+  "effective": "NEIGHBORS (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.rooms.room_finder.dilation_diff_threshold_m",
+  "yaml_value": -1.0,
+  "effective": "-1",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.buildings.type",
+  "yaml_value": "UpdateBuildingsFunctor",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.update_functors.zmq_labels.type",
+  "yaml_value": "ZmqRoomLabelUpdater",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.run_mode",
+  "yaml_value": "FULL",
+  "effective": "FULL (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.embed_trajectory_delta_t",
+  "yaml_value": 5.0,
+  "effective": null,
+  "status": "ignored_no_such_field"
+ },
+ {
+  "key": "backend.pgmo.num_interp_pts",
+  "yaml_value": 3,
+  "effective": "3 (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.interp_horizon",
+  "yaml_value": 10.0,
+  "effective": "10",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.optimizer.type",
+  "yaml_value": "KimeraRpgoOptimizer",
+  "effective": "virtual_init",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.optimizer.solver",
+  "yaml_value": "LM",
+  "effective": "LM (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.optimizer.gnc.inlier_probability",
+  "yaml_value": 0.9,
+  "effective": "0.9",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.optimizer.gnc.mu_step",
+  "yaml_value": 1.6,
+  "effective": "1.6",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.optimizer.gnc.max_iterations",
+  "yaml_value": 100,
+  "effective": "100",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.add_initial_prior",
+  "yaml_value": true,
+  "effective": "true (default)",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.odom",
+  "yaml_value": 0.01,
+  "effective": "0.01",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.loop_close",
+  "yaml_value": 0.05,
+  "effective": "0.05",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.sg_loop_close",
+  "yaml_value": 0.1,
+  "effective": "0.1",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.prior",
+  "yaml_value": 0.01,
+  "effective": "0.01",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.mesh_mesh",
+  "yaml_value": 0.01,
+  "effective": "0.01",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.pose_mesh",
+  "yaml_value": 0.01,
+  "effective": "0.01",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.place_mesh",
+  "yaml_value": 0.01,
+  "effective": "0.01",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.place_edge",
+  "yaml_value": 10.0,
+  "effective": "10",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.place_merge",
+  "yaml_value": 10.0,
+  "effective": "10",
+  "status": "applied"
+ },
+ {
+  "key": "backend.pgmo.covariance.object_merge",
+  "yaml_value": 10.0,
+  "effective": "10",
+  "status": "applied"
+ }
+]

@@ -1,0 +1,496 @@
+{
+ "backend": {
+  "counts": {
+   "tmp_dk_base": {
+    "2": 1,
+    "2[97]": 6,
+    "3": 20,
+    "3[1]": 33,
+    "4": 1,
+    "5": 1
+   },
+   "tmp_dk_mis": {
+    "2": 1,
+    "2[97]": 6,
+    "3": 20,
+    "3[1]": 33,
+    "4": 1,
+    "5": 1
+   },
+   "tmp_dk_set": {
+    "2[97]": 6,
+    "3": 20,
+    "3[1]": 33
+   },
+   "tmp_dk_typea": {
+    "2": 1,
+    "2[97]": 6,
+    "3": 20
+   },
+   "tmp_dk_typeb": {
+    "2[97]": 6,
+    "3": 20,
+    "4": 1,
+    "5": 1
+   }
+  },
+  "pairwise": {
+   "tmp_dk_base vs tmp_dk_mis": {
+    "2": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 33,
+     "n_b": 33,
+     "same_ids": true
+    },
+    "4": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "5": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    }
+   },
+   "tmp_dk_base vs tmp_dk_set": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 33,
+     "n_b": 33,
+     "same_ids": true
+    },
+    "4": "layer missing in one run",
+    "5": "layer missing in one run"
+   },
+   "tmp_dk_base vs tmp_dk_typea": {
+    "2": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run",
+    "4": "layer missing in one run",
+    "5": "layer missing in one run"
+   },
+   "tmp_dk_base vs tmp_dk_typeb": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run",
+    "4": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "5": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    }
+   },
+   "tmp_dk_mis vs tmp_dk_set": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 33,
+     "n_b": 33,
+     "same_ids": true
+    },
+    "4": "layer missing in one run",
+    "5": "layer missing in one run"
+   },
+   "tmp_dk_mis vs tmp_dk_typea": {
+    "2": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run",
+    "4": "layer missing in one run",
+    "5": "layer missing in one run"
+   },
+   "tmp_dk_mis vs tmp_dk_typeb": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run",
+    "4": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "5": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    }
+   },
+   "tmp_dk_set vs tmp_dk_typea": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_set vs tmp_dk_typeb": {
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run",
+    "4": "layer missing in one run",
+    "5": "layer missing in one run"
+   },
+   "tmp_dk_typea vs tmp_dk_typeb": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "4": "layer missing in one run",
+    "5": "layer missing in one run"
+   }
+  }
+ },
+ "frontend": {
+  "counts": {
+   "tmp_dk_base": {
+    "2": 1,
+    "2[97]": 6,
+    "3": 20,
+    "3[1]": 33
+   },
+   "tmp_dk_mis": {
+    "2": 1,
+    "2[97]": 6,
+    "3": 20,
+    "3[1]": 33
+   },
+   "tmp_dk_set": {
+    "2[97]": 6,
+    "3": 20,
+    "3[1]": 33
+   },
+   "tmp_dk_typea": {
+    "2": 1,
+    "2[97]": 6,
+    "3": 20
+   },
+   "tmp_dk_typeb": {
+    "2[97]": 6,
+    "3": 20
+   }
+  },
+  "pairwise": {
+   "tmp_dk_base vs tmp_dk_mis": {
+    "2": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 33,
+     "n_b": 33,
+     "same_ids": true
+    }
+   },
+   "tmp_dk_base vs tmp_dk_set": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 33,
+     "n_b": 33,
+     "same_ids": true
+    }
+   },
+   "tmp_dk_base vs tmp_dk_typea": {
+    "2": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_base vs tmp_dk_typeb": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_mis vs tmp_dk_set": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 33,
+     "n_b": 33,
+     "same_ids": true
+    }
+   },
+   "tmp_dk_mis vs tmp_dk_typea": {
+    "2": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 1,
+     "n_b": 1,
+     "same_ids": true
+    },
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_mis vs tmp_dk_typeb": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_set vs tmp_dk_typea": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_set vs tmp_dk_typeb": {
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    },
+    "3[1]": "layer missing in one run"
+   },
+   "tmp_dk_typea vs tmp_dk_typeb": {
+    "2": "layer missing in one run",
+    "2[97]": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 6,
+     "n_b": 6,
+     "same_ids": true
+    },
+    "3": {
+     "max_abs_pos_diff_sorted": 0.0,
+     "n_a": 20,
+     "n_b": 20,
+     "same_ids": true
+    }
+   }
+  }
+ }
+}

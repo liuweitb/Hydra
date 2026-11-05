@@ -1,0 +1,13 @@
+run,fault,seed,n_fail,failure_rate,strict_failure_rate,adhoc_failure_rate,n_room_missing,n_wrong_room,n_wrong_label,n_wrong_position,n_target_missing
+uh2_label_confusion_s03_r0,label_confusion,0,3,0.0275,0.0367,0.0286,0,0,2,1,0
+uh2_label_confusion_s03_r1,label_confusion,1,1,0.0092,0.0092,0.0095,0,0,1,0,0
+uh2_label_dropout_s03_r0,label_dropout,0,3,0.0275,0.0367,0.0286,0,0,0,2,1
+uh2_label_dropout_s03_r1,label_dropout,1,1,0.0092,0.0092,0.0095,0,0,0,0,1
+uh2_depth_noise_s03_r0,depth_noise,0,4,0.0367,0.1376,0.0762,0,4,0,0,0
+uh2_depth_noise_s03_r1,depth_noise,1,0,0.0,0.6239,0.6,0,0,0,0,0
+uh2_depth_holes_s03_r0,depth_holes,0,3,0.0275,0.5872,0.219,0,3,0,0,0
+uh2_depth_holes_s03_r1,depth_holes,1,6,0.055,0.6147,0.4286,0,2,0,4,0
+uh2_pose_drift_s03_r0,pose_drift,0,8,0.0734,0.3303,0.1333,0,2,0,6,0
+uh2_pose_drift_s03_r1,pose_drift,1,15,0.1376,0.8257,0.4571,0,7,0,8,0
+uh2_frame_drop_s03_r0,frame_drop,0,4,0.0367,0.1376,0.0762,0,4,0,0,0
+uh2_frame_drop_s03_r1,frame_drop,1,2,0.0183,0.2844,0.219,0,2,0,0,0

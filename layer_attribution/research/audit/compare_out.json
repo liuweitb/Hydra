@@ -1,0 +1,160 @@
+{
+ "thresholds": {
+  "n_features": 99,
+  "max_abs_center_diff": 4.440892098500626e-16,
+  "max_abs_thr_diff": 4.440892098500626e-16,
+  "max_rel_thr_diff": 4.785417220340873e-15,
+  "nan_mismatch": [],
+  "n_nan_thresholds_code": 0,
+  "n_nan_thresholds_mine": 0,
+  "nan_threshold_features": []
+ },
+ "strengths": {
+  "shape": [
+   34,
+   99
+  ],
+  "max_abs_diff": 1.7763568394002505e-15,
+  "nan_pattern_mismatches": 0
+ },
+ "predictions_vs_mine": {
+  "rows_compared": 120,
+  "max_abs_score_diff": 1.7763568394002505e-15,
+  "discrepancies": [],
+  "n_discrepancies": 0
+ },
+ "summary_vs_mine": {
+  "discrepancies": [],
+  "code_random": 0.36363636363636365,
+  "mine_micro": 0.36363636363636365,
+  "mine_macro": 0.35714285714285715,
+  "code_prior": "objects",
+  "mine_prior_candidates": {
+   "mesh": 0.42857142857142855,
+   "objects": 0.5714285714285714,
+   "places": 0.42857142857142855,
+   "rooms": 0.0
+  }
+ },
+ "reproduce": {
+  "grid_identical": true,
+  "chosen_identical": true,
+  "predictions_identical": true,
+  "summary_identical": true
+ },
+ "selection_fallback": {
+  "rb": {
+   "n_meeting_cap": 0,
+   "min_false_alarm": 0.2,
+   "tied_configs": [
+    "rb-k1",
+    "rb-k1-nocount",
+    "rb-k2",
+    "rb-k2-nocount",
+    "rb-k3",
+    "rb-k3-nocount"
+   ],
+   "code_pick": {
+    "mode": "rb",
+    "k": 1,
+    "exclude_count_based": false
+   },
+   "tie_aware_pick": "rb-k2"
+  },
+  "rf": {
+   "n_meeting_cap": 0,
+   "min_false_alarm": 0.2,
+   "tied_configs": [
+    "rf-k2",
+    "rf-k2-nocount",
+    "rf-k3",
+    "rf-k3-nocount"
+   ],
+   "code_pick": {
+    "mode": "rf",
+    "k": 2,
+    "exclude_count_based": false
+   },
+   "tie_aware_pick": "rf-k3-nocount"
+  }
+ },
+ "bootstrap_hand": {
+  "values": [
+   1,
+   1,
+   0,
+   0
+  ],
+  "code": [
+   0.5,
+   0.0,
+   1.0
+  ],
+  "exact_expected": [
+   0.5,
+   0.0,
+   1.0
+  ],
+  "note": "exact bootstrap of mean(1,1,0,0): P(mean=0)=1/16, P(mean=1)=1/16 -> 2.5 %=0.0, 97.5 %=1.0"
+ },
+ "bootstrap_hand2": {
+  "code": [
+   0.375,
+   0.125,
+   0.75
+  ],
+  "exact_discrete_quantiles": [
+   0.375,
+   0.125,
+   0.75
+  ]
+ },
+ "macro_ci_hand": {
+  "code": {
+   "a": {
+    "acc": 0.5,
+    "lo": 0.0,
+    "hi": 1.0,
+    "n": 2
+   },
+   "b": {
+    "acc": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n": 3
+   },
+   "macro": {
+    "acc": 0.75,
+    "lo": 0.5,
+    "hi": 1.0,
+    "n": 5
+   }
+  },
+  "exact": "groups a=[1,0] b=[1,1,1]: macro in {0.5,0.75,1.0} with probs {1/4,1/2,1/4} -> mean 0.75 (point 0.75), 2.5%=0.5, 97.5%=1.0"
+ },
+ "loo_hand": {
+  "code_run": {
+   "rate": 0.3333333333333333,
+   "n": 3,
+   "per_layer": {
+    "mesh": 0.3333333333333333,
+    "objects": 0.0,
+    "places": 0.0,
+    "rooms": 0.0
+   }
+  },
+  "code_family": {
+   "rate": 0.3333333333333333,
+   "n": 3,
+   "per_layer": {
+    "mesh": 0.3333333333333333,
+    "objects": 0.0,
+    "places": 0.0,
+    "rooms": 0.0
+   }
+  },
+  "by_hand_run_rate": 0.3333333333333333,
+  "by_hand_family_rate": 0.3333333333333333,
+  "by_hand_per_layer_mesh": 0.3333333333333333
+ }
+}

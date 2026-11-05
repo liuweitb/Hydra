@@ -1,0 +1,15 @@
+run,fault,severity,seed,n_fail,failure_rate,benign_hi_pooled,masked_pooled,benign_hi_own_fault,masked_vs_own_control,strict_failure_rate,strict_benign_hi,strict_masked,adhoc_failure_rate,adhoc_benign_hi,adhoc_masked
+uh2_label_confusion_s20_r0,label_confusion,0.2,0,9,0.0826,0.1376,True,0.0275,False,0.0826,0.8257,True,0.0952,0.6,True
+uh2_label_confusion_s50,label_confusion,0.5,0,47,0.4312,0.1376,False,0.0275,False,0.4587,0.8257,True,0.4286,0.6,True
+uh2_label_dropout_s20_r0,label_dropout,0.2,0,9,0.0826,0.1376,True,0.0275,False,0.0826,0.8257,True,0.0952,0.6,True
+uh2_label_dropout_s50,label_dropout,0.5,0,47,0.4312,0.1376,False,0.0275,False,0.4404,0.8257,True,0.4286,0.6,True
+uh2_depth_noise_s20_r0,depth_noise,0.2,0,7,0.0642,0.1376,True,0.0367,False,0.6514,0.8257,True,0.6381,0.6,False
+uh2_depth_noise_s50,depth_noise,0.5,0,12,0.1101,0.1376,True,0.0367,False,0.4954,0.8257,True,0.3714,0.6,True
+uh2_depth_holes_s20_r0,depth_holes,0.2,0,9,0.0826,0.1376,True,0.055,False,0.8807,0.8257,False,0.8476,0.6,False
+uh2_depth_holes_s50,depth_holes,0.5,0,32,0.2936,0.1376,False,0.055,False,0.6697,0.8257,True,0.581,0.6,True
+uh2_depth_holes_s80_r0,depth_holes,0.8,0,47,0.4312,0.1376,False,0.055,False,0.945,0.8257,False,0.8476,0.6,False
+uh2_pose_drift_s20_r0,pose_drift,0.2,0,12,0.1101,0.1376,True,0.1376,True,0.6789,0.8257,True,0.5524,0.6,True
+uh2_pose_drift_s50,pose_drift,0.5,0,52,0.4771,0.1376,False,0.1376,False,0.9817,0.8257,False,0.6476,0.6,False
+uh2_frame_drop_s20_r0,frame_drop,0.2,0,2,0.0183,0.1376,True,0.0367,True,0.4771,0.8257,True,0.4,0.6,True
+uh2_frame_drop_s50,frame_drop,0.5,0,4,0.0367,0.1376,True,0.0367,True,0.3028,0.8257,True,0.2476,0.6,True
+uh2_frame_drop_s80_r0,frame_drop,0.8,0,7,0.0642,0.1376,True,0.0367,False,0.4771,0.8257,True,0.219,0.6,True

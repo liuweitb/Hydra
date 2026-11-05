@@ -1,0 +1,574 @@
+runs 27: benign 12, fault 13; margin 1.5
+fault runs: lc20, ld20, dn20, dh20, pd20, fd20, lc50, ld50, dn50, dh50, pd50, fd50, fd80
+
+## mesh-neutral benign runs (largest reference-based MESH deviation / floor; <= 1 is neutral)
+
+|  | max_dev_over_floor | neutral |
+|---|---|---|
+| uh2_label_confusion_s03_r0 | 0.00 | True |
+| uh2_label_confusion_s03_r1 | 0.00 | True |
+| uh2_label_dropout_s03_r0 | 0.00 | True |
+| uh2_label_dropout_s03_r1 | 0.00 | True |
+| uh2_depth_noise_s03_r0 | 0.18 | True |
+| uh2_depth_noise_s03_r1 | 0.14 | True |
+| uh2_depth_holes_s03_r0 | 3.70 | False |
+| uh2_depth_holes_s03_r1 | 3.03 | False |
+| uh2_pose_drift_s03_r0 | 2.41 | False |
+| uh2_pose_drift_s03_r1 | 6.57 | False |
+| uh2_frame_drop_s03_r0 | 0.16 | True |
+| uh2_frame_drop_s03_r1 | 0.34 | True |
+
+## single-feature leave-one-out false-alarm rate on benign runs (mean over non-count features)
+
+|  | A run | A family | N run | N family |
+|---|---|---|---|---|
+| MESH based | 0.067 | 0.100 | 0.000 | 0.000 |
+| MESH free | 0.019 | 0.083 | 0.000 | 0.000 |
+| OBJECTS based | 0.015 | 0.076 | 0.000 | 0.045 |
+| OBJECTS free | 0.013 | 0.048 | 0.020 | 0.053 |
+| PLACES based | 0.036 | 0.036 | 0.000 | 0.143 |
+| PLACES free | 0.026 | 0.051 | 0.010 | 0.029 |
+| ROOMS based | 0.062 | 0.062 | 0.094 | 0.094 |
+| ROOMS free | 0.009 | 0.009 | 0.028 | 0.028 |
+
+## saturation index (median d_s03 / d_s50 over responsive reference-based non-count features; ~0.06 proportional, >= 0.5 saturated)
+
+|  | MESH | OBJECTS | PLACES | ROOMS |
+|---|---|---|---|---|
+| lc |  | 0.07 |  |  |
+| ld |  | 0.04 |  |  |
+| dn |  | 0.01 | 0.77 | 0.98 |
+| dh | 0.48 | 0.22 | 0.76 | 0.56 |
+| pd | 0.15 | 0.17 | 0.76 | 0.50 |
+| fd |  |  | 0.54 | 0.55 |
+
+features used:
+
+|  | MESH | OBJECTS | PLACES | ROOMS |
+|---|---|---|---|---|
+| lc | 0 | 7 | 0 | 0 |
+| ld | 0 | 5 | 0 | 0 |
+| dn | 0 | 1 | 5 | 3 |
+| dh | 5 | 7 | 5 | 3 |
+| pd | 5 | 8 | 5 | 3 |
+| fd | 0 | 0 | 4 | 3 |
+
+## which benign family sets the threshold (non-count features: count by group, kind, family)
+
+|  | - | dh | dn | fd | lc | pd |
+|---|---|---|---|---|---|---|
+| ('CROSS', 'based') | 0 | 0 | 1 | 0 | 0 | 0 |
+| ('CROSS', 'free') | 0 | 0 | 0 | 0 | 0 | 2 |
+| ('INPUT_POSE', 'based') | 0 | 0 | 0 | 0 | 0 | 1 |
+| ('INPUT_POSE', 'free') | 0 | 1 | 0 | 3 | 0 | 1 |
+| ('MESH', 'based') | 0 | 1 | 0 | 0 | 0 | 4 |
+| ('MESH', 'free') | 0 | 4 | 0 | 0 | 0 | 5 |
+| ('OBJECTS', 'based') | 0 | 1 | 0 | 0 | 4 | 6 |
+| ('OBJECTS', 'free') | 0 | 7 | 1 | 0 | 6 | 5 |
+| ('PLACES', 'based') | 0 | 0 | 0 | 0 | 0 | 7 |
+| ('PLACES', 'free') | 1 | 4 | 3 | 0 | 0 | 5 |
+| ('QUERY', 'based') | 0 | 1 | 2 | 0 | 0 | 1 |
+| ('ROOMS', 'based') | 0 | 0 | 3 | 0 | 0 | 1 |
+| ('ROOMS', 'free') | 3 | 1 | 2 | 0 | 0 | 3 |
+
+## features already above the old heuristic threshold (floor) on benign runs (non-count; n of 12 benign runs; best strength on any fault run >= s20)
+
+| feature | group | kind | n_benign_over_old_thr | benign_argmax_family | best_x_A | best_x_N |
+|---|---|---|---|---|---|---|
+| query_ambiguity_frac | CROSS | reference_free | 10 | pd | 0.7 | 0.9 |
+| edge_obj_room_agreement | CROSS | reference_based | 6 | dn | 0.9 | 0.9 |
+| traj_step_max_over_median | INPUT_POSE | reference_free | 2 | fd | 1.7 | 1.7 |
+| traj_ate_rmse | INPUT_POSE | reference_based | 1 | pd | 4.9 | 13.5 |
+| mesh_extra_mean | MESH | reference_based | 4 | pd | 3.6 | 12.2 |
+| mesh_extra_frac_gt10cm | MESH | reference_based | 4 | pd | 3.0 | 29.3 |
+| mesh_centroid_shift | MESH | reference_based | 4 | dh | 2.1 | 11.9 |
+| mesh_roughness_median | MESH | reference_free | 4 | dh | 0.7 | 848.2 |
+| floor_z_robust_sd | MESH | reference_free | 4 | pd | 6.4 | 44.8 |
+| mesh_revisit_offset_median | MESH | reference_free | 3 | pd | 1.8 | 4.7 |
+| mesh_missing_mean | MESH | reference_based | 2 | pd | 3.6 | 11.2 |
+| mesh_missing_frac_gt10cm | MESH | reference_based | 2 | pd | 2.5 | 23.9 |
+| wall_sheet_sd_median | MESH | reference_free | 2 | dh | 1.0 | 1.6 |
+| floor_z_time_range | MESH | reference_free | 2 | pd | 5.5 | 23.8 |
+| floor_time_structure | MESH | reference_free | 2 | pd | 0.6 | 3.4 |
+| obj_support_median | OBJECTS | reference_free | 10 | dh | 2.9 | 3.9 |
+| obj_precision_pos | OBJECTS | reference_based | 6 | lc | 1.8 | 1.8 |
+| obj_extra_near_ref_frac | OBJECTS | reference_based | 5 | lc | 1.3 | 1.3 |
+| obj_dup_same_class_frac_100 | OBJECTS | reference_free | 5 | dh | 1.2 | 4.6 |
+| obj_bbox_iou_median | OBJECTS | reference_based | 3 | pd | 1.3 | 9.2 |
+| obj_dup_same_class_frac_050 | OBJECTS | reference_free | 3 | pd | 1.7 | 3.2 |
+| obj_logvol_mad_within_class | OBJECTS | reference_free | 3 | pd | 0.8 | 3.3 |
+| mesh_label_disagree_matched | OBJECTS | reference_based | 2 | pd | 2.6 | 16.8 |
+| mesh_objclass_knn_purity | OBJECTS | reference_free | 2 | lc | 4.8 | 4.8 |
+| obj_recall_pos | OBJECTS | reference_based | 2 | pd | 3.7 | 8.3 |
+| obj_recall_same_label | OBJECTS | reference_based | 2 | pd | 4.0 | 8.8 |
+| obj_overlap_diffclass_frac | OBJECTS | reference_free | 2 | lc | 1.5 | 1.5 |
+| obj_mesh_label_purity_low_frac | OBJECTS | reference_free | 2 | lc | 1.9 | 1.9 |
+| obj_place_intrusion_frac | OBJECTS | reference_free | 2 | dn | 0.8 | 0.8 |
+| obj_removed_per_final | OBJECTS | reference_free | 2 | dh | 1.8 | 8.3 |
+| obj_pos_err_median | OBJECTS | reference_based | 1 | pd | 2.1 | 4.3 |
+| obj_overlap_sameclass_frac | OBJECTS | reference_free | 1 | dh | 0.8 | 2.0 |
+| obj_floor_gap_p90 | OBJECTS | reference_free | 1 | lc | 1.4 | 1.4 |
+| place_coverage_050 | PLACES | reference_based | 8 | pd | 0.8 | 1.3 |
+| place_spurious_050 | PLACES | reference_based | 8 | pd | 0.9 | 1.3 |
+| place_chamfer_mean | PLACES | reference_based | 8 | pd | 0.9 | 1.2 |
+| place_freespace_iou | PLACES | reference_based | 8 | pd | 0.7 | 1.1 |
+| place_components | PLACES | reference_free | 7 | dh | 0.4 | 1.3 |
+| place_freevol_m3 | PLACES | reference_free | 5 | pd | 0.4 | 8.4 |
+| place_edge_gap_frac | PLACES | reference_free | 4 | dn | 0.7 | 0.7 |
+| place_degree_mean | PLACES | reference_free | 4 | dn | 0.9 | 0.9 |
+| place_mesh_intrusion_frac | PLACES | reference_free | 3 | dh | 2.4 | 3.9 |
+| place_radius_err_median | PLACES | reference_based | 2 | pd | 1.1 | 3.1 |
+| place_freevol_ratio | PLACES | reference_based | 1 | pd | 0.4 | 2.4 |
+| place_radius_mean_ratio | PLACES | reference_based | 1 | pd | 0.3 | 0.8 |
+| place_radius_mesh_ratio_median | PLACES | reference_free | 1 | pd | 1.2 | 1.9 |
+| place_edge_wall_cross_frac | PLACES | reference_free | 1 | dh | 1.7 | 2.5 |
+| place_radius_mean | PLACES | reference_free | 1 | pd | 0.3 | 0.7 |
+| place_small_radius_frac | PLACES | reference_free | 1 | pd | 0.3 | 1.2 |
+| query_success_rate | QUERY | reference_based | 8 | dn | 0.9 | 0.9 |
+| query_fail_wrong_object | QUERY | reference_based | 6 | dh | 1.4 | 6.7 |
+| query_fail_room_missing | QUERY | reference_based | 5 | dn | 0.9 | 0.9 |
+| room_match_frac | ROOMS | reference_based | 8 | dn | 0.8 | 0.8 |
+| room_partition_ari | ROOMS | reference_based | 6 | dn | 0.5 | 0.5 |
+| room_footprint_max | ROOMS | reference_free | 6 | dn | 0.2 | 0.2 |
+| room_assignment_agreement | ROOMS | reference_based | 5 | dn | 0.7 | 0.7 |
+| room_degree_mean | ROOMS | reference_free | 3 | pd | 0.6 | 0.7 |
+| room_elongation_max | ROOMS | reference_free | 3 | pd | 1.1 | 1.4 |
+| room_footprint_min | ROOMS | reference_free | 2 | pd | 2.8 | 3.9 |
+
+## useless: never reaches strength 1 on any seed-0 fault run with severity >= 0.2
+
+policy A: 36 of 85 layer features
+| group | reference_based | reference_free |
+|---|---|---|
+| MESH | 0 | 4 |
+| OBJECTS | 0 | 6 |
+| PLACES | 7 | 9 |
+| ROOMS | 4 | 6 |
+  mesh_roughness_median, wall_sheet_sd_median, floor_time_structure, mesh_open_edge_frac, mesh_label_edge_disagree_frac, obj_overlap_sameclass_frac, obj_size_prior_violation_frac, obj_logvol_mad_within_class, obj_nearest_place_dist_p90, obj_place_intrusion_frac, place_coverage_050, place_spurious_050, place_chamfer_mean, place_freespace_iou, place_freevol_ratio, place_freevol_m3, place_radius_mean_ratio, meshplace_count_ratio, place_edge_gap_frac, place_components, place_isolated_frac, place_degree_mean, place_orphan_frac, place_radius_mean, place_small_radius_frac, room_count_ratio, room_match_frac, room_assignment_agreement, room_partition_ari, room_empty_count, room_min_share, room_footprint_max, room_components_mean, room_degree_mean, room_without_objects_frac, place_merged_per_final
+policy N: 23 of 85 layer features
+| group | reference_based | reference_free |
+|---|---|---|
+| MESH | 0 | 1 |
+| OBJECTS | 0 | 4 |
+| PLACES | 2 | 6 |
+| ROOMS | 4 | 6 |
+  mesh_open_edge_frac, mesh_label_edge_disagree_frac, obj_size_prior_violation_frac, obj_nearest_place_dist_p90, obj_place_intrusion_frac, place_radius_mean_ratio, meshplace_count_ratio, place_edge_gap_frac, place_isolated_frac, place_degree_mean, place_orphan_frac, place_radius_mean, room_count_ratio, room_match_frac, room_assignment_agreement, room_partition_ari, room_empty_count, room_min_share, room_footprint_max, room_components_mean, room_degree_mean, room_without_objects_frac, place_merged_per_final
+
+## strength vs severity, policy A (s03 = mean of the two benign seeds; seed 0 otherwise); strongest features per group
+
+| feature | grp | lc03 | lc20 | lc50 | ld03 | ld20 | ld50 | dn03 | dn20 | dn50 | dh03 | dh20 | dh50 | pd03 | pd20 | pd50 | fd03 | fd20 | fd50 | fd80 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| mesh_roughness_median | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.7 | 0.7 | 0.5 | 0.1 | 0.4 | 0.3 | 0.0 | 0.0 | 0.0 | 0.0 |
+| floor_z_robust_sd | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.5 | 0.4 | 2.0 | 1.6 | 0.5 | 2.6 | 6.4 | 0.0 | 0.0 | 0.0 | 0.0 |
+| mesh_extra_frac_gt10cm | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.3 | 0.4 | 0.4 | 0.5 | 1.4 | 3.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| mesh_missing_frac_gt10cm | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.9 | 0.5 | 1.4 | 2.5 | 0.0 | 0.1 | 0.1 | 0.2 |
+| floor_z_time_range | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.1 | 0.3 | 0.0 | 0.5 | 2.2 | 5.5 | 0.0 | 0.0 | 0.0 | 0.0 |
+| mesh_extra_mean | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.3 | 0.4 | 0.6 | 0.7 | 0.5 | 1.7 | 3.6 | 0.0 | 0.0 | 0.0 | 0.0 |
+| mesh_label_disagree_matched | OBJE | 0.1 | 0.3 | 0.8 | 0.1 | 0.3 | 0.8 | 0.0 | 0.1 | 0.3 | 0.1 | 0.3 | 0.3 | 0.6 | 1.1 | 2.6 | 0.0 | 0.0 | 0.1 | 0.1 |
+| obj_label_agree_matched | OBJE | 0.5 | 4.5 | 14.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.0 | 0.0 | 0.4 | 0.0 | 0.0 | 1.9 | 0.0 | 0.0 | 0.0 | 0.0 |
+| obj_bbox_iou_median | OBJE | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 0.0 | 0.1 | 0.4 | 0.2 | 0.4 | 0.7 | 0.5 | 1.2 | 1.3 | 0.0 | 0.0 | 0.0 | 0.0 |
+| obj_recall_same_label | OBJE | 0.2 | 0.7 | 3.7 | 0.2 | 0.7 | 3.7 | 0.0 | 0.2 | 0.5 | 0.2 | 0.3 | 1.9 | 0.6 | 0.7 | 4.0 | 0.0 | 0.2 | 0.2 | 0.4 |
+| obj_mesh_label_purity_median | OBJE | 0.1 | 2.5 | 2.4 | 0.0 | 1.1 | 8.6 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| obj_removed_per_final | OBJE | 0.0 | 0.1 | 0.1 | 0.0 | 0.0 | 0.2 | 0.1 | 0.6 | 1.2 | 0.5 | 1.2 | 1.8 | 0.1 | 0.7 | 1.3 | 0.0 | 0.0 | 0.0 | 0.0 |
+| place_freevol_m3 | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.4 | 0.1 | 0.0 | 0.3 | 0.4 | 0.1 | 0.1 | 0.0 | 0.1 | 0.0 | 0.0 |
+| place_mesh_intrusion_frac | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 1.0 | 1.0 | 0.6 | 1.6 | 2.4 | 0.4 | 0.9 | 0.5 | 0.2 | 0.4 | 0.1 | 0.4 |
+| place_radius_err_median | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.3 | 0.4 | 0.3 | 0.5 | 0.6 | 0.5 | 0.9 | 1.1 | 0.0 | 0.0 | 0.2 | 0.3 |
+| place_edge_wall_cross_frac | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 0.1 | 0.5 | 0.5 | 1.2 | 1.0 | 0.2 | 0.7 | 1.7 | 0.2 | 0.3 | 0.0 | 0.3 |
+| place_freevol_ratio | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.4 | 0.1 | 0.0 | 0.3 | 0.4 | 0.1 | 0.1 | 0.0 | 0.1 | 0.0 | 0.0 |
+| place_removed_per_final | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.6 | 1.3 | 0.2 | 0.9 | 2.2 | 0.3 | 0.6 | 0.3 | 0.1 | 0.1 | 0.5 | 0.7 |
+| room_footprint_min | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 0.4 | 0.1 | 0.2 | 0.9 | 0.8 | 0.4 | 0.4 | 1.8 | 0.2 | 0.2 | 0.3 | 2.8 |
+| room_centroid_err_median | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.5 | 0.4 | 0.5 | 0.4 | 1.0 | 0.5 | 0.6 | 1.7 | 0.3 | 0.5 | 0.4 | 0.3 |
+| room_boundary_mixing | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.6 | 0.2 | 0.4 | 0.2 | 1.2 | 0.2 | 0.2 | 1.4 | 0.2 | 0.2 | 0.1 | 0.0 |
+| room_elongation_max | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 0.9 | 0.2 | 0.1 | 0.8 | 1.1 | 0.4 | 0.2 | 0.4 | 0.2 | 0.9 | 0.4 | 0.3 |
+| room_match_frac | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.8 | 0.5 | 0.2 | 0.7 | 0.3 | 0.2 | 0.5 | 0.5 | 0.2 | 0.5 | 0.3 | 0.3 |
+| room_assignment_agreement | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.7 | 0.4 | 0.2 | 0.7 | 0.5 | 0.2 | 0.5 | 0.5 | 0.2 | 0.4 | 0.3 | 0.1 |
+| traj_ate_rmse | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.5 | 2.0 | 4.9 | 0.0 | 0.1 | 0.1 | 0.1 |
+| traj_keyframe_ratio | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.8 | 2.2 | 3.6 |
+| traj_dt_p95_over_median | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.1 | 0.6 | 2.9 | 4.4 | 4.3 |
+| traj_step_max_over_median | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.7 | 1.4 | 1.7 | 1.6 |
+| traj_accel_rms | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.3 | 0.0 | 0.0 | 0.1 | 0.1 |
+| traj_yaw_rate_p95 | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| traj_mesh_collision_frac | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.1 | 0.3 | 0.6 | 0.1 | 0.9 | 2.7 | 0.0 | 0.1 | 0.1 | 0.5 |
+
+## strength vs severity, policy N (s03 = mean of the two benign seeds; seed 0 otherwise); strongest features per group
+
+| feature | grp | lc03 | lc20 | lc50 | ld03 | ld20 | ld50 | dn03 | dn20 | dn50 | dh03 | dh20 | dh50 | pd03 | pd20 | pd50 | fd03 | fd20 | fd50 | fd80 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| mesh_roughness_median | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 12.6 | 178.3 | 780.5 | 848.2 | 572.6 | 72.4 | 457.7 | 409.2 | 0.2 | 0.0 | 0.5 | 0.6 |
+| floor_z_robust_sd | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.9 | 3.6 | 2.4 | 14.3 | 11.1 | 3.7 | 17.9 | 44.8 | 0.0 | 0.0 | 0.1 | 0.1 |
+| mesh_extra_frac_gt10cm | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 1.3 | 3.0 | 4.0 | 4.2 | 4.5 | 14.2 | 29.3 | 0.0 | 0.0 | 0.1 | 0.2 |
+| mesh_missing_frac_gt10cm | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.4 | 2.1 | 8.3 | 4.3 | 13.0 | 23.9 | 0.0 | 0.6 | 1.2 | 2.3 |
+| floor_z_time_range | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.3 | 0.3 | 1.1 | 0.1 | 2.2 | 9.5 | 23.8 | 0.0 | 0.0 | 0.0 | 0.0 |
+| mesh_extra_mean | MESH | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.9 | 1.3 | 2.1 | 2.5 | 1.7 | 5.7 | 12.2 | 0.0 | 0.0 | 0.1 | 0.1 |
+| mesh_label_disagree_matched | OBJE | 0.3 | 2.2 | 5.1 | 0.3 | 2.2 | 5.1 | 0.1 | 0.7 | 1.9 | 0.9 | 1.8 | 2.2 | 3.6 | 6.8 | 16.8 | 0.0 | 0.1 | 0.5 | 0.8 |
+| obj_label_agree_matched | OBJE | 0.5 | 4.5 | 14.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.0 | 0.0 | 0.4 | 0.0 | 0.0 | 1.9 | 0.0 | 0.0 | 0.0 | 0.0 |
+| obj_bbox_iou_median | OBJE | 0.0 | 0.0 | 0.1 | 0.0 | 0.1 | 2.2 | 0.0 | 0.5 | 2.6 | 1.1 | 3.0 | 5.1 | 3.7 | 8.2 | 9.2 | 0.0 | 0.0 | 0.0 | 0.3 |
+| obj_recall_same_label | OBJE | 0.4 | 1.7 | 8.3 | 0.4 | 1.7 | 8.3 | 0.0 | 0.4 | 1.1 | 0.4 | 0.6 | 4.2 | 1.3 | 1.7 | 8.8 | 0.0 | 0.4 | 0.4 | 0.9 |
+| obj_mesh_label_purity_median | OBJE | 0.1 | 2.5 | 2.4 | 0.0 | 1.1 | 8.6 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| obj_removed_per_final | OBJE | 0.1 | 0.3 | 0.5 | 0.1 | 0.2 | 0.9 | 0.4 | 2.7 | 5.6 | 2.5 | 5.6 | 8.3 | 0.2 | 3.0 | 5.9 | 0.0 | 0.2 | 0.2 | 0.2 |
+| place_freevol_m3 | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.5 | 3.3 | 8.4 | 1.3 | 1.1 | 7.2 | 8.8 | 2.6 | 3.1 | 0.3 | 2.1 | 0.1 | 1.1 |
+| place_mesh_intrusion_frac | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.5 | 1.6 | 1.7 | 1.0 | 2.7 | 3.9 | 0.6 | 1.5 | 0.8 | 0.3 | 0.6 | 0.1 | 0.7 |
+| place_radius_err_median | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.9 | 1.2 | 0.8 | 1.3 | 1.8 | 1.6 | 2.5 | 3.1 | 0.0 | 0.0 | 0.7 | 0.9 |
+| place_edge_wall_cross_frac | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.5 | 0.2 | 0.7 | 0.8 | 1.8 | 1.5 | 0.3 | 1.0 | 2.5 | 0.2 | 0.5 | 0.0 | 0.5 |
+| place_freevol_ratio | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.9 | 2.4 | 0.4 | 0.3 | 2.0 | 2.5 | 0.7 | 0.9 | 0.1 | 0.6 | 0.0 | 0.3 |
+| place_removed_per_final | PLAC | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.6 | 1.3 | 0.2 | 0.9 | 2.2 | 0.3 | 0.6 | 0.3 | 0.1 | 0.1 | 0.5 | 0.7 |
+| room_footprint_min | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.6 | 0.1 | 0.2 | 1.3 | 1.2 | 0.6 | 0.5 | 2.6 | 0.3 | 0.2 | 0.5 | 3.9 |
+| room_centroid_err_median | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.5 | 0.4 | 0.5 | 0.4 | 1.0 | 0.5 | 0.6 | 1.7 | 0.3 | 0.5 | 0.4 | 0.3 |
+| room_boundary_mixing | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.6 | 0.2 | 0.4 | 0.2 | 1.2 | 0.2 | 0.2 | 1.4 | 0.2 | 0.2 | 0.1 | 0.0 |
+| room_elongation_max | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 1.1 | 0.3 | 0.1 | 1.0 | 1.4 | 0.5 | 0.3 | 0.5 | 0.3 | 1.1 | 0.5 | 0.3 |
+| room_match_frac | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.8 | 0.5 | 0.2 | 0.7 | 0.3 | 0.2 | 0.5 | 0.5 | 0.2 | 0.5 | 0.3 | 0.3 |
+| room_assignment_agreement | ROOM | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.4 | 0.7 | 0.4 | 0.2 | 0.7 | 0.5 | 0.2 | 0.5 | 0.5 | 0.2 | 0.4 | 0.3 | 0.1 |
+| traj_ate_rmse | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 | 5.4 | 13.5 | 0.1 | 0.3 | 0.2 | 0.3 |
+| traj_keyframe_ratio | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.8 | 2.2 | 3.6 |
+| traj_dt_p95_over_median | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.1 | 0.6 | 2.9 | 4.4 | 4.3 |
+| traj_step_max_over_median | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.7 | 1.4 | 1.7 | 1.6 |
+| traj_accel_rms | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.3 | 0.0 | 0.0 | 0.1 | 0.1 |
+| traj_yaw_rate_p95 | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| traj_mesh_collision_frac | INPU | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.1 | 0.3 | 0.6 | 0.1 | 0.9 | 2.7 | 0.0 | 0.1 | 0.1 | 0.5 |
+
+## dose-response class of non-count layer features, by fault (silent = never above floor; step = s03 already >= half of the later maximum)
+
+| fault | graded | non_monotone | silent | step |
+|---|---|---|---|---|
+| depth_holes | 24 | 9 | 24 | 20 |
+| depth_noise | 17 | 4 | 42 | 14 |
+| frame_drop | 9 | 6 | 55 | 7 |
+| label_confusion | 11 | 1 | 63 | 2 |
+| label_dropout | 14 | 0 | 63 | 0 |
+| pose_drift | 31 | 6 | 21 | 19 |
+
+step-class features by fault (MESH/OBJECTS):
+
+  lc: obj_mesh_label_purity_low_frac, obj_floor_gap_p90
+  ld: -
+  dn: obj_place_intrusion_frac
+  dh: mesh_extra_mean, mesh_extra_frac_gt10cm, mesh_roughness_median, wall_sheet_sd_median, mesh_revisit_offset_median, obj_precision_pos, obj_extra_near_ref_frac, obj_dup_same_class_frac_100, obj_overlap_sameclass_frac, obj_logvol_mad_within_class, obj_place_intrusion_frac
+  pd: floor_time_structure, obj_logvol_mad_within_class
+  fd: -
+
+## detector set sizes (all = non-count features with reads inside allowed layers; rec = physically motivated subset)
+
+|  | all ref | all free | rec ref | rec free |
+|---|---|---|---|---|
+| MESH | 5 | 9 | 5 | 5 |
+| OBJECTS | 11 | 16 | 6 | 4 |
+| PLACES | 7 | 12 | 5 | 4 |
+| ROOMS | 4 | 8 | 4 | 4 |
+
+## DAG rule summary: correct top-1 on 10 scored seed-0 runs (frame_drop expected 'all' is listed, not scored); benign alarm = share of benign runs where any group fires (A: 12 runs; N: the 8 mesh-neutral runs, the 4 dh/pd s03 runs listed apart)
+
+|  | A correct | A fd | A benign alarm run | A benign alarm family | N correct | N fd | N alarm on dh/pd s03 (4) | N benign alarm run | N benign alarm family |
+|---|---|---|---|---|---|---|---|---|---|
+| ref k=1 | 7/10 | none,none,none | 0.17 | 0.42 | 9/10 | none,MESH,MESH | 1.00 | 0.12 | 0.50 |
+| ref k=2 | 5/10 | none,none,none | 0.17 | 0.33 | 8/10 | none,MESH,none | 1.00 | 0.12 | 0.50 |
+| ref k=3 | 5/10 | none,none,none | 0.17 | 0.17 | 8/10 | none,none,none | 1.00 | 0.12 | 0.25 |
+| free k=1 | 8/10 | none,OBJECTS,ROOMS | 0.42 | 0.58 | 10/10 | PLACES,OBJECTS,OBJECTS|PLACES | 1.00 | 0.38 | 0.50 |
+| free k=2 | 6/10 | none,none,none | 0.08 | 0.50 | 9/10 | none,none,OBJECTS | 1.00 | 0.25 | 0.50 |
+| free k=3 | 6/10 | none,none,none | 0.08 | 0.33 | 8/10 | none,none,none | 1.00 | 0.00 | 0.25 |
+| both k=1 | 8/10 | none,OBJECTS,ROOMS | 0.42 | 0.58 | 10/10 | PLACES,MESH,MESH | 1.00 | 0.38 | 0.50 |
+| both k=2 | 7/10 | none,none,none | 0.17 | 0.58 | 9/10 | none,MESH,OBJECTS | 1.00 | 0.25 | 0.50 |
+| both k=3 | 6/10 | none,none,none | 0.17 | 0.50 | 9/10 | none,none,none | 1.00 | 0.12 | 0.50 |
+| rec_ref k=1 | 7/10 | none,none,none | 0.17 | 0.42 | 9/10 | none,MESH,MESH | 1.00 | 0.12 | 0.50 |
+| rec_ref k=2 | 5/10 | none,none,none | 0.17 | 0.33 | 8/10 | none,MESH,none | 1.00 | 0.12 | 0.50 |
+| rec_ref k=3 | 4/10 | none,none,none | 0.17 | 0.17 | 6/10 | none,none,none | 1.00 | 0.12 | 0.25 |
+| rec_free k=1 | 8/10 | none,none,ROOMS | 0.42 | 0.58 | 10/10 | PLACES,none,PLACES | 1.00 | 0.25 | 0.38 |
+| rec_free k=2 | 6/10 | none,none,none | 0.08 | 0.42 | 9/10 | none,none,none | 1.00 | 0.12 | 0.38 |
+| rec_free k=3 | 3/10 | none,none,none | 0.00 | 0.17 | 5/10 | none,none,none | 1.00 | 0.00 | 0.25 |
+| rec_both k=1 | 8/10 | none,none,ROOMS | 0.42 | 0.58 | 10/10 | PLACES,MESH,MESH | 1.00 | 0.25 | 0.50 |
+| rec_both k=2 | 7/10 | none,none,none | 0.17 | 0.58 | 9/10 | none,MESH,none | 1.00 | 0.12 | 0.50 |
+| rec_both k=3 | 6/10 | none,none,none | 0.17 | 0.42 | 9/10 | none,none,none | 1.00 | 0.12 | 0.50 |
+| min_ref k=1 | 5/10 | none,none,none | 0.17 | 0.25 | 9/10 | none,MESH,MESH | 1.00 | 0.12 | 0.25 |
+| min_ref k=2 | 4/10 | none,none,none | 0.17 | 0.17 | 6/10 | none,none,none | 0.50 | 0.12 | 0.12 |
+| min_ref k=3 | 1/10 | none,none,none | 0.00 | 0.00 | 2/10 | none,none,none | 0.00 | 0.00 | 0.00 |
+| min_free k=1 | 8/10 | none,none,ROOMS | 0.25 | 0.50 | 10/10 | PLACES,none,PLACES | 1.00 | 0.25 | 0.38 |
+| min_free k=2 | 4/10 | none,none,none | 0.08 | 0.25 | 7/10 | none,none,none | 1.00 | 0.00 | 0.25 |
+| min_free k=3 | 1/10 | none,none,none | 0.00 | 0.00 | 4/10 | none,none,none | 0.50 | 0.00 | 0.00 |
+| min_both k=1 | 8/10 | none,none,ROOMS | 0.33 | 0.58 | 10/10 | PLACES,MESH,MESH | 1.00 | 0.25 | 0.50 |
+| min_both k=2 | 6/10 | none,none,none | 0.17 | 0.42 | 9/10 | none,none,none | 1.00 | 0.12 | 0.38 |
+| min_both k=3 | 5/10 | none,none,none | 0.08 | 0.08 | 9/10 | none,none,none | 1.00 | 0.12 | 0.12 |
+
+### predictions, mode both, k=1
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | MESH | MESH | MESH |
+| ('depth_holes', 0.5) | MESH | MESH | MESH |
+| ('depth_noise', 0.2) | OBJECTS | MESH | MESH |
+| ('depth_noise', 0.5) | OBJECTS|PLACES | MESH | MESH |
+| ('frame_drop', 0.2) | none | PLACES | all |
+| ('frame_drop', 0.5) | OBJECTS | MESH | all |
+| ('frame_drop', 0.8) | ROOMS | MESH | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode both, k=2
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | OBJECTS|PLACES | MESH | MESH |
+| ('depth_holes', 0.5) | MESH | MESH | MESH |
+| ('depth_noise', 0.2) | none | OBJECTS|PLACES | MESH |
+| ('depth_noise', 0.5) | OBJECTS|PLACES | MESH | MESH |
+| ('frame_drop', 0.2) | none | none | all |
+| ('frame_drop', 0.5) | none | MESH | all |
+| ('frame_drop', 0.8) | none | OBJECTS | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode rec_both, k=1
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | MESH | MESH | MESH |
+| ('depth_holes', 0.5) | MESH | MESH | MESH |
+| ('depth_noise', 0.2) | none | MESH | MESH |
+| ('depth_noise', 0.5) | PLACES | MESH | MESH |
+| ('frame_drop', 0.2) | none | PLACES | all |
+| ('frame_drop', 0.5) | none | MESH | all |
+| ('frame_drop', 0.8) | ROOMS | MESH | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode rec_both, k=2
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | PLACES | MESH | MESH |
+| ('depth_holes', 0.5) | MESH | MESH | MESH |
+| ('depth_noise', 0.2) | none | PLACES | MESH |
+| ('depth_noise', 0.5) | none | MESH | MESH |
+| ('frame_drop', 0.2) | none | none | all |
+| ('frame_drop', 0.5) | none | MESH | all |
+| ('frame_drop', 0.8) | none | none | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode rec_free, k=2
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | PLACES | MESH | MESH |
+| ('depth_holes', 0.5) | ROOMS | MESH | MESH |
+| ('depth_noise', 0.2) | none | PLACES | MESH |
+| ('depth_noise', 0.5) | none | MESH | MESH |
+| ('frame_drop', 0.2) | none | none | all |
+| ('frame_drop', 0.5) | none | none | all |
+| ('frame_drop', 0.8) | none | none | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode rec_ref, k=2
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | none | MESH | MESH |
+| ('depth_holes', 0.5) | OBJECTS | MESH | MESH |
+| ('depth_noise', 0.2) | none | none | MESH |
+| ('depth_noise', 0.5) | none | none | MESH |
+| ('frame_drop', 0.2) | none | none | all |
+| ('frame_drop', 0.5) | none | MESH | all |
+| ('frame_drop', 0.8) | none | none | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | none | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode min_both, k=1
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | MESH | MESH | MESH |
+| ('depth_holes', 0.5) | MESH | MESH | MESH |
+| ('depth_noise', 0.2) | none | MESH | MESH |
+| ('depth_noise', 0.5) | none | MESH | MESH |
+| ('frame_drop', 0.2) | none | PLACES | all |
+| ('frame_drop', 0.5) | none | MESH | all |
+| ('frame_drop', 0.8) | ROOMS | MESH | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode min_free, k=1
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | MESH | MESH | MESH |
+| ('depth_holes', 0.5) | MESH | MESH | MESH |
+| ('depth_noise', 0.2) | none | MESH | MESH |
+| ('depth_noise', 0.5) | none | MESH | MESH |
+| ('frame_drop', 0.2) | none | PLACES | all |
+| ('frame_drop', 0.5) | none | none | all |
+| ('frame_drop', 0.8) | ROOMS | PLACES | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+### predictions, mode min_ref, k=1
+
+|  | A | N | expected |
+|---|---|---|---|
+| ('depth_holes', 0.2) | none | MESH | MESH |
+| ('depth_holes', 0.5) | OBJECTS | MESH | MESH |
+| ('depth_noise', 0.2) | none | none | MESH |
+| ('depth_noise', 0.5) | none | MESH | MESH |
+| ('frame_drop', 0.2) | none | none | all |
+| ('frame_drop', 0.5) | none | MESH | all |
+| ('frame_drop', 0.8) | none | MESH | all |
+| ('label_confusion', 0.2) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | none | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | MESH | MESH | MESH |
+| ('pose_drift', 0.5) | MESH | MESH | MESH |
+
+## moving-feature counts per group, mode rec_both (policy A | policy N), plus input-level evidence
+
+policy A
+|  | n_MESH | n_OBJECTS | n_PLACES | n_ROOMS | n_INPUT_ref | n_INPUT_free |
+|---|---|---|---|---|---|---|
+| ('depth_holes', 0.2) | 1 | 1 | 2 | 0 | 0 | 0 |
+| ('depth_holes', 0.5) | 2 | 3 | 1 | 3 | 0 | 0 |
+| ('depth_noise', 0.2) | 0 | 0 | 0 | 0 | 0 | 0 |
+| ('depth_noise', 0.5) | 0 | 0 | 1 | 0 | 0 | 0 |
+| ('frame_drop', 0.2) | 0 | 0 | 0 | 0 | 0 | 2 |
+| ('frame_drop', 0.5) | 0 | 0 | 0 | 0 | 1 | 2 |
+| ('frame_drop', 0.8) | 0 | 0 | 0 | 1 | 1 | 2 |
+| ('label_confusion', 0.2) | 0 | 7 | 0 | 0 | 0 | 0 |
+| ('label_confusion', 0.5) | 0 | 8 | 0 | 0 | 0 | 0 |
+| ('label_dropout', 0.2) | 0 | 3 | 0 | 0 | 0 | 0 |
+| ('label_dropout', 0.5) | 0 | 5 | 0 | 0 | 0 | 0 |
+| ('pose_drift', 0.2) | 7 | 0 | 0 | 0 | 1 | 0 |
+| ('pose_drift', 0.5) | 8 | 4 | 1 | 3 | 1 | 1 |
+policy N
+|  | n_MESH | n_OBJECTS | n_PLACES | n_ROOMS | n_INPUT_ref | n_INPUT_free |
+|---|---|---|---|---|---|---|
+| ('depth_holes', 0.2) | 8 | 1 | 4 | 1 | 0 | 0 |
+| ('depth_holes', 0.5) | 8 | 3 | 6 | 4 | 0 | 0 |
+| ('depth_noise', 0.2) | 1 | 0 | 2 | 1 | 0 | 0 |
+| ('depth_noise', 0.5) | 3 | 1 | 3 | 0 | 0 | 0 |
+| ('frame_drop', 0.2) | 0 | 0 | 1 | 1 | 0 | 2 |
+| ('frame_drop', 0.5) | 2 | 0 | 0 | 0 | 1 | 2 |
+| ('frame_drop', 0.8) | 1 | 0 | 1 | 1 | 1 | 2 |
+| ('label_confusion', 0.2) | 0 | 8 | 0 | 0 | 0 | 0 |
+| ('label_confusion', 0.5) | 0 | 8 | 0 | 0 | 0 | 0 |
+| ('label_dropout', 0.2) | 0 | 4 | 0 | 0 | 0 | 0 |
+| ('label_dropout', 0.5) | 0 | 5 | 0 | 0 | 0 | 0 |
+| ('pose_drift', 0.2) | 9 | 1 | 5 | 0 | 1 | 0 |
+| ('pose_drift', 0.5) | 9 | 4 | 6 | 3 | 1 | 1 |
+
+## benign runs: top-1 of the rule (mode rec_both, k=2) under leave-one-family-out thresholds
+
+| run | A_LOO_family | N_LOO_family |
+|---|---|---|
+| uh2_depth_holes_s03_r0 | MESH | MESH |
+| uh2_depth_holes_s03_r1 | MESH | MESH |
+| uh2_depth_noise_s03_r0 | none | PLACES |
+| uh2_depth_noise_s03_r1 | ROOMS | PLACES |
+| uh2_frame_drop_s03_r0 | none | none |
+| uh2_frame_drop_s03_r1 | none | none |
+| uh2_label_confusion_s03_r0 | OBJECTS | OBJECTS |
+| uh2_label_confusion_s03_r1 | OBJECTS | OBJECTS |
+| uh2_label_dropout_s03_r0 | none | none |
+| uh2_label_dropout_s03_r1 | none | none |
+| uh2_pose_drift_s03_r0 | MESH | MESH |
+| uh2_pose_drift_s03_r1 | MESH | MESH |
+
+## calibrated strengths without the DAG order: blame the group whose recommended set has the largest strength (mode rec_both)
+
+scores are MESH/OBJECTS/PLACES/ROOMS
+
+|  | A pick | A scores | N pick | N scores | expected |
+|---|---|---|---|---|---|
+| ('depth_holes', 0.2) | MESH | 2.0/1.5/1.6/0.9 | MESH | 848.2/1.5/2.7/1.3 | MESH |
+| ('depth_holes', 0.5) | OBJECTS | 1.6/4.3/2.4/1.2 | MESH | 572.6/4.3/7.2/1.4 | MESH |
+| ('depth_noise', 0.2) | none | 0.1/0.2/1.0/0.9 | MESH | 12.6/0.4/3.3/1.1 | MESH |
+| ('depth_noise', 0.5) | PLACES | 0.6/0.7/1.0/0.5 | MESH | 178.3/1.1/8.4/0.5 | MESH |
+| ('frame_drop', 0.2) | none | 0.1/0.2/0.4/0.9 | PLACES | 0.6/0.4/2.1/1.1 | all |
+| ('frame_drop', 0.5) | none | 0.3/0.2/0.5/0.4 | MESH | 1.8/0.4/0.8/0.5 | all |
+| ('frame_drop', 0.8) | ROOMS | 0.3/0.4/0.6/2.8 | ROOMS | 2.3/0.9/1.1/3.9 | all |
+| ('label_confusion', 0.2) | OBJECTS | 0.0/4.5/0.0/0.0 | OBJECTS | 0.0/4.5/0.0/0.0 | OBJECTS |
+| ('label_confusion', 0.5) | OBJECTS | 0.0/14.0/0.0/0.0 | OBJECTS | 0.0/14.0/0.0/0.0 | OBJECTS |
+| ('label_dropout', 0.2) | OBJECTS | 0.0/1.9/0.0/0.0 | OBJECTS | 0.0/1.9/0.0/0.0 | OBJECTS |
+| ('label_dropout', 0.5) | OBJECTS | 0.0/7.6/0.0/0.0 | OBJECTS | 0.0/8.3/0.0/0.0 | OBJECTS |
+| ('pose_drift', 0.2) | MESH | 2.6/0.7/0.9/0.6 | MESH | 457.7/1.7/2.6/0.6 | MESH |
+| ('pose_drift', 0.5) | MESH | 6.4/4.0/1.7/1.8 | MESH | 409.2/8.8/3.1/2.6 | MESH |
+
+largest-strength correct: A 7/10, N 10/10 (scored runs only)
+
+## baselines: layer with the largest raw reference-based discrepancy, and layer where the query failure is visible
+
+|  | MESH | OBJECTS | PLACES | ROOMS | largest_discrepancy | failure_visible | expected |
+|---|---|---|---|---|---|---|---|
+| ('depth_holes', 0.2) | 0.08 | 0.13 | 0.53 | 0.78 | ROOMS | ROOMS | MESH |
+| ('depth_holes', 0.5) | 0.17 | 0.21 | 0.60 | 0.58 | PLACES | ROOMS | MESH |
+| ('depth_noise', 0.2) | 0.01 | 0.02 | 0.44 | 0.75 | ROOMS | ROOMS | MESH |
+| ('depth_noise', 0.5) | 0.03 | 0.06 | 0.52 | 0.42 | PLACES | ROOMS | MESH |
+| ('frame_drop', 0.2) | 0.01 | 0.02 | 0.33 | 0.40 | ROOMS | ROOMS | all |
+| ('frame_drop', 0.5) | 0.02 | 0.02 | 0.41 | 0.38 | PLACES | ROOMS | all |
+| ('frame_drop', 0.8) | 0.05 | 0.05 | 0.45 | 0.25 | PLACES | ROOMS | all |
+| ('label_confusion', 0.2) | 0.00 | 0.33 | 0.00 | 0.00 | OBJECTS | OBJECTS | OBJECTS |
+| ('label_confusion', 0.5) | 0.00 | 0.41 | 0.00 | 0.00 | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.2) | 0.00 | 0.08 | 0.00 | 0.00 | OBJECTS | OBJECTS | OBJECTS |
+| ('label_dropout', 0.5) | 0.00 | 0.41 | 0.00 | 0.00 | OBJECTS | OBJECTS | OBJECTS |
+| ('pose_drift', 0.2) | 0.28 | 0.19 | 0.63 | 0.58 | PLACES | ROOMS | MESH |
+| ('pose_drift', 0.5) | 0.59 | 0.51 | 0.74 | 0.56 | PLACES | OBJECTS | MESH |
+
+largest-discrepancy correct 4/13, failure-visible correct 4/13 (frame_drop expected 'all' counts as wrong)
+
+## feature inventory (layer features by group and kind; n_count = count-flagged)
+
+| group | ('n', 'reference_based') | ('n', 'reference_free') | ('n_count', 'reference_based') | ('n_count', 'reference_free') |
+|---|---|---|---|---|
+| CROSS | 1 | 2 | 0 | 0 |
+| INPUT_POSE | 2 | 5 | 1 | 0 |
+| MESH | 7 | 9 | 2 | 0 |
+| OBJECTS | 13 | 19 | 2 | 0 |
+| PLACES | 10 | 13 | 3 | 0 |
+| QUERY | 4 | 0 | 0 | 0 |
+| ROOMS | 5 | 9 | 1 | 0 |
+
+## margin sensitivity: single-feature LOO false alarm (run | family) and share of layer features moving on seed-0 s50 faults
+
+|  | A FA run | A FA family | A moving at s50 | N FA run | N FA family | N moving at s50 |
+|---|---|---|---|---|---|---|
+| margin 1.0 | 0.056 | 0.084 | 0.201 | 0.037 | 0.054 | 0.284 |
+| margin 1.25 | 0.041 | 0.069 | 0.175 | 0.024 | 0.050 | 0.266 |
+| margin 1.5 | 0.024 | 0.055 | 0.158 | 0.015 | 0.045 | 0.251 |
+| margin 2.0 | 0.011 | 0.039 | 0.119 | 0.010 | 0.028 | 0.216 |
+| margin 3.0 | 0.003 | 0.025 | 0.065 | 0.002 | 0.021 | 0.186 |
+
+## features that move AND track their own layer's node count (|Spearman rho| >= 0.8 of the raw value against the count ratio, over runs whose count changed by > 3 %), non-count-flagged only
+
+| feature | group | kind | rho_count | rho_count_n | best_x_N |
+|---|---|---|---|---|---|
+| obj_extra_near_ref_frac | OBJECTS | reference_based | 0.94 | 12.00 | 1.28 |
+| obj_precision_pos | OBJECTS | reference_based | -0.87 | 12.00 | 1.83 |
+| room_boundary_mixing | ROOMS | reference_free | 0.91 | 13.00 | 1.42 |
